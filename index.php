@@ -1,3 +1,10 @@
+<?php
+include_once 'helpers/url.php';
+include_once 'helpers/PrimaryNavBuilder.php';
+include_once 'Doc.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,15 +13,20 @@
     </head>
 
     <body>
-
         <?php
-
-        include_once 'helpers/url.php';
-        include_once 'Doc.php';
-
 
         $urlParams = parseUrl();
 
+
+        //builds and displays the local nav
+        $primaryNav = new PrimaryNavBuilder(array(
+            "test"  => "test",
+            "test1" => "test",
+            "test2" => "test",
+        ));
+        $primaryNav->display();
+
+        //decides which kind of page to display
         switch ($urlParams[0]) {
 
             case "doc":
@@ -27,7 +39,9 @@
 
 
             default:
-               echo "page not found";
+                //ob_clean();
+                echo '<iframe width=1000 height=1000 src="http://www.thebest404pageever.com"></iframe>';
+                //echo "page not found";
         }
         ?>
 

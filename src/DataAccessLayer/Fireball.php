@@ -13,7 +13,7 @@ namespace Fireball {
         private $colChangedCache;
         private $ID;
         private static $connection;
-        
+
         private static $colCacheCache;
 
         public function __construct($ID) {
@@ -33,8 +33,8 @@ namespace Fireball {
 
             $this->tableID = md5(serialize($this->tableDef));
 
-            //Load the data access class from the cache if possible
-            if (isset(self::$colCacheCache[$tableID])) {
+            //Load from cache if possible TODO: test this
+            if (isset(self::$colCacheCache[$this->tableID])) {
                 $this->colCache = self::$colCacheCache[$tableID];
                 error_log('cache loaded');
             }
