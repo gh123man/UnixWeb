@@ -54,7 +54,7 @@ namespace Fireball {
                     return $this->getCol($col);
                 }
             } else {
-                throw new UnexpectedValueException("Column: " . $col . " does not exist in " . $this->orm->getTableName());
+                //throw new UnexpectedValueException("Column: " . $col . " does not exist in " . $this->orm->getTableName()); TODO: fix this
             }
         }
 

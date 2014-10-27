@@ -1,6 +1,6 @@
 <?php
-include_once 'helpers/url.php';
-include_once 'helpers/PrimaryNavBuilder.php';
+include_once 'components/helpers/url.php';
+include_once 'components/PrimaryNavBuilder.php';
 include_once 'Doc.php';
 
 ?>
@@ -16,7 +16,6 @@ include_once 'Doc.php';
         <?php
 
         $urlParams = parseUrl();
-
 
         //builds and displays the local nav
         $primaryNav = new PrimaryNavBuilder(array(
