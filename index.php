@@ -14,7 +14,7 @@ include_once 'Doc.php';
 
     <body>
         <?php
-t
+
         $urlParams = parseUrl();
 
         //builds and displays the local nav
