@@ -54,8 +54,8 @@ include_once 'Doc.php';
 
                 default:
                     //ob_clean();
-                    //echo '<iframe width=1000 height=1000 src="http://www.thebest404pageever.com"></iframe>';
-                    echo "page not found";
+                    echo '<div id="errorPage"><iframe width="100%" height="1000px" frameborder="0" src="http://www.thebest404pageever.com"></iframe><div>';
+                    //echo "page not found";
             }
             ?>
         </div>
