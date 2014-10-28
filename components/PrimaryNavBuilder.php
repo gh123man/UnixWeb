@@ -9,12 +9,15 @@ class PrimaryNavBuilder {
 
     }
 
-    public function display() {
+    public function display($leftCallback = null, $rightCallback = null) {
         ?>
         <nav>
             <div class="navWrapper">
                 <div class="navContainer">
                     <?php
+                    if (isset($leftCallback)){
+                        $leftCallback();
+                    }
 
                     foreach ($this->navItems as $title => $address) {
                         echo '<a href=' . $address . '>';
@@ -26,6 +29,9 @@ class PrimaryNavBuilder {
                         echo '</a>';
                     }
 
+                    if (isset($rightCallback)){
+                        $rightCallback();
+                    }
                     ?>
                 </div>
             </div>

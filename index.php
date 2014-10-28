@@ -1,5 +1,6 @@
 <?php
 include_once 'components/helpers/url.php';
+include_once 'components/drawFunctions.php';
 include_once 'components/PrimaryNavBuilder.php';
 include_once 'Doc.php';
 
@@ -21,11 +22,13 @@ include_once 'Doc.php';
 
         //builds and displays the local nav
         $primaryNav = new PrimaryNavBuilder(array(
-            "test"  => "test",
-            "test1" => "test",
-            "test2" => "test",
+            "Docs"  => "/doc",
+            "test1" => "/test",
+            "test2" => "/test",
         ));
-        $primaryNav->display();
+
+
+        $primaryNav->display('drawLogo', 'drawSearch');
 
         ?>
         <div class="pageContentWrapper">
@@ -34,19 +37,25 @@ include_once 'Doc.php';
             //decides which kind of page to display
             switch ($urlParams[0]) {
 
+                case "": //home page
+                    include_once 'home.php';
+                    break;
+
                 case "doc":
                     try {
                         $docPage = new Doc($urlParams);
                         $docPage->display();
                         break;
-                    } catch (Exception $e) {}
+                    } catch (Exception $e) {
+                        error_log($e);
+                    }
 
 
 
                 default:
                     //ob_clean();
                     //echo '<iframe width=1000 height=1000 src="http://www.thebest404pageever.com"></iframe>';
-                    //echo "page not found";
+                    echo "page not found";
             }
             ?>
         </div>

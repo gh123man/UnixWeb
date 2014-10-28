@@ -14,7 +14,7 @@
  }
 
 
- .navContainer {
+.navContainer {
 
      width: 100%;
      background: #aaaaaa;
@@ -45,4 +45,9 @@
     margin: 10px;
     float: left;
     width: 1050px;
+}
+
+.logo {
+    float: left;
+    padding: 10px;
 }
