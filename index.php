@@ -12,6 +12,8 @@ include_once 'Doc.php';
     <title>Group Site</title>
     </head>
 
+    <link rel="stylesheet" href="/static/css/core.css"/>
+
     <body>
         <?php
 
@@ -25,24 +27,28 @@ include_once 'Doc.php';
         ));
         $primaryNav->display();
 
-        //decides which kind of page to display
-        switch ($urlParams[0]) {
-
-            case "doc":
-                try {
-                    $docPage = new Doc($urlParams);
-                    $docPage->display();
-                    break;
-                } catch (Exception $e) {}
-
-
-
-            default:
-                //ob_clean();
-                echo '<iframe width=1000 height=1000 src="http://www.thebest404pageever.com"></iframe>';
-                //echo "page not found";
-        }
         ?>
+        <div class="pageContentWrapper">
+            <?php
 
+            //decides which kind of page to display
+            switch ($urlParams[0]) {
+
+                case "doc":
+                    try {
+                        $docPage = new Doc($urlParams);
+                        $docPage->display();
+                        break;
+                    } catch (Exception $e) {}
+
+
+
+                default:
+                    //ob_clean();
+                    //echo '<iframe width=1000 height=1000 src="http://www.thebest404pageever.com"></iframe>';
+                    //echo "page not found";
+            }
+            ?>
+        </div>
     </body>
 </html>

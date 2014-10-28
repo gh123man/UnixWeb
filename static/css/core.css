@@ -1,0 +1,48 @@
+ @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700); /* feel free to change this */
+
+ *, *:before, *:after {
+   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+ html, body
+ {
+     padding: 0px;
+     margin: 0px;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 100%;
+     background: #E9E9E9;
+ }
+
+
+ .navContainer {
+
+     width: 100%;
+     background: #aaaaaa;
+     float: left;
+}
+
+.navItemWrapper {
+    float: left;
+    padding: 10px;
+}
+
+.localNavWrapper {
+    float: left;
+    margin: 10px;
+    padding: 20px;
+    border: solid 1px;
+}
+
+.pageContentWrapper {
+    width: 1200px;
+    margin: auto;
+}
+
+
+.pageContent {
+    border: solid 1px;
+    padding 20px;
+    margin: 10px;
+    float: left;
+    width: 1050px;
+}

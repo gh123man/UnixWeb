@@ -3,7 +3,6 @@
 class PrimaryNavBuilder {
 
     private $navItems;
-    private $itemWidth;
 
     public function __construct($items) {
         $this->navItems = $items;
@@ -13,14 +12,14 @@ class PrimaryNavBuilder {
     public function display() {
         ?>
         <nav>
-            <div class="navWrapper absoluteNav">
+            <div class="navWrapper">
                 <div class="navContainer">
                     <?php
 
                     foreach ($this->navItems as $title => $address) {
                         echo '<a href=' . $address . '>';
-                        echo '<div class="">';
-                        echo '<div class="">';
+                        echo '<div class="navItemWrapper">';
+                        echo '<div class="navItem">';
                         echo $title;
                         echo '</div>';
                         echo '</div>';
