@@ -3,6 +3,7 @@ include_once 'components/helpers/url.php';
 include_once 'components/drawFunctions.php';
 include_once 'components/PrimaryNavBuilder.php';
 include_once 'Doc.php';
+include_once 'home.php';
 
 ?>
 
@@ -38,7 +39,7 @@ include_once 'Doc.php';
             switch ($urlParams[0]) {
 
                 case "": //home page
-                    include_once 'home.php';
+                    displayHome();
                     break;
 
                 case "doc":
@@ -50,12 +51,8 @@ include_once 'Doc.php';
                         error_log($e);
                     }
 
-
-
                 default:
-                    //ob_clean();
                     echo '<div id="errorPage"><iframe width="100%" height="1000px" frameborder="0" src="http://www.thebest404pageever.com"></iframe><div>';
-                    //echo "page not found";
             }
             ?>
         </div>

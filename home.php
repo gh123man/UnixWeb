@@ -1,1 +1,11 @@
-This is our home page!
+<?php
+function displayHome() {
+?>
+
+
+    This is our home page!
+
+
+<?php
+}
+?>
