@@ -5,7 +5,12 @@
 ###bg
 Category: Process Management
 
--------------------
+--------------------
+
+###cal
+Category: System Info
+
+----------------
 
 ###cat
 Category: File 
@@ -93,15 +98,66 @@ Examples:
 + cd /
 
 ------------
+
+###chmod
+Category: File Permissions
+
+------------------
+
 ###cp
 Category: File
 
 --------------
 
+###date
+Category: System Info
+
+--------------
+
+###df
+Category: System Info
+
+----------
+
+###dig
+Category: Network
+
+--------------
+
+###dpkg
+Category: Installation
+
+---------
+
+###du
+Category: System Info
+
+--------------
+
+###finger
+Category: System Info
+
+-----------
+
+##free
+Category: System Info
+
+---------
+
 ###fg
 Category: Process Management
 
 ---------------
+
+###grep
+Category: Searching
+
+------------
+
+###gzip
+Category: Compression
+
+--------
 
 ###head
 Category: File 
@@ -117,6 +173,17 @@ Category: Process Management
 Category: File
 
 --------------
+
+###make
+Category Installation
+
+----------
+
+###man
+Category: System Info
+
+---------
+
 ###mkdir
 Category: File
 Definiton: creates a directory.
@@ -201,6 +268,11 @@ Uses:
 Category: File
 
 -----------
+
+###ssh
+Category: SSH
+
+-------------
 
 ###tail
 Category: File
