@@ -2,6 +2,11 @@
 
 ## Listed alphabetically
 
+###bg
+Category: Process Management
+
+-------------------
+
 ###cat
 Category: File 
 Definition: concatenates (or appends) and displays files.
@@ -87,9 +92,31 @@ Examples:
 + cd ~
 + cd /
 
+------------
+###cp
+Category: File
 
 --------------
 
+###fg
+Category: Process Management
+
+---------------
+
+###head
+Category: File 
+
+----------
+
+##kill
+Category: Process Management
+
+---------
+
+###ln
+Category: File
+
+--------------
 ###mkdir
 Category: File
 Definiton: creates a directory.
@@ -128,7 +155,16 @@ Examples:
 + mkdir p /home/330/Links/a/b/c
 
 -------------
+###more 
+Category: File
 
+
+------------------
+
+###mv
+Category: File
+
+-------------
 ###pwd
 Category: File
 Defintion: prints the current working directory. you can use it to find the full path to the current directory,
@@ -159,6 +195,27 @@ Uses:
   + shows all locations containing an excueetable named pwd
 + 
 
+------
+
+###rm
+Category: File
+
+-----------
+
+###tail
+Category: File
+
+-----
+
+###top
+Category: Process Management
+
+-------------
+
+###touch 
+Category: File
+
+-------
 
 
 
