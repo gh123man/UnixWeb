@@ -21,13 +21,15 @@ class LocalNavBuilder {
 
                     foreach ($this->files as $file) {
                         $name = explode('.', $file);
-                        echo "<a href=/$this->prefix/$name[0]>";
-                        echo '<div class="localNavItemWrapper">';
-                        echo '<div class="localNavItem">';
-                        echo $name[0];
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</a>';
+                        if ($name[0] != "index" && isset($name[1]) && $name[1] == "html") {
+                            echo "<a href=/$this->prefix/$name[0]>";
+                            echo '<div class="localNavItemWrapper">';
+                            echo '<div class="localNavItem">';
+                            echo $name[0];
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
                     }
 
                     ?>

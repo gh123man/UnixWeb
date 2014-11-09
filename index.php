@@ -15,6 +15,7 @@ include_once 'home.php';
     </head>
 
     <link rel="stylesheet" href="/static/css/core.css"/>
+    <script src="/static/js/jquery/jquery.js"></script>
 
     <body>
         <?php
