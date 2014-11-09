@@ -2,9 +2,8 @@
 
 ## Listed alphabetically
 
-
-
 ###cat
+Category: File 
 Definition: concatenates (or appends) and displays files.
 The command will display file contents to a screen. You can also use the command
 to create a file as well as read/write to it. 
@@ -55,6 +54,112 @@ Examples:
 + cat *
 + cat *.html
 + cat /proc/cpuinfo
+
+-------
+
+###cd
+Category: File
+Definition: changes the current working directory. cd stands for "current directory" 
+
+See **Directory Structure** for more information
+
+Additional explanation: Unix shells use a tree system. The root directory is represented by "/" whereas
+the current directory is represented by "."
+To move up to the parent directory in the tree, you can use ".."
+A "/" separates the names of file 
+
+
+Uses:
++ cd /
+  + changes the directory to the root directory
++ cd directoryName
+  + changes to the directory
++ cd /path/directoryName
++ cd ~
+   + ~ represents our username
+   +  will function the same as typing cd /home/username
+
+Examples:
++ cd Links
++ cd /330/Links
++ cd ../..
++ cd ..
++ cd ~
++ cd /
+
+
+--------------
+
+###mkdir
+Category: File
+Definiton: creates a directory.
+
+Options:
++ -m / --mode
+  + set the file mode (see **chmod**)
++ -p / --parents
+  + create parent directory
+  + if directory exists, no response will appear
++  -v / --verbose
+  + prints a message for each created directory
++  -Z / --context
+  + sets the SELinux security context
++  --help
+  + displays help message
+  + will exit after
++  --version
+  + displays the version information
+  + will exit after
+
+Uses:
++ mkdir directoryName
++  mkdir -m a=rwx directoryName
+  + creates directory
+  + m = mode
+  + sets permissions (a=rwx) to read, write, and excuete)
+    + see **permissions**
+  + mkdir - p /path/directory/directory2
+    + creates a directory at that path
+    + if parent directories do not exist, will create them
+
+Examples:
++ mkdir /330/Links
++ mkdir -m a=rx Links
++ mkdir p /home/330/Links/a/b/c
+
+-------------
+
+###pwd
+Category: File
+Defintion: prints the current working directory. you can use it to find the full path to the current directory,
+store the full path, and verify the physical path.
+
+Options:
++ -L
+  + displays the logical current working directory
+  + causes the pwd to use a $PWD environment despite symlinks
+  + see **_**
++ -P
+  + defualt
+  + displays the physical current working directory
++ /bin/pwd -- version
+  + displays the pwd command version
++ /bin/pwd --help
+  + diaplays information about the pwd
+
+Uses:
++ pwd
+  + prints the path
++ x=$(pwd)
+  + stores the path
+  + can do with the variable
+    + echo "The current working directory: $x"
+    + printf "The current directory is: %s" $x
++ type -a pwd
+  + shows all locations containing an excueetable named pwd
 + 
+
+
+
 
 
