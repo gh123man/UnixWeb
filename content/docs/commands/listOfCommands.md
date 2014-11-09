@@ -269,6 +269,11 @@ Category: File
 
 -----------
 
+##rpm
+Category: Installation
+
+----------
+
 ###ssh
 Category: SSH
 
@@ -278,6 +283,11 @@ Category: SSH
 Category: File
 
 -----
+
+##tar
+Category: Compression
+
+----------
 
 ###top
 Category: Process Management
@@ -289,6 +299,35 @@ Category: File
 
 -------
 
+##uname
+Category: System Info
+
+---------
+
+##uptime
+Category: System Info
+
+----------
+
+###w
+Category: System Info
+
+------------
+
+###whereis
+Category: System Info
+
+------------
+
+###which
+Category: System Info
+
+------------
+
+###whois
+Category: Network
+
+------------
 
 
 
