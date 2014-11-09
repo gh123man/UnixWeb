@@ -1,8 +1,8 @@
-# Note: this is a list of commands to be used in the website. These need to be inserted in a database with respective definitions
+#Note: this is a list of commands to be used in the website. These need to be inserted in a database with respective definitions
 
 ## Listed alphabetically
 
-**cat**
+###cat
 Definition: concatenates (or appends) and displays files.
 The command will display file contents to a screen. You can also use the command
 to create a file as well as read/write to it. 
