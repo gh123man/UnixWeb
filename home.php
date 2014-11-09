@@ -2,42 +2,6 @@
 function displayHome() {
 ?>
 
-<style>
-    #main {
-        float: left;
-    }
-    #command-of-day, #top-ten-commands{
-        padding: 1em;
-        border: 1px solid #e1e1e1;
-        float: right;
-        clear: right;
-        width: 200px;
-        margin: .5em;
-    }
-    #command-of-day h3, #top-ten-commands h3{
-        color: #aaa;
-    }
-    #command-of-day h4{
-        font-size: 1.2em;
-    }
-
-    #top-ten-commands ul li, #top-ten-commands a{
-        list-style: none;
-        text-decoration: none;
-        color: black;
-    }
-
-    #top-ten-commands a:visited {
-        color: purple;
-    }
-
-    #top-ten-commands a:hover{
-        font-style: italic;
-    }
-
-</style>
-
-
 <script>
     //this can be removed and placed in a different file and needs to be rewritten
     //since i don't have access to the database, I am writing it with an array of basic commands

@@ -1,0 +1,80 @@
+
+<p>Category: File
+Definiton: creates a directory.</p>
+
+<p>Options:</p>
+<ul class="task-list">
+<li>-m / --mode
+
+<ul class="task-list">
+<li>set the file mode (see <strong>chmod</strong>)</li>
+</ul>
+</li>
+<li>-p / --parents
+
+<ul class="task-list">
+<li>create parent directory</li>
+<li>if directory exists, no response will appear</li>
+</ul>
+</li>
+<li> -v / --verbose
+
+<ul class="task-list">
+<li>prints a message for each created directory</li>
+</ul>
+</li>
+<li> -Z / --context
+
+<ul class="task-list">
+<li>sets the SELinux security context</li>
+</ul>
+</li>
+<li> --help
+
+<ul class="task-list">
+<li>displays help message</li>
+<li>will exit after</li>
+</ul>
+</li>
+<li> --version
+
+<ul class="task-list">
+<li>displays the version information</li>
+<li>will exit after</li>
+</ul>
+</li>
+</ul>
+
+<p>Uses:</p>
+<ul class="task-list">
+<li>mkdir directoryName</li>
+<li> mkdir -m a=rwx directoryName
+
+<ul class="task-list">
+<li>creates directory</li>
+<li>m = mode</li>
+<li>sets permissions (a=rwx) to read, write, and excuete)
+
+<ul class="task-list">
+<li>see <strong>permissions</strong>
+</li>
+</ul>
+</li>
+<li>mkdir - p /path/directory/directory2
+
+<ul class="task-list">
+<li>creates a directory at that path</li>
+<li>if parent directories do not exist, will create them</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>Examples:</p>
+<ul class="task-list">
+<li>mkdir /330/Links</li>
+<li>mkdir -m a=rx Links</li>
+<li>mkdir p /home/330/Links/a/b/c</li>
+</ul>
+<hr />
