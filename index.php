@@ -2,7 +2,7 @@
 include_once 'components/helpers/url.php';
 include_once 'components/drawFunctions.php';
 include_once 'components/PrimaryNavBuilder.php';
-include_once 'Doc.php';
+include_once 'Docs.php';
 include_once 'home.php';
 
 ?>
@@ -24,7 +24,7 @@ include_once 'home.php';
 
         //builds and displays the local nav
         $primaryNav = new PrimaryNavBuilder(array(
-            "Docs"  => "/doc",
+            "Docs"  => "/docs",
             "test1" => "/test",
             "test2" => "/test",
         ));
@@ -43,7 +43,7 @@ include_once 'home.php';
                     displayHome();
                     break;
 
-                case "doc":
+                case "docs":
                     try {
                         $docPage = new Doc($urlParams);
                         $docPage->display();

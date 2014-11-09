@@ -42,7 +42,7 @@ class Doc {
     }
 
     public static function showNav() {
-        $localNav = new LocalNavBuilder('content/docs', 'doc');
+        $localNav = new LocalNavBuilder('content/docs', 'docs');
         $localNav->display();
     }
 
