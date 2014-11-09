@@ -1,6 +1,6 @@
-#Note: this is a list of commands to be used in the website. These need to be inserted in a database with respective definitions
+# Note: this is a list of commands to be used in the website. These need to be inserted in a database with respective definitions
 
-##Listed alphabetically
+## Listed alphabetically
 
 **cat**
 Definition: concatenates (or appends) and displays files.
