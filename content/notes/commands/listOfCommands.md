@@ -2,6 +2,11 @@
 
 ## Listed alphabetically
 
+##!
+Category: Miscellaneous
+
+----------
+
 ###bg
 Category: Process Management
 
@@ -99,10 +104,25 @@ Examples:
 
 ------------
 
+###chgrp
+Category: File
+
+---------
+
 ###chmod
 Category: File Permissions
 
 ------------------
+
+##clear
+Category: Miscellaneous
+
+------------
+
+###compress
+Category: Compression
+
+-----------
 
 ###cp
 Category: File
@@ -119,6 +139,11 @@ Category: System Info
 
 ----------
 
+###diff
+Category: Comparison
+
+------------
+
 ###dig
 Category: Network
 
@@ -131,6 +156,11 @@ Category: Installation
 
 ###du
 Category: System Info
+
+--------------
+
+###find
+Category: Searching
 
 --------------
 
@@ -149,8 +179,13 @@ Category: Process Management
 
 ---------------
 
-###grep
+###grep / egrep
 Category: Searching
+
+------------
+
+###gunzip
+Category: Compression
 
 ------------
 
@@ -164,6 +199,16 @@ Category: File
 
 ----------
 
+###history
+Category: Miscellaneous
+
+----------
+
+###job
+Category: Process Management
+
+-----------
+
 ##kill
 Category: Process Management
 
@@ -173,6 +218,11 @@ Category: Process Management
 Category: File
 
 --------------
+
+###ls
+Category: file
+
+------------
 
 ###make
 Category Installation
@@ -279,6 +329,11 @@ Category: SSH
 
 -------------
 
+###scp
+Category: File
+
+----------
+
 ###tail
 Category: File
 
@@ -303,6 +358,11 @@ Category: File
 Category: System Info
 
 ---------
+
+##uncompress
+Category: Compression
+
+----------
 
 ##uptime
 Category: System Info
