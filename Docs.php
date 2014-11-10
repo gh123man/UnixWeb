@@ -25,9 +25,8 @@ class Doc {
 
             self::showNav();
 
-            //Show local nav and stuff here (should be generated)
             ?>
-            <div class="pageContent">
+            <div class="pageContent pageContentDocs">
                 <h2><?php echo $doc; ?> documentation</h2>
                 <?php
                 echo $pageData;
@@ -43,13 +42,15 @@ class Doc {
     }
 
     public static function showNav() {
-        $localNav = new LocalNavBuilder('content/docs', 'doc');
+        $localNav = new LocalNavBuilder('content/docs', 'docs');
         $localNav->display();
     }
 
     public static function landing() {
         ?>
-        Welcome to our docs page!
+        <div class="pageContent pageContentDocs">
+            <?php include_once './content/docs/index.html';?>
+        </div>
         <?php
     }
 
