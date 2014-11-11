@@ -91,7 +91,7 @@ function noResults() {
     if (q === "") {
         return;
     }
-    $resultsBox.html('<div class="resultMessage">No Results for '  + q + '</div>');
+    $resultsBox.html('<div class="resultMessage">No Results for: '  + q + '</div>');
 
 }
 
@@ -125,6 +125,6 @@ function clearSearch(q) {
 
 $(document).mouseup(function (e) {
     if (!$resultsBox.is(e.target) && $resultsBox.has(e.target).length === 0) {
-        $resultsBox.slideUp('fast');
+        $resultsBox.slideUp();
     }
 });
