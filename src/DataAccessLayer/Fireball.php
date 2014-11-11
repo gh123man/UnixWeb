@@ -1,4 +1,7 @@
 <?php
+// This is an experimental fork of my own library found here: https://github.com/gh123man/Fireball-for-PHP
+// It may be broken, it may be unstable - but what better time to experiment!
+// By: Brian Floersch
 
 namespace Fireball {
 
@@ -47,14 +50,14 @@ namespace Fireball {
          * intercepts funciton calls and translates them to the table columns
          */
         public function __call($col, $value = null) {
-            if (in_array($col, $this->tableDef->getDef())) {
+            if (in_array($col, $this->tableDef->getCols())) {
                 if (isset($value[0])) {
                     $this->setCol($col, $value[0]);
                 } else {
                     return $this->getCol($col);
                 }
             } else {
-                //throw new UnexpectedValueException("Column: " . $col . " does not exist in " . $this->orm->getTableName()); TODO: fix this
+                throw new UnexpectedValueException("Column: " . $col . " does not exist");
             }
         }
 
@@ -211,6 +214,7 @@ namespace Fireball {
 
     }
 
+    //This needs work
     class TableDef {
 
         private $name;
@@ -229,11 +233,15 @@ namespace Fireball {
         }
 
         public function addCol($name) {
-            $this->def['COL'] = $name;
+            $this->def['COLS'][] = $name;
         }
 
         public function getDef() {
             return $this->def;
+        }
+
+        public function getCols() {
+            return $this->def['COLS'];
         }
 
         public function getKey() {

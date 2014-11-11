@@ -1,0 +1,7 @@
+<?php
+
+include_once 'src/DataAccessLayer/Fireball.php';
+
+Fireball\ORM::connect('DB_NAME', 'DB_HOST', 'DB_USER', 'DB_PASSWORD');
+
+?>

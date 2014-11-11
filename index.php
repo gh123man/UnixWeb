@@ -19,6 +19,7 @@ include_once 'components/home.php';
 
     <link rel="stylesheet" href="/static/css/core.css"/>
     <script src="/static/js/jquery/jquery.js"></script>
+    <script src="/static/js/search.js"></script>
 
     <body>
         <?php

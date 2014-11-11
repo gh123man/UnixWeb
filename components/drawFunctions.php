@@ -11,8 +11,9 @@ function drawLogo() {
 
 function drawSearch() {
 ?>
-    <div class="logo">
-        <input type="text" placeholder="search"/>
+    <div id="Search" class="logo">
+        <input id="searchField" type="text" name="q" placeholder="search"/>
+        <div id="searchResults" class="searchResults"></div>
     </div>
 <?php
 }
