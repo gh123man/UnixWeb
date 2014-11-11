@@ -21,7 +21,7 @@ class LocalNavBuilder {
 
                     foreach ($this->files as $file) {
                         $name = explode('.', $file);
-                        if ($name[0] != "index" && isset($name[1]) && $name[1] == "html") {
+                        if ($name[0] != "index" && isset($name[1]) && ($name[1] == "php" || $name[1] == "html")) {
                             echo "<a href=/$this->prefix/$name[0]>";
                             echo '<div class="localNavItemWrapper">';
                             echo '<div class="localNavItem">';

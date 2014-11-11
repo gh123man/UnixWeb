@@ -4,8 +4,6 @@ include_once './components/LocalNavBuilder.php';
 
 abstract class PageBuilder {
 
-    const DOC_LOCATION_FORMAT = './content/docs/%s.html';
-
     private $urlContext;
 
     public function __construct($urlContext) {
@@ -33,7 +31,7 @@ abstract class PageBuilder {
 
             $dataLocation = sprintf($this->getPageTypePath(), $page);
 
-            $pageData = self::getPageData($dataLocation);
+            self::confirmPageExists($dataLocation);
 
             $this->showNavBar();
 
@@ -41,7 +39,7 @@ abstract class PageBuilder {
             <div class="pageContent pageContentDocs">
                 <h2><?php echo $this->getPageHeader($page) ?></h2>
                 <?php
-                echo $pageData;
+                include_once $dataLocation;
                 ?>
             </div>
             <?php
@@ -61,9 +59,9 @@ abstract class PageBuilder {
         <?php
     }
 
-    public static function getPageData($dataLocation) {
+    public static function confirmPageExists($dataLocation) {
         if (file_exists($dataLocation)) {
-            return file_get_contents($dataLocation);
+            return true;
         } else {
             throw new Exception("Page Content file not found");
         }
