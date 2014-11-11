@@ -52,7 +52,6 @@ var timer;
 var oldTileState;
 var firstUpdate = false;
 
-var lastQ = "";
 $(window).load(function() {
 
     $searchInput.click(function() {
@@ -68,12 +67,6 @@ $(window).load(function() {
 
         var q = $searchInput.val();
 
-        if (lastQ === q && q === "") {
-            return;
-        } else if (q === "") {
-            lastQ = q;
-            return;
-        }
 
         clearSearch(q);
 
@@ -81,11 +74,9 @@ $(window).load(function() {
 	        clearTimeout(timer);
         }
 
-        lastQ = q;
-
         timer = setTimeout(function () {
             execSearch(q);
-        }, 300);
+        }, 400);
     });
 
     $searchInput.click(function() {

@@ -16,13 +16,13 @@ class Search {
         $query = explode(" ", $que);
 
         //funciton used to gather and score results
-        $addToResults = function (&$results, $query) {
+        $addToResults = function (&$results, $query, $baseScore = 0) {
             while ($result = $query->fetch()) {
                 if (isset($results[$result['ID']])) {
                     $results[$result['ID']]['score']++;
 
                 } else {
-                    $result['score'] = 0; //default priority
+                    $result['score'] = $baseScore; // priority
                     $results[$result['ID']] = $result;
                 }
             }
@@ -38,38 +38,22 @@ class Search {
 
         $results = array();
 
+        $addToResults($results, self::searchContent($que), 2); //full query full text matches take priority
+
         foreach($query as $q) { //for each word the user searched
 
             if ($q != "" && $q != "%") {
 
                 $q = $q . "%";
-                $query = Fireball\ORM::getConnection()->prepare('SELECT ' . Searchable::PRIMARY_KEY .
-                                                                ' FROM ' . Searchable::TABLE_NAME .
-                                                                ' where ' . Searchable::TITLE .
-                                                                ' COLLATE latin1_general_ci LIKE :q'
-                );
-
-                $query->execute(array(':q' => $q));
-                $query->setFetchMode(PDO::FETCH_ASSOC);
 
 
+                $addToResults($results, self::searchTitles($q), 3); //exact title match takes highest priority
 
-                $addToResults($results, $query);
-                $query = Fireball\ORM::getConnection()->prepare('SELECT ' . Searchable::PRIMARY_KEY.
-                                                                ' FROM ' . Searchable::TABLE_NAME .
-                                                                ' where match(' . Searchable::CONTENT . ')' .
-                                                                ' against (:q)'
-                );
-
-                $query->execute(array(':q' => $q));
-                $query->setFetchMode(PDO::FETCH_ASSOC);
-
-                $addToResults($results, $query);
+                $addToResults($results, self::searchContent($q));
 
             }
 
         }
-
 
         usort($results, "cmp");
         $out = array();
@@ -79,6 +63,32 @@ class Search {
 
         return $out;
 
+    }
+
+    private static function searchTitles($q) {
+        $query = Fireball\ORM::getConnection()->prepare(
+            'SELECT ' . Searchable::PRIMARY_KEY .
+            ' FROM ' . Searchable::TABLE_NAME .
+            ' where ' . Searchable::TITLE .
+            ' COLLATE latin1_general_ci LIKE :q'
+        );
+
+        $query->execute(array(':q' => $q));
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        return $query;
+    }
+
+    private static function searchContent($q) {
+        $query = Fireball\ORM::getConnection()->prepare(
+            'SELECT ' . Searchable::PRIMARY_KEY.
+            ' FROM ' . Searchable::TABLE_NAME .
+            ' where match(' . Searchable::CONTENT . ')' .
+            ' against (:q)'
+        );
+
+        $query->execute(array(':q' => $q));
+        $query->setFetchMode(PDO::FETCH_ASSOC);
+        return $query;
     }
 
 
