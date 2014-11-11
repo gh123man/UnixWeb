@@ -12,7 +12,8 @@ function doSearch(q) {
     clearSearch(q);
 
     if ($searchInput.val() != q) {
-        $searchInput.val(q);
+    //    displayResults(lastResult);
+
     }
 
     execSearch(q, setHistory);
@@ -21,39 +22,31 @@ function doSearch(q) {
 
 function execSearch(q) {
 
-    if (q != lastValue) {
 
-        if (q === '') {
-            updatePath();
-        }
 
-        $.ajax({
-            url: '/ajax/search.php?q=' + q,
-            async: true,
-            dataType: 'json',
-            success: function(data){
-
-                if (data.length > 0) {
-                    lastResult = data.last;
-		            displayResults(data);
-	            } else {
-	                noResults();
-	            }
-
-            },
-            error: function(jqXHR, textStatus, errorThrown){
-                console.log(
-                    "The following error occured: "+
-                    textStatus, errorThrown
-                );
+    $.ajax({
+        url: '/ajax/search.php?q=' + q,
+        async: true,
+        dataType: 'json',
+        success: function(data){
+            lastResult = data;
+            if (data.length > 0) {
+	            displayResults(data);
+            } else {
+                noResults();
             }
-        });
 
-        lastValue = q;
-    }
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(
+                "The following error occured: "+
+                textStatus, errorThrown
+            );
+        }
+    });
+
 }
 
-var lastValue;
 var lastResult;
 var timer;
 var oldTileState;
@@ -63,7 +56,12 @@ var lastQ = "";
 $(window).load(function() {
 
     $searchInput.click(function() {
-        clearSearch('')
+        if ($searchInput.val() != '') {
+            clearSearch('');
+            execSearch($searchInput.val());
+        } else {
+            clearSearch('');
+        }
     });
 
     $searchInput.keyup(function () {
@@ -120,7 +118,7 @@ function displayResults(data) {
         out += '</div>';
         out += '</a>';
     }
-    $resultsBox.html(out);
+    $resultsBox.hide().html(out).slideDown();
 
 }
 
@@ -136,6 +134,6 @@ function clearSearch(q) {
 
 $(document).mouseup(function (e) {
     if (!$resultsBox.is(e.target) && $resultsBox.has(e.target).length === 0) {
-        $resultsBox.hide();
+        $resultsBox.slideUp('fast');
     }
 });
