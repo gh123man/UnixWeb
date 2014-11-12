@@ -18,22 +18,21 @@ abstract class PageBuilder {
 
     abstract function getLocalNav();
 
-    private function showNavBar() {
-        $this->getLocalNav()->display();
+    private function showNavBar($select = null) {
+        $this->getLocalNav()->display($select);
     }
 
     public function display() {
 
         if (isset($this->urlContext[1])) {
-
-            $page = $this->urlContext[1];
+            $page = urldecode($this->urlContext[1]);
             $pageData = "";
 
             $dataLocation = sprintf($this->getPageTypePath(), $page);
 
             self::confirmPageExists($dataLocation);
 
-            $this->showNavBar();
+            $this->showNavBar($page);
 
             ?>
             <div class="pageContent pageContentDocs">

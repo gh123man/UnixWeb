@@ -12,19 +12,19 @@ class LocalNavBuilder {
 
     }
 
-    public function display() {
+    public function display($select = null) {
         ?>
         <nav>
             <div class="localNavWrapper">
                 <div class="localNavContainer">
                     <?php
-
                     foreach ($this->files as $file) {
                         $name = explode('.', $file);
                         if ($name[0] != "index" && isset($name[1]) && ($name[1] == "php" || $name[1] == "html")) {
-                            echo "<a href=/$this->prefix/$name[0]>";
+                            $uri = urlencode($name[0]);
+                            echo "<a href=/$this->prefix/$uri>";
                             echo '<div class="localNavItemWrapper">';
-                            echo '<div class="localNavItem">';
+                            echo '<div class="localNavItem' . ($select != null && $select == $name[0] ? ' selectedNavItem' : '') . '">';
                             echo $name[0];
                             echo '</div>';
                             echo '</div>';
