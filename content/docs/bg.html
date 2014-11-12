@@ -14,13 +14,27 @@ See: <a href="#"> jobs</a>
    <ul class="task-list">
     <li> refers to the previous job</li></ul>
     </li>
-  <li> 1, 2, 3
+  <li> %(num)
     <ul class="task-list">
     <li>refers to the job number</li>
     <li>i.e. %1 or %2</li>
     </ul>
   </li>
 
+<p>Uses/Examples:</p>
+<ul class="task-list">
+  <li>bg %1
+    <ul class="task-list">
+      <li>resumes job 1 in the background</li>
+    </ul></li>
+  <li>bg %+
+  <ul class="task-list">
+      <li>bg %</li>
+      <li>bg %%</li>
+      <li>resumes current job background</li>
+    </ul></li>
+
+</ul>
 <!--
 <ul class="task-list">
 <li>bg job
