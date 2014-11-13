@@ -14,7 +14,7 @@ include_once 'components/home.php';
 <html lang="en">
     <head>
     <meta charset="utf-8" />
-    <title>Group Site</title>
+    <title>Unix Web</title>
     </head>
 
     <link rel="stylesheet" href="/static/css/core.css"/>
