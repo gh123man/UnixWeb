@@ -11,10 +11,16 @@ include_once 'src/Search.php';
 //echo $test->title();
 //echo $test->content();
 
+
+$query = Fireball\ORM::getConnection()->prepare(
+    'DELETE FROM ' . Searchable::TABLE_NAME
+);
+
+$query->execute();
+
 $docs = 'docs';
 $tut = 'tutorials';
 $quiz = 'quizzes';
-
 
 index($docs);
 index($tut);
@@ -34,10 +40,12 @@ function index($dir) {
             $content = strip_tags($content);
 
             if ($fname == "index") {
-                $fname = $dir;
+                Searchable::createNew($dir, $content, '/' . $dir);
+            } else {
+                Searchable::createNew($fname, $content, '/' . $dir . '/' . $fname);
             }
 
-            Searchable::createNew($fname, $content, '/' . $dir . '/' . $fname);
+
         }
     }
 
