@@ -281,3 +281,9 @@ a:visited{
 .quizLink a {
     color: #0580d2;
 }
+
+/* tempo for presentation*/
+
+pre {
+    font-size: 12pt;
+}
