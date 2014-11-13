@@ -31,6 +31,7 @@ include_once 'components/home.php';
             "Docs"      => "/docs",
             "Tutorials" => "/tutorials",
             "Quizzes"   => "/quizzes",
+            "History"   => "/histroy",
         ));
 
 
@@ -72,9 +73,12 @@ include_once 'components/home.php';
                     } catch (Exception $e) {
                         error_log($e);
                     }
+                case "histroy":
+                        include_once 'components/History.php';
+                        break;
 
                 default:
-                    //404
+                    echo "<h1> 404 </h1>";
                     //echo '<div id="errorPage"><iframe width="100%" height="1000px" frameborder="0" src="http://www.thebest404pageever.com"></iframe><div>';
             }
             ?>

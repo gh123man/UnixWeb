@@ -1,23 +1,23 @@
 <h2>Lesson 1: File and directory manipulation </h2>
 <h3>ls (List) </h3>
-<p> When you first login, your landing directory is your home directory. 
-  Your home directory is in the home system folder and has the same name as your user-name, for example, <strong>/home/chad/</strong>, 
+<p> When you first login, your landing directory is your home directory.
+  Your home directory is in the home system folder and has the same name as your user-name, for example, <strong>/home/chad/</strong>,
   and it is where your personal files reside. </p>
 <p> To find out what's in your home folder, type </p>
 <p class="code">% ls </p>
 <p>The <strong>ls</strong> command <strong>( lowercase L and lowercase S )</strong> lists the contents of your current working directory.</p>
 <p align="center"> <img width="678" height="430" alt="Results of ls command" src="../../static/images/tutorial1/tutorial1picture1.png"></p>
 <p>There may be no files visible in your home directory, in which case, nothing will show up! Or maybe some system default files will exist.</p>
-<p><strong>ls</strong> only lists visible files by default. Files 
-  beginning with a dot (.) are known as hidden files and usually contain important 
+<p><strong>ls</strong> only lists visible files by default. Files
+  beginning with a dot (.) are known as hidden files and usually contain important
   program configurations. They are hidden because they require a higher level of UNIX to work with/edit correctly! </p>
 <p> To list <emphasis>all</emphasis> files in your home directory including those who are hidden, type </p>
 <p class="code">% ls -a</p>
 <p>As you can see, <strong>ls -a</strong> lists files that are normally hidden. </p>
 <p align="center"><img width="679" height="429" alt="Results of ls command with -a flag" src="../../static/images/tutorial1/tutorial1picture2.png"> </p>
-<p>The -a is an example of an extra option or flag that the command takes into consideration when running. 
+<p>The -a is an example of an extra option or flag that the command takes into consideration when running.
   The options change the behaviour of the command. If you want to know more about a command you can use <strong>man {command}</strong> </p>
- 
+
  <h3>pwd (Print Working Directory)</h3>
  <p>There are instances where you may want to know where in your folder structure you are as there is no GUI on the terminal. <strong>pwd</strong> is a command designed to help with this.</p>
  <p>When you enter the command</p>
@@ -25,3 +25,5 @@
 <p> A line is printed showing where you are in the file system you are starting from the <strong>root</strong> or <emphasis>base folder</emphasis>.</p>
  <p align="center"><img width="676" height="424" alt="Results of pwd command" src="../../static/images/tutorial1/tutorial1picture3.png"> </p>
  <p>As you can see from the picture above, I am in the /home/chad folder... My home directory! One of the most important things of Unix is knowing where you are at all times!</p>
+
+<div class="quizLink"><a href="/quizzes/File+Basics"> Take The Quiz! </a></div>

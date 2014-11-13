@@ -73,7 +73,7 @@ border-radius: 9px 9px 0px 0px;
 .pageContentWrapper {
     width: 1200px;
     margin: auto;
-    border: solid 1px;
+    border: solid 1px rgba(0, 0, 0, 0);
 }
 
 .pageContentHomePage {
@@ -266,4 +266,15 @@ a:visited{
 
 .selectedNavItem {
     font-weight: bold;
+}
+
+
+.quizLink {
+    font-size: 28pt;
+    margin: auto;
+    text-align: center;
+}
+
+.quizLink a {
+    color: #0580d2;
 }
