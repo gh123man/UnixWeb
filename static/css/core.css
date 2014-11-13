@@ -63,15 +63,15 @@
 .localNavWrapper {
     float: left;
     margin: 10px;
-    padding: 20px;
+    padding: 20px 0px 20px 10px;
     border: solid 1px;
     width: 150px;
 }
 
 .localNavItem {
     white-space: nowrap;
+    width: 100%;
 }
-
 .pageContentWrapper {
     width: 1200px;
     margin: auto;
@@ -127,8 +127,17 @@
 .localNavContainer{
 	border-left: solid 1px;
 	padding-left: 5px;
-	margin-left: -10px;
     float: left;
+    width: 100%;
+}
+
+.localNavItemWrapper {
+    height: 22px;
+    width: 100%;
+}
+
+.localNavItemWrapper:hover {
+    background: #DDD;
 }
 
 a{
