@@ -18,6 +18,8 @@ $query = Fireball\ORM::getConnection()->prepare(
 
 $query->execute();
 
+
+
 $docs = 'docs';
 $tut = 'tutorials';
 $quiz = 'quizzes';
@@ -28,6 +30,7 @@ index($quiz);
 
 
 function index($dir) {
+    $updateCount = 0;
     $searchDir = './content/';
     $files = scandir($searchDir . $dir);
     $files = array_slice($files, 2);
@@ -44,11 +47,12 @@ function index($dir) {
             } else {
                 Searchable::createNew($fname, $content, '/' . $dir . '/' . $fname);
             }
+            $updateCount++;
 
 
         }
     }
-
+    echo "Indexed $updateCount $dir's <br>";
 
 }
 
