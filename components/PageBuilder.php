@@ -35,7 +35,7 @@ abstract class PageBuilder {
             $this->showNavBar($page);
 
             ?>
-            <div class="pageContent pageContentDocs">
+            <div class="pageContent pannel pageContentDocs">
                 <h2><?php echo $this->getPageHeader($page) ?></h2>
                 <?php
                 include_once $dataLocation;
@@ -52,7 +52,7 @@ abstract class PageBuilder {
 
     public function landing() {
         ?>
-        <div class="pageContent pageContentDocs">
+        <div class="pageContent pannel pageContentDocs">
             <?php $this->getDefaultPage(); ?>
         </div>
         <?php

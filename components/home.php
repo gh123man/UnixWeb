@@ -36,7 +36,7 @@ function displayHome() {
 
 </script>
 
-<div class="pageContent pageContentHomePage">
+<div class="pageContent pannel pageContentHomePage">
     <div id="main">
         <h1>Welcome!</h1>
         <p>UnixWeb is a place for anyone to learn and reference everything Unix.</p>

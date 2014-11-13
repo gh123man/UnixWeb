@@ -15,7 +15,7 @@ class LocalNavBuilder {
     public function display($select = null) {
         ?>
         <nav>
-            <div class="localNavWrapper">
+            <div class="localNavWrapper pannel">
                 <div class="localNavContainer">
                     <?php
                     foreach ($this->files as $file) {
