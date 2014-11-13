@@ -40,7 +40,9 @@
 
 .navItemWrapper {
     float: left;
-    padding: 10px;
+    font-size: 14pt;
+    padding: 12px;
+    margin: 2px;
 	border-radius: 9px 9px 0px 0px;
 }
 
@@ -75,7 +77,7 @@ border-radius: 9px 9px 0px 0px;
 }
 
 .pageContentHomePage {
-    width: 100%;
+    width: 1170px;
 }
 
 .pageContent {
@@ -104,6 +106,12 @@ border-radius: 9px 9px 0px 0px;
 .logo {
     float: left;
     padding: 10px;
+    width: 125px;
+    margin-top: -8px;
+}
+
+.logo img {
+    width: 100px;
 }
 
 #errorPage {
@@ -180,10 +188,9 @@ a:visited{
     border-radius: 3px;
     width: 400px;
     position: absolute;
-    top: 32px;
+    top: 42px;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.4);
     display: none;
-    margin-left: -20px;
 }
 
 .resultMessage {
@@ -225,9 +232,10 @@ a:visited{
 }
 
 #Search {
-    margin-top: -2px;
     float: right;
     width: 400px;
+    margin-top: 18px;
+    margin-right: 20px;
 }
 
 #searchField {
