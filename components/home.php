@@ -36,6 +36,11 @@ function displayHome() {
 
 </script>
 
+<?php
+echo '<div class="sideBar">';
+drawLogin();
+echo '</div>';
+?>
 <div class="pageContent pannel pageContentHomePage">
     <div id="main">
         <h1>Welcome!</h1>

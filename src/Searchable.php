@@ -19,10 +19,10 @@ class Searchable extends Fireball\ORM {
     const PATH        = 'path';
 
     private static $fields = array (
-            self::PRIMARY_KEY,
-            self::TITLE,
-            self::CONTENT,
-            self::PATH
+        self::PRIMARY_KEY,
+        self::TITLE,
+        self::CONTENT,
+        self::PATH
     );
 
     //Override

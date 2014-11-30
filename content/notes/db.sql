@@ -9,3 +9,19 @@ create table Searchable (
 
 CREATE INDEX titleIndex
 ON Searchable (title);
+
+
+create table Account (
+    ID char(32) NOT NULL,
+    email varchar(256) NOT NULL,
+    fname varchar(80) NOT NULL,
+    lname varchar(80) NOT NULL,
+    hash varchar(104) NOT NULL,
+    salt varchar(32) NOT NULL,
+    time int unsigned NOT NULL,
+
+    PRIMARY KEY (ID)
+);
+
+CREATE INDEX emailIndex
+ON Account (email);

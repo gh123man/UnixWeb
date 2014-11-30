@@ -63,11 +63,16 @@
 }
 
 .localNavWrapper {
-    float: left;
-    margin: 10px;
+    margin: 2px;
     padding: 20px 0px 20px 10px;
     border: solid 1px;
     width: 150px;
+    display: inline-block;
+}
+
+.sideBar{
+    margin: 8px;
+    float: left;
 }
 
 .localNavItem {
@@ -81,7 +86,7 @@
 }
 
 .pageContentHomePage {
-    width: 1170px;
+    width: 1000px;
 }
 
 .pageContent {
@@ -296,4 +301,8 @@ a:visited{
 
 h1{
 	color: rgb(169,3,41);
+}
+
+.clickable {
+    cursor: pointer;
 }

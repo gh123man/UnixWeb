@@ -14,8 +14,8 @@ if (isset($_GET['q'])) {
         $item = new Searchable($id);
         $content = $item->content();
         $out[] = array(
-            'title' => $item->title(),
-            'path' => $item->path(),
+            'title'   => $item->title(),
+            'path'    => $item->path(),
             'content' => substr($content, 0, 100),
         );
     }

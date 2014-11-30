@@ -32,7 +32,8 @@ abstract class PageBuilder {
 
             self::confirmPageExists($dataLocation);
 
-            $this->showNavBar($page);
+
+            $this->showSideBar($page);
 
             ?>
             <div class="pageContent pannel pageContentDocs">
@@ -44,10 +45,18 @@ abstract class PageBuilder {
             <?php
 
         } else {
-            $this->showNavBar();
+            $this->showSideBar();
             $this->landing();
         }
 
+
+    }
+
+    public function showSideBar($page = null) {
+        echo '<div class="sideBar">';
+        drawLogin();
+        $this->showNavBar($page);
+        echo '</div>';
     }
 
     public function landing() {

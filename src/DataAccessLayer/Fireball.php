@@ -230,6 +230,7 @@ namespace Fireball {
 
         public function addKey($name) {
             $this->def['KEY'] = $name;
+            $this->def['COLS'][] = $name;
         }
 
         public function addCol($name) {
