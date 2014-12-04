@@ -306,3 +306,7 @@ h1{
 .clickable {
     cursor: pointer;
 }
+
+#loginBox {
+    display: none;
+}

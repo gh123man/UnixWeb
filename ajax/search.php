@@ -12,7 +12,6 @@ if (isset($_GET['q'])) {
 
     foreach ($results as $item) {
 
-        //error_log(print_r($results, true));
         try {
             $content = $item->content();
             $out[] = array(
