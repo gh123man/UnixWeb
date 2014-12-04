@@ -19,18 +19,10 @@ namespace Fireball {
 
         private static $colCacheCache;
 
-        public function __construct($ID) {
+        public function __construct($ID = null) {
 
             $this->tableDef = new TableDef();
             $this->setUp($this->tableDef);
-
-            //self::validateTableDef($this->tableDef);
-
-            /*
-            if (!isset($ID) || !self::rowExistsFrom($this->tableName, $this->primaryKey, $ID)) {
-                throw new UnexpectedValueException("ID: " . $ID . " does not exist in " . $this->tableName);
-            }
-            */
 
             $this->ID = $ID;
 
@@ -95,6 +87,10 @@ namespace Fireball {
             return self::$connection;
         }
 
+        protected function setID($ID) {
+            $this->ID = $ID;
+        }
+
         public function getID() {
             return $this->ID;
         }
@@ -102,12 +98,30 @@ namespace Fireball {
         /**
          * selects one item from the database
          */
-        public static function dbSelect($what, $table, $where, $is) {
+        public static function dbSelect($what, $table, $where, $is, $returnQuery = false) {
             $query = self::getConnection()->prepare('SELECT ' . $what . ' FROM ' . $table . ' WHERE ' . $where . ' = :IS');
             $query->execute(array(':IS' => $is));
-            $query->setFetchMode(PDO::FETCH_ASSOC);
-            $results = $query->fetch();
-            return $results[$what];
+
+            if ($returnQuery) {
+                return $query;
+            } else {
+                $query->setFetchMode(PDO::FETCH_ASSOC);
+                $results = $query->fetch();
+                return $results[$what];
+            }
+        }
+
+        public static function rawQuery($query, $map, $returnQuery = false) {
+            $query = self::getConnection()->prepare($query);
+            $query->execute($map);
+
+            if ($returnQuery) {
+                return $query;
+            } else {
+                $query->setFetchMode(PDO::FETCH_ASSOC);
+                $results = $query->fetchAll();
+                return $results;
+            }
         }
 
         /**
@@ -212,6 +226,26 @@ namespace Fireball {
             }
         }
 
+        protected function map($result) {
+            $this->setID($result[$this->tableDef->getKey()]);
+            foreach ($result as $key => $value) {
+                $this->$key($value);
+                $this->colChangedCache[$key] = false;
+            }
+
+        }
+
+        public static function mapQuery($getNewInstance, $query) {
+            $query->setFetchMode(PDO::FETCH_ASSOC);
+            $out = array();
+            foreach ($query->fetchAll() as $result) {
+                $class = $getNewInstance();
+                $class->map($result);
+                $out[] = $class;
+            }
+            return $out;
+        }
+
     }
 
     //This needs work
@@ -230,11 +264,14 @@ namespace Fireball {
 
         public function addKey($name) {
             $this->def['KEY'] = $name;
-            $this->def['COLS'][] = $name;
         }
 
         public function addCol($name) {
             $this->def['COLS'][] = $name;
+        }
+
+        public function setCols($cols) {
+            $this->def['COLS'] = $cols;
         }
 
         public function getDef() {

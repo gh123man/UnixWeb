@@ -1,14 +1,6 @@
 <?php
 
 include_once 'DataAccessLayer/Fireball.php';
-/*
-create table Searchable (
-    ID char(32) NOT NULL,
-    title varchar(80) NOT NULL,
-    content TEXT NOT NULL,
-    PRIMARY KEY (ID)
-) ENGINE=MyISAM;
-*/
 
 class Searchable extends Fireball\ORM {
 
@@ -29,9 +21,7 @@ class Searchable extends Fireball\ORM {
     protected function setUp(Fireball\TableDef $def) {
         $def->setName(self::TABLE_NAME);
         $def->addKey(self::PRIMARY_KEY);
-        $def->addCol(self::TITLE);
-        $def->addCol(self::CONTENT);
-        $def->addCol(self::PATH);
+        $def->setCols(self::$fields);
     }
 
     public static function createNew($title, $content, $type) {

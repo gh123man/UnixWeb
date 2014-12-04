@@ -16,13 +16,20 @@ class Search {
         $query = explode(" ", $que);
 
         //funciton used to gather and score results
-        $addToResults = function (&$results, $query, $baseScore = 0) {
-            while ($result = $query->fetch()) {
-                if (isset($results[$result['ID']])) {
-                    $results[$result['ID']]['score']++;
+        $addToResults = function (&$results, $newItems, $baseScore = 0) {
+            foreach ($newItems as $item) {
+
+                if (isset($results[$item->ID()])) {
+                    $results[$item->ID()]['score']++;
 
                 } else {
-                    $result['score'] = $baseScore; // priority
+
+                    $result = array (
+                        'ID' => $item->ID(),
+                        'obj' => $item,
+                        'score' => $baseScore,
+                    );
+
                     $results[$result['ID']] = $result;
                 }
             }
@@ -58,39 +65,44 @@ class Search {
         usort($results, "cmp");
         $out = array();
         foreach ($results as $result) {
-            $out[] = $result['ID'];
+            $out[] = $result['obj'];
         }
 
         return $out;
 
     }
 
+
+
     private static function searchTitles($q) {
-        $query = Fireball\ORM::getConnection()->prepare(
+
+        $results = Fireball\ORM::mapQuery(function() {
+            return new Searchable();
+        }, Fireball\ORM::rawQuery(
             'SELECT ' . Searchable::PRIMARY_KEY .
             ' FROM ' . Searchable::TABLE_NAME .
             ' where ' . Searchable::TITLE .
-            ' COLLATE latin1_general_ci LIKE :q'
+            ' COLLATE latin1_general_ci LIKE :q',
+            array(':q' => $q), true)
         );
-
-        $query->execute(array(':q' => $q));
-        $query->setFetchMode(PDO::FETCH_ASSOC);
-        return $query;
+        return $results;
     }
 
     private static function searchContent($q) {
-        $query = Fireball\ORM::getConnection()->prepare(
-            'SELECT ' . Searchable::PRIMARY_KEY.
+
+
+        $results = Fireball\ORM::mapQuery(function() {
+            return new Searchable();
+        }, Fireball\ORM::rawQuery(
+            'SELECT *' .
             ' FROM ' . Searchable::TABLE_NAME .
             ' where match(' . Searchable::CONTENT . ')' .
-            ' against (:q)'
+            ' against (:q)',
+            array(':q' => $q), true)
         );
+        return $results;
 
-        $query->execute(array(':q' => $q));
-        $query->setFetchMode(PDO::FETCH_ASSOC);
-        return $query;
     }
-
 
 }
 

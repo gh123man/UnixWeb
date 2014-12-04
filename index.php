@@ -9,7 +9,6 @@ include_once 'components/Tutorial.php';
 include_once 'components/home.php';
 include_once 'components/accountUtils.php';
 
-
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +27,7 @@ include_once 'components/accountUtils.php';
 
     <body>
         <?php
+
 
         $urlParams = parseUrl();
 
