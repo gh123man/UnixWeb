@@ -1,4 +1,6 @@
 <?php
+	include_once './src/QuizTracker.php';
+
 	// Load in questions, answer choices, and the actual answers
 
 	$questions = array("What command is used to print your working directory?",
@@ -47,6 +49,9 @@
 	<?php
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
+			if (isset($_SESSION['userid'])) {
+				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Basics', $correctCount, sizeof($questions));
+			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}
 	?>

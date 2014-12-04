@@ -310,3 +310,12 @@ h1{
 #loginBox {
     display: none;
 }
+
+.lastScore {
+    font-size: 12pt;
+    margin: 10px;
+}
+
+td {
+    padding: 10px;
+}

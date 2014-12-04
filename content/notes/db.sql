@@ -25,3 +25,19 @@ create table Account (
 
 CREATE INDEX emailIndex
 ON Account (email);
+
+
+create table QuizTracker (
+    ID char(32) NOT NULL,
+    user char(32) NOT NULL,
+    name varchar(80) NOT NULL,
+    score int unsigned NOT NULL,
+    points int unsigned NOT NULL,
+    path varchar(180) NOT NULL,
+    time int unsigned NOT NULL,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (user) REFERENCES Account(ID)
+);
+
+CREATE INDEX userIndex
+ON QuizTracker (user);
