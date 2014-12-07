@@ -23,7 +23,7 @@ $.extend($.ui.dialog.prototype.options.position, { collision: 'none' });
         bgiframe    : true,
         draggable   : false,
         resizable   : false,
-        width       : 900,
+        width       : 700,
         height      : $(window).height() - 20,
         stack       : true,
         zIndex      : 99999,

@@ -319,3 +319,7 @@ h1{
 td {
     padding: 10px;
 }
+
+#loginBox {
+    font-size: 80%;
+}
