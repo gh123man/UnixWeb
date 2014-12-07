@@ -29,9 +29,50 @@ And lastly, you must determine the permissions themselves.
     <li> x : the ability to run the contents of the file as a program </li>
   </ul>
 
-<br/><br/>
-The second way is by three numbers
+Examples of class/operator/permissions combinations:
+<ul>
+  <li>u=rwx
+    <ul>
+      <li>user/owner can read, write, and execute the file</li>
+    </ul>
+  </li>
+  <li>o+r
+    <ul>
+      <li>other/public can other read the file as well</li>
+    </ul>
+  </li>
+  <li>u-w
+    <ul>
+      <li>user/owner can no longer change the contents of the file (write)</li>
+    </ul>
+  </li>
+  <li>u-w
+    <ul>
+      <li>user/owner can no longer change the contents of the file (write)</li>
+    </ul>
+  </li>
+</ul>
 
+
+<br/><br/>
+The second way is by three numbers. Each number represents a permission.
+ <ul class="task-list">
+    <li> 4: read</li>
+    <li> 2: write</li>
+    <li> 1 : execute </li>
+    <li> 0 : no permission</li>
+  </ul>
+To set permissions for each user class, we use a three digit number to represent them all. for example 654. 6 refers
+to the owner/user class, 5 to the group class, and 4 to the other/public class. How did we get 6 & 5? Simple really, 
+to represent multiple permissions to each other.
+<br/>
+So for the user class we have 6 which means we combined the read(4) and the execute(2) permissions together (4+2 = 6).
+<br/>
+For the group, it was the read(4) and execute(1) permissions to get 5.
+<br/>
+The other/public class, it's easy, we simply have 4 for read.
+<br/>
+Common combinations are: 644 for files and 755 for directories.
 </p>
 
 <p>Options:</p>
