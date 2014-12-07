@@ -386,7 +386,25 @@ td {
     color: #777;
 }
 
+<<<<<<< HEAD
 .pageContent img {
 	max-width: 100%;
 	height: auto;
 }
+=======
+input{
+	width: 200px;
+}
+
+input#renewpassword{
+	width: 146px;
+}
+
+input#submit{
+	width: 286px;
+}
+
+#loginWrapper{
+	width: 45%;
+}	
+>>>>>>> origin/master
