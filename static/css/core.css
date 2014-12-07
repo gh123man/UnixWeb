@@ -12,7 +12,7 @@ html, body{
 	/*background: #E9E9E9;*/
 	background: #dddddd;
 	background-image: url('../images/background.png');
-	min-width: 1250px;
+	min-width: 900px;
 }
 
 .navWrapper {
