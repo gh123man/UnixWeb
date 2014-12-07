@@ -51,7 +51,7 @@
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
 			if (isset($_SESSION['userid'])) {
-				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Management', $correctCount, sizeof($questions));
+				QuizTracker::track($_SESSION['userid'], 'File Management', '/quizzes/File+Management', $correctCount, sizeof($questions));
 			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}
