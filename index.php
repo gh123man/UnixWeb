@@ -17,7 +17,7 @@ $urlParams = parseUrl();
 <html lang="en">
     <head>
     <meta charset="utf-8" />
-    <title>Unix Web - <?php echo $urlParams[0]?></title>
+    <title>Unix Web - <?php echo ucfirst($urlParams[0])?></title>
     </head>
 
     <link rel="stylesheet" href="/static/css/core.css"/>
