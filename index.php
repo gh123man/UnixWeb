@@ -89,6 +89,9 @@ include_once 'src/CommandTracker.php';
                     //echo '<div id="errorPage"><iframe width="100%" height="1000px" frameborder="0" src="http://www.thebest404pageever.com"></iframe><div>';
             }
             ?>
+            <div class="footer">
+                &copy;2014 UnixWeb Team
+            </div>
         </div>
     </body>
 </html>

@@ -355,3 +355,9 @@ td {
 .historyTitle:hover + .historyContent {
    display: block;
 }
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+}
