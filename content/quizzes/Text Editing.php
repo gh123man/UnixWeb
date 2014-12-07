@@ -3,12 +3,12 @@
 
 	// Load in questions, answer choices, and the actual answers
 
-	$questions = array("What command is used to print your working directory?",
-			"What command is used to list the files in the current directory?",
-			"What command can be used to make a new, empty file?",
-			"What command can be used to change your directory?");
-	$answerlist = array("cd", "pwd", "ls", "touch");
-	$answers = array("pwd", "ls", "touch", "cd");
+	$questions = array("What command is used in vi to write a file?",
+			"What command is used in vi to search backwards?",
+			"What command is used in vi to quit?",
+			"What command is used in vi to search forwards?");
+	$answerlist = array(":w", ":q", "/", "?");
+	$answers = array(":w", "?", ":q", "/");
 
 	// When submitted check the answers
 
@@ -50,7 +50,7 @@
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
 			if (isset($_SESSION['userid'])) {
-				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Basics', $correctCount, sizeof($questions));
+				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/Text+Editing', $correctCount, sizeof($questions));
 			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}

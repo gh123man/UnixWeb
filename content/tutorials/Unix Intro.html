@@ -1,0 +1,34 @@
+<h2>Lesson 0: Unix Intro </h2>
+<h3>What is UNIX?</h3>
+<p>UNIX is an operating system which was first developed in the 1960s, and has been under constant development ever since. By operating system, we mean the suite of programs which make the computer work. It is a stable, multi-user, multi-tasking system for servers, desktops and laptops.</p>
+
+<p>UNIX systems also have a graphical user interface (GUI) similar to Microsoft Windows which provides an easy to use environment. However, knowledge of UNIX is required for operations which aren't covered by a graphical program, or for when there is no windows interface available, for example, in a telnet session.</p>
+
+<h3>Types of UNIX</h3>
+
+<p>There are many different versions of UNIX, although they share common similarities. The most popular varieties of UNIX are Sun Solaris, GNU/Linux, and MacOS X.</p>
+
+<h3>The UNIX operating system</h3>
+
+<p>The UNIX operating system is made up of three parts; the kernel, the shell and the programs.</p>
+
+<p><strong>The kernel</strong></p>
+
+<p>The kernel of UNIX is the hub of the operating system: it allocates time and memory to programs and handles the filestore and communications in response to system calls.</p>
+
+<p>As an illustration of the way that the shell and the kernel work together, suppose a user types rm myfile (which has the effect of removing the file myfile). The shell searches the filestore for the file containing the program rm, and then requests the kernel, through system calls, to execute the program rm on myfile. When the process rm myfile has finished running, the shell then returns the UNIX prompt % to the user, indicating that it is waiting for further commands.</p>
+
+<p><strong>The shell</strong></p>
+
+<p>The shell acts as an interface between the user and the kernel. When a user logs in, the login program checks the username and password, and then starts another program called the shell. The shell is a command line interpreter (CLI). It interprets the commands the user types in and arranges for them to be carried out. The commands are themselves programs: when they terminate, the shell gives the user another prompt (% on our systems).</p>
+
+<p>The tcsh shell has certain features to help the user inputting commands.</p>
+
+<ul>
+<li><strong>Filename Completion</strong> - By typing part of the name of a command, filename or directory and pressing the [Tab] key, the tcsh shell will complete the rest of the name automatically. If the shell finds more than one name beginning with those letters you have typed, it will beep, prompting you to type a few more letters before pressing the tab key again. Or you may press tab twice to see what files match what you have typed in so far.</li>
+
+<li><strong>History</strong> - The shell keeps a list of the commands you have typed in. If you need to repeat a command, use the cursor keys to scroll up and down the list or type history for a list of previous commands.</li>
+</ul>
+
+<div class="quizLink"><a href="/quizzes/Unix+Intro"> Take The Quiz! </a></div>
+<div class="quizLink"><a href="/quizzes/File+Basics"> Next Lesson! </a></div>

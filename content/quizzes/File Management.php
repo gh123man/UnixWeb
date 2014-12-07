@@ -3,18 +3,19 @@
 
 	// Load in questions, answer choices, and the actual answers
 
-	$questions = array("What command is used to print your working directory?",
-			"What command is used to list the files in the current directory?",
-			"What command can be used to make a new, empty file?",
-			"What command can be used to change your directory?");
-	$answerlist = array("cd", "pwd", "ls", "touch");
-	$answers = array("pwd", "ls", "touch", "cd");
+	$questions = array("What command is used to copy a file?",
+			"What command is used to remove a file?",
+			"What command can be used to move a file?",
+			"What command can be used to print a file's contents?",
+			"What command can be used to rename a file?");
+	$answerlist = array("cp", "mv", "rm", "cat");
+	$answers = array("cp", "rm", "mv", "cat", "mv");
 
 	// When submitted check the answers
 
 	if(!empty($_POST)){
-		$questionresults = array("","","","");
-		$submittedanswers = array("","","","");
+		$questionresults = array("","","","","");
+		$submittedanswers = array("","","","","");
 
 		$i = 0;
 
@@ -50,7 +51,7 @@
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
 			if (isset($_SESSION['userid'])) {
-				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Basics', $correctCount, sizeof($questions));
+				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Management', $correctCount, sizeof($questions));
 			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}

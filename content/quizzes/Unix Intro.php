@@ -3,12 +3,12 @@
 
 	// Load in questions, answer choices, and the actual answers
 
-	$questions = array("What command is used to print your working directory?",
-			"What command is used to list the files in the current directory?",
-			"What command can be used to make a new, empty file?",
-			"What command can be used to change your directory?");
-	$answerlist = array("cd", "pwd", "ls", "touch");
-	$answers = array("pwd", "ls", "touch", "cd");
+	$questions = array("What part of the operating system allocates memory to programs and handles system calls?",
+			"What element of an operating system represents a collection of static data?",
+			"What element of an operating system represents a executing program?",
+			"What part of the operating system is the interface between the user and the core system?");
+	$answerlist = array("shell", "file", "kernel", "process");
+	$answers = array("kernel", "file", "process", "shell");
 
 	// When submitted check the answers
 
@@ -50,7 +50,7 @@
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
 			if (isset($_SESSION['userid'])) {
-				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/File+Basics', $correctCount, sizeof($questions));
+				QuizTracker::track($_SESSION['userid'], 'File Basics', '/quizzes/Unix+Intro', $correctCount, sizeof($questions));
 			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}
