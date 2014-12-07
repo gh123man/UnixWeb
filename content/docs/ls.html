@@ -40,5 +40,231 @@ Definition: for displaying a list of information about files </p>
     <li> --color[=WHEN]
       <ul class="task-list">
       <li>gives the output color</li>
-      <li></li></ul>
+      <li>WHEN can be always, never, or auto</li></ul>
     </li>
+    <li> -d, --directory
+      <ul class="task-list">
+      <li>list directory entries instead of the directory files</li>
+        <li>does not dreference symlinks</li>
+      </ul>
+    </li>
+    <li> -D, --directd
+      <ul class="task-list">
+      <li>generate output for EMACS</li></ul>
+    </li>
+    <li> -f
+      <ul class="task-list">
+      <li>says do not sort</li></ul>
+    </li>
+    <li> -F, --classify
+      <ul class="task-list">
+      <li>append an indicator to entries</li>
+        <li>indicators: */=>@|</li>
+      </ul>
+    </li>
+    <li> --file-type
+      <ul class="task-list">
+      <li>similar to --classify, but cannot append *</li></ul>
+    </li>
+    <li> --format=WORd
+      <ul class="task-list">
+        <li> formats according to the WORD
+          <ul class="task-list">
+            <li> -x : across</li>
+            <li> -m : commas </li>
+            <li> -x : horizontal</li>
+            <li> -l : long</li>
+            <li> -1 : single-column </li>
+            <li> -C : vertical</li>
+          </ul>
+        </li>
+      </ul></li>
+      <li> -full-time
+        <ul class="task-list">
+          <li>same as --time-style=full iso</li>
+        </ul>
+      </li>
+      <li> -g
+        <ul class="task-list">
+          <lilike -l but does not list owner</li>
+        </ul>
+      </li>
+      <li> -group-directories-first
+        <ul class="task-list">
+          <li>lists the group directories before files</li>
+          <li>--sort=none will disable this command</li>
+        </ul>
+      </li>
+      <li> -G, --no-group
+        <ul class="task-list">
+          <li>in long listings, the long group names aren't printed</li>
+        </ul>
+      </li>
+      <li> -h, --human-readable, --si
+        <ul class="task-list">
+          <li>use with -l</li>
+          <li>prints sizes in human readable formats</li>
+          <li>--si prints in powers of 1000 not 1024</li>
+        </ul>
+      </li>
+      <li> -hide=PATTERN
+        <ul class="task-list">
+          <li>hides all entries matching the shell PATTERN specified</li>
+        </ul>
+      </li>
+      <li> --indicator-style=WORD
+        <ul class="task-list">
+          <li>append indicator to each entry </li>
+        </ul>
+      </li>
+      <li> -i, --inode
+        <ul class="task-list">
+          <li>prints index noumber of each file</li>
+        </ul>
+      </li>
+      <li> -I, --ignore=PATTERN
+        <ul class="task-list">
+          <li>ignored the entries that match the specified PATTERN</li>
+        </ul>
+      </li>
+      <li> -k, --kibibytes
+        <ul class="task-list">
+          <li>uses 1024 blocks</li>
+        </ul>
+      </li>
+      <li> -l
+        <ul class="task-list">
+          <li>uses a long listing format</li>
+        </ul>
+      </li>
+      <li> -L, -derefence
+        <ul class="task-list">
+          <li>shows information for the file the link references rather than the symlink</li>
+        </ul>
+      </li>
+      <li> -m
+        <ul class="task-list">
+          <li>full width with a comma separated list of entries</li>
+        </ul>
+      </li>
+      <li> -n, --numeric-uid-grid
+        <ul class="task-list">
+        <li>lists numeric user and group ids</li>
+          <li>like -l</li>
+        </ul>
+      </li>
+      <li> -N, --literal
+        <ul class="task-list">
+          <li>print raw entry names</li>
+        </ul>
+      </li>
+      <li> -o
+        <ul class="task-list">
+        <li>lists everything but group information</li>
+          <li>like -l</li>
+        </ul>
+      </li>
+      <li> -p, --indicator-style=slash
+        <ul class="task-list">
+          <li>append / indicator to directories </li>
+        </ul>
+      </li>
+      <li> -q, --hide-control-chars
+        <ul class="task-list">
+          <li>print ? instead of non graphic chars</li>
+        </ul>
+      </li>
+      <li> --show-control-chars
+        <ul class="task-list">
+          <li>shows non graphic chars as-is</li>
+        </ul>
+      </li>
+      <li> -Q, --quote-name
+        <ul class="task-list">
+          <li>entries names are enclosed in quotes</li>
+        </ul>
+      </li>
+      <li> -r, --reverse
+        <ul class="task-list">
+          <li>reverse order while sorting</li>
+        </ul>
+      </li>
+      <li> -R, --recursive
+        <ul class="task-list">
+          <li>lists subdirectories recursively</li>
+        </ul>
+      </li>
+      <li> -s, --size
+        <ul class="task-list">
+          <li>print allocated size of each file</li>
+        </ul>
+      </li>
+      <li> -S
+        <ul class="task-list">
+          <li>sorts files by size</li>
+        </ul>
+      </li>
+      <li> --sort=WORD
+        <ul class="task-list">
+          <li>sorts by the WORD instead of name</li>
+          <li>WORD: none/-U, extension/-X, size/-S, time/-t, version/-v</li>
+        </ul>
+      </li>
+      <li> -T, --tablesize=COLS
+        <ul class="task-list">
+          <li>assume tab stops at each COLS instead of 8</li>
+        </ul>
+      </li>
+      <li> -U
+        <ul class="task-list">
+          <li>doesn't sort, list in order</li>
+        </ul>
+      </li>
+      <li> -w, --width=COLS
+        <ul class="task-list">
+          <li>assumes screen width of COLS</li>
+        </ul>
+      </li>
+      <li> -x
+        <ul class="task-list">
+          <li>list entries by lines instead of columns</li>
+        </ul>
+      </li>
+      <li> -X
+        <ul class="task-list">
+          <li>sort by extension, alphabetically</li>
+        </ul>
+      </li>
+      <li> -Z, --context
+        <ul class="task-list">
+          <li>print any SELinux security context for each file</li>
+        </ul>
+      </li>
+      <li> -1
+        <ul class="task-list">
+          <li>list one file per line</li>
+        </ul>
+      </li>
+</ul>
+
+<p>Examples:</p>
+<ul class="task-list">
+    <li> ls -l
+      <ul class="task-list">
+      <li>long listing of files</li></ul>
+    </li>
+    <li> ls -laxo
+      <ul class="task-list">
+      <li>long listing of files wioth permissions including hidden files</li>
+        <li>displays them in column format and surpresses group information</li>
+      </ul>
+    </li>
+    <li> ls /
+      <ul class="task-list">
+      <li>listing of files in root directory</li></ul>
+    </li>
+    <li> ls -ltr
+      <ul class="task-list">
+      <li>long listing of files by time last modifed in reverse order</li></ul>
+    </li>
+</ul>
