@@ -385,3 +385,8 @@ td {
     float: right;
     color: #777;
 }
+
+.pageContent img {
+	max-width: 100%;
+	height: auto;
+}

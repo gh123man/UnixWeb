@@ -70,7 +70,7 @@
 
 			// Populate the choices for this, if we are on the submitted quiz - choices are greyed out, the correct one highlighted in green and the user's choice preserved.
 			foreach($answerlist as $j=>$answer){
-				$questionbuilder .= '<input type="radio" name="question' . $i . '" id="q' . $i . "a" . $j . '" value="' . $answer . '"' . ($submitted ? "disabled" : "") . ($submitted && $submittedanswers[$i] == $answer ? ' checked' : '') . '>' . '<label' . 'for="q' . $i . 'a' . $j . '"' . ($submitted && $answers[$i] == $answer ? ' style="color:green;font-weight:bold;background-color:#EFE;">' : '>' ) . $answer . '</label><br />';
+				$questionbuilder .= '<input type="radio" name="question' . $i . '" id="q' . $i . "a" . $j . '" value="' . $answer . '"' . ($submitted ? "disabled" : "") . ($submitted && $submittedanswers[$i] == $answer ? ' checked' : '') . '>' . '<label ' . 'for="q' . $i . 'a' . $j . '"' . ($submitted && $answers[$i] == $answer ? ' style="color:green;font-weight:bold;background-color:#EFE;">' : '>' ) . $answer . '</label><br />';
 			}
 
 			$questionbuilder .= '</li>';
@@ -81,5 +81,5 @@
     </ol>
 
 <input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled'?>/>
-<?php if($submitted) echo '<button onclick="window.location.href=' . curPageURL() . '">Reset Quiz</button>'?>
+<?php if($submitted){ echo '<button onclick="window.location.href=' . curPageURL() . ';}">Reset Quiz</button>'?>
 </form>
