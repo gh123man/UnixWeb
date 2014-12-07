@@ -387,6 +387,7 @@ td {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #loginTable{
 	margin: 0;
 	padding: 0;
@@ -399,17 +400,22 @@ td {
 	height: auto;
 }
 
+=======
+>>>>>>> parent of 85c12a5... login thing update to not look like slight ass
 input{
 	width: 200px;
 }
 
 input#renewpassword{
 	width: 146px;
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 85c12a5... login thing update to not look like slight ass
 }
 
 input#submit{
-	width: 100%;
+	width: 286px;
 }
 
 #loginWrapper{
