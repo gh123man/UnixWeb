@@ -1,35 +1,80 @@
-<p>Category: Process Management <br/>
-Definition: a job control command that makes sure suspended jobs are not brought to the foreground when resumed.
-The job indicated with the bg command is the job you want to run in the background.</p>
-See: <a href="#"> jobs</a>
+<p>Category: System Info<br/>
+Definition: shows the amount of disk sapce abailable and the amount of disk space being used. </p>
 
 <p>Options:</p>
 
   <ul class="task-list">
-  <li>%, %+, %%
+  <li> -a, --all
     <ul class="task-list">
-    <li>refers to the current job</li></ul>
+    <li>includes dummy file systems</li></ul>
   </li>
- <li> %- or -
+ <li> -B, --block-size=SIZE
    <ul class="task-list">
-    <li> refers to the previous job</li></ul>
+    <li> scales the file by size before printing</li></ul>
     </li>
-  <li> %(num)
+  <li> --total
     <ul class="task-list">
-    <li>refers to the job number</li>
-    <li>i.e. %1 or %2</li>
+    <li>displays the total size; a grand total</li>
     </ul>
   </li>
+  <li> -h, --human-readable, -H, --si
+    <ul class="task-list">
+    <li>print size in a 'human readable' format</li>
+    <li>i.e. 1K 234M</li>
+    <li>-H & --si use powers of 1000 instead 1024</li>
+    </ul>
+  </li>
+  <li>-i, --inodes
+    <ul class="task-list">
+    <li>list inode information</li></ul>
+  </li>
+  <li> -k
+    <ul class="task-list">
+    <li>same as --block-size=1K</li></ul>
+  </li>
+  <li> -l, --local
+    <ul class="task-list">
+    <li>only displays local file systems</li></ul>
+  </li>
+  <li> --no-sync
+    <ul class="task-list">
+    <li>prevents a sync from happening before getting information</li>
+      <li>this is the default</li>
+    </ul>
+  </li>
+  <li> -P, --portability
+    <ul class="task-list">
+    <li>makes it so the format is in POSIX</li></ul>
+  </li>
+  <li> --sync
+    <ul class="task-list">
+    <li>implements a sync before getting information</li></ul>
+  </li>
+  <li> -t, --type=TYPE
+    <ul class="task-list">
+    <li>limit the listing to a certain TYPE of file</li></ul>
+  </li>
+  <li> -T, --print-type
+    <ul class="task-list">
+    <li>prints the file system type with other information</li></ul>
+  </li>
+  <li> -x, --exclude-type=TYPE
+    <ul class="task-list">
+    <li>excludes the TYPE of file system specified</li></ul>
+  </li>
+</ul>
 
 <p>Uses/Examples:</p>
 <ul class="task-list">
-  <li>bg %1
+  <li>df
     <ul class="task-list">
-      <li>resumes job 1 in the background</li>
+      <li>will display all file systems and their disk usuage</li>
     </ul></li>
-  <li>bg %+
+    <li>df Sites
+    <ul class="task-list">
+      <li></li>displays the amount of free space in the Sites directory</li>
+    </ul></li>
+  <li>df Sites -h
   <ul class="task-list">
-      <li>bg %</li>
-      <li>bg %%</li>
-      <li>resumes current job background</li>
+      <li></li>displays the same as above, but in a readable format</li>
     </ul></li>
