@@ -1,10 +1,35 @@
-<p>Category: System Info <br/>
-Definition: for displaying a calendar on the commanxd line. The calendar is formatted for you after called/
+<p>Category: File Management <br/>
+Definition: for displaying a list of information about files </p>
 
 <p>Options:</p>
 
   <ul class="task-list">
-  <li>-l
-    <ul class="task-list">
-    <li>displays a single month (default)</li></ul>
-  </li>
+    <li> -a, --all
+      <ul class="task-list">
+      <li>doesn't ignore entries with "." as its start (default)</li></ul>
+    </li>
+    <li> -A, --almost-all
+      <ul class="task-list">
+      <li>do not list "." and ".." </li></ul>
+    </li>
+    <li> -author
+      <ul class="task-list">
+      <li>requires -1, will print author of each file</li></ul>
+    </li>
+    <li> -b, --escape
+      <ul class="task-list">
+      <li>print C-style escapes</li></ul>
+    </li>
+    <li> -block-size=SIZE
+      <ul class="task-list">
+      <li>scale sizes by SIZE specificed</li></ul>
+    </li>
+    <li> -B, --ignore-backups
+      <ul class="task-list">
+      <li>ignores entires with ~</li></ul>
+    </li>
+    <li> -c
+      <ul class="task-list">
+      <li>use with -lt: will sort and show by ctime</li>
+      <li>use with -l: show ctime and sort by name</li></ul>
+    </li>
