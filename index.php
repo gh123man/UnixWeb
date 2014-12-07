@@ -10,13 +10,14 @@ include_once 'components/home.php';
 include_once 'components/accountUtils.php';
 include_once 'src/PageTracker.php';
 
+$urlParams = parseUrl();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="utf-8" />
-    <title>Unix Web</title>
+    <title>Unix Web - <?php echo ucfirst($urlParams[0])?></title>
     </head>
 
     <link rel="stylesheet" href="/static/css/core.css"/>
@@ -29,8 +30,6 @@ include_once 'src/PageTracker.php';
     <body>
         <?php
 
-
-        $urlParams = parseUrl();
 
         //builds and displays the local nav
         $primaryNav = new PrimaryNavBuilder(array(

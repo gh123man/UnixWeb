@@ -3,19 +3,18 @@
 
 	// Load in questions, answer choices, and the actual answers
 
-	$questions = array("What command is used to copy a file?",
-			"What command is used to remove a file?",
-			"What command can be used to move a file?",
-			"What command can be used to print a file's contents?",
-			"What command can be used to rename a file?");
-	$answerlist = array("cp", "mv", "rm", "cat");
-	$answers = array("cp", "rm", "mv", "cat", "mv");
+	$questions = array("What part of the operating system allocates memory to programs and handles system calls?",
+			"What element of an operating system represents a collection of static data?",
+			"What element of an operating system represents a executing program?",
+			"What part of the operating system is the interface between the user and the core system?");
+	$answerlist = array("shell", "file", "kernel", "process");
+	$answers = array("kernel", "file", "process", "shell");
 
 	// When submitted check the answers
 
 	if(!empty($_POST)){
-		$questionresults = array("","","","","");
-		$submittedanswers = array("","","","","");
+		$questionresults = array("","","","");
+		$submittedanswers = array("","","","");
 
 		$i = 0;
 
@@ -51,7 +50,7 @@
 		// Print out the results of the quiz if it has been submitted
 		if($submitted){
 			if (isset($_SESSION['userid'])) {
-				QuizTracker::track($_SESSION['userid'], 'File Management', '/quizzes/File+Management', $correctCount, sizeof($questions));
+				QuizTracker::track($_SESSION['userid'], 'File Intro', '/quizzes/Unix+Intro', $correctCount, sizeof($questions));
 			}
 			echo '<div style="font-weight:bold;font-size: 200%;color:green;">RESULTS: ' . $correctCount . ' out of ' . sizeof($questions) . ' correct!</div>';
 		}
@@ -70,7 +69,7 @@
 
 			// Populate the choices for this, if we are on the submitted quiz - choices are greyed out, the correct one highlighted in green and the user's choice preserved.
 			foreach($answerlist as $j=>$answer){
-				$questionbuilder .= '<input type="radio" name="question' . $i . '" id="q' . $i . "a" . $j . '" value="' . $answer . '"' . ($submitted ? "disabled" : "") . ($submitted && $submittedanswers[$i] == $answer ? ' checked' : '') . '>' . '<label' . 'for="q' . $i . 'a' . $j . '"' . ($submitted && $answers[$i] == $answer ? ' style="color:green;font-weight:bold;background-color:#EFE;">' : '>' ) . $answer . '</label><br />';
+				$questionbuilder .= '<input type="radio" name="question' . $i . '" id="q' . $i . "a" . $j . '" value="' . $answer . '"' . ($submitted ? "disabled" : "") . ($submitted && $submittedanswers[$i] == $answer ? ' checked' : '') . '>' . '<label ' . 'for="q' . $i . 'a' . $j . '"' . ($submitted && $answers[$i] == $answer ? ' style="color:green;font-weight:bold;background-color:#EFE;">' : '>' ) . $answer . '</label><br />';
 			}
 
 			$questionbuilder .= '</li>';
@@ -81,5 +80,5 @@
     </ol>
 
 <input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled'?>/>
-<?php if($submitted) echo '<button onclick="window.location.href=' . curPageURL() . '">Reset Quiz</button>'?>
+<?php if($submitted){ echo '<button onclick="window.location.href=' . curPageURL() . ';}">Reset Quiz</button>'?>
 </form>

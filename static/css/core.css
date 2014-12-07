@@ -386,12 +386,26 @@ td {
     color: #777;
 }
 
+<<<<<<< HEAD
 #loginTable{
 	margin: 0;
 	padding: 0;
 	position: relative;
 	left: -11px;
 	width: 50%
+=======
+.pageContent img {
+	max-width: 100%;
+	height: auto;
+}
+
+input{
+	width: 200px;
+}
+
+input#renewpassword{
+	width: 146px;
+>>>>>>> origin/master
 }
 
 input#submit{
@@ -400,4 +414,4 @@ input#submit{
 
 #loginWrapper{
 	width: 45%;
-}	
+}
