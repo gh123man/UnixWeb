@@ -1,7 +1,7 @@
 <?php
 
 include_once './components/LocalNavBuilder.php';
-include_once './src/CommandTracker.php';
+include_once './src/PageTracker.php';
 
 abstract class PageBuilder {
 
@@ -36,14 +36,23 @@ abstract class PageBuilder {
 
             //Track page view here
             $trackPath = '/' . $this->urlContext[0] . '/' . $this->urlContext[1];
-            CommandTracker::track($page, $trackPath, $this->urlContext[0]);
+            PageTracker::track($page, $trackPath, $this->urlContext[0]);
 
 
             $this->showSideBar($page);
 
             ?>
             <div class="pageContent pannel pageContentDocs">
-                <h2><?php echo $this->getPageHeader($page) ?></h2>
+                <h2><?php echo $this->getPageHeader($page) ?>
+                <div class="pageVIews">
+                <?php
+
+                $currentItem = PageTracker::getItem($trackPath);
+                echo $currentItem->hits();
+
+                ?>
+                Views</div>
+                </h2>
                 <?php
                 include_once $dataLocation;
                 ?>

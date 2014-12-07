@@ -47,7 +47,7 @@ ON QuizTracker (path);
 
 
 
-create table CommandTracker (
+create table PageTracker (
     ID char(32) NOT NULL,
     name varchar(80) NOT NULL,
     hits int unsigned NOT NULL,
@@ -57,7 +57,7 @@ create table CommandTracker (
 );
 
 CREATE INDEX cmdPathIndex
-ON CommandTracker (path);
+ON PageTracker (path);
 
 CREATE INDEX hitsIndex
-ON CommandTracker (hits);
+ON PageTracker (hits);

@@ -2,9 +2,9 @@
 
 include_once 'DataAccessLayer/Fireball.php';
 
-class CommandTracker extends Fireball\ORM {
+class PageTracker extends Fireball\ORM {
 
-    const TABLE_NAME  = 'CommandTracker';
+    const TABLE_NAME  = 'PageTracker';
     const PRIMARY_KEY = 'ID';
     const NAME        = 'name';
     const HITS        = 'hits';
@@ -43,7 +43,7 @@ class CommandTracker extends Fireball\ORM {
 
     public function getInstanceClosure() {
         return function() {
-            return new CommandTracker();
+            return new PageTracker();
         };
     }
 

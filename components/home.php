@@ -21,7 +21,7 @@ echo '</div>';
         <h3>Command of the day</h3>
         <?php
 
-        $cmd = CommandTracker::getCommandOfTheDay();
+        $cmd = PageTracker::getCommandOfTheDay();
         echo '<h4><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></h4>';
 
         ?>
@@ -31,7 +31,7 @@ echo '</div>';
         <h3>Top 10 Commands</h3>
         <ol>
             <?php
-            $topCommands = CommandTracker::getTopCommands(10);
+            $topCommands = PageTracker::getTopCommands(10);
 
             foreach ($topCommands as $cmd) {
                 echo '<li><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></li>';

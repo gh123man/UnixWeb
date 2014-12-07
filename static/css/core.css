@@ -372,3 +372,11 @@ td {
     text-align: center;
     margin: 20px;
 }
+
+.pageVIews {
+    font-size: 12pt;
+    font-weight: normal;
+    margin-left: 20px;
+    float: right;
+    color: #777;
+}

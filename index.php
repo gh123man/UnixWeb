@@ -8,7 +8,7 @@ include_once 'components/Quiz.php';
 include_once 'components/Tutorial.php';
 include_once 'components/home.php';
 include_once 'components/accountUtils.php';
-include_once 'src/CommandTracker.php';
+include_once 'src/PageTracker.php';
 
 ?>
 
