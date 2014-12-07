@@ -344,6 +344,8 @@ td {
     background: #DDD;
     font-weight: bold;
     padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     -o-transition:.2s;
     -ms-transition:.2s;
