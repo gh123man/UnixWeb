@@ -4,17 +4,16 @@
    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
- html, body
- {
-     padding: 0px;
-     margin: 0px;
-     font-family: 'Ubuntu', sans-serif;
-     font-size: 100%;
-     /*background: #E9E9E9;*/
-	 background: #dddddd;
-	 background-image: url('../images/background.png');
-     min-width: 1250px;
- }
+html, body{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 100%;
+	/*background: #E9E9E9;*/
+	background: #dddddd;
+	background-image: url('../images/background.png');
+	min-width: 1250px;
+}
 
 .navWrapper {
 
@@ -320,6 +319,9 @@ h1{
 
 #loginBox {
     display: none;
+	font-size: 85%;
+	font-family: ubuntu;
+	background: #fefefe url(../images/background-login.png);
 }
 
 .lastScore {
@@ -331,8 +333,8 @@ td {
     padding: 10px;
 }
 
-#loginBox {
-    font-size: 80%;
+.ui-dialog-title{
+	font-family: Ubuntu;
 }
 
 .historyItem {

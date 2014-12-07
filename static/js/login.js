@@ -18,6 +18,7 @@ function correctBox() {
 
 function accountWindow() {
 $.extend($.ui.dialog.prototype.options.position, { collision: 'none' });
+
     $('#loginBox').dialog({
         title       : 'Register or Login',
         bgiframe    : true,
@@ -36,6 +37,7 @@ $.extend($.ui.dialog.prototype.options.position, { collision: 'none' });
         },
 
     });
+	
     $("#username").focus();
 
     $('#loginForm').on( "submit", function( event ) {
