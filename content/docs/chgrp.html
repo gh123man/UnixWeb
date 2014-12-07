@@ -1,46 +1,85 @@
-<p>Category: Process Management <br/>
-Definition: a job control command that makes sure suspended jobs are not brought to the foreground when resumed.
-The job indicated with the bg command is the job you want to run in the background.</p>
-See: <a href="#"> jobs</a>
+<p>Category: File Management <br/>
+Definition: changes a group ownership of a file or of many files. 
 
 <p>Options:</p>
 
   <ul class="task-list">
-  <li>%, %+, %%
+  <li>-C, --changes
     <ul class="task-list">
-    <li>refers to the current job</li></ul>
+      <li>reports when a change is made</li></ul>
   </li>
- <li> %- or -
+ <li>-f, --silent, --quiet
    <ul class="task-list">
-    <li> refers to the previous job</li></ul>
+     <li>makes it so error messages are not shown</li></ul>
     </li>
-  <li> %(num)
+  <li>-v, --verbose
     <ul class="task-list">
-    <li>refers to the job number</li>
-    <li>i.e. %1 or %2</li>
+      <li>prints out details/diagnostic for every file processed/changed</li>
     </ul>
   </li>
+   <li>-h, --no-dereference
+    <ul class="task-list">
+      <li>affects symbolic links instead of any referenced file</li>
+      <li>can only use this if you can change symlink ownership</li>
+    </ul>
+  </li>
+   <li>--no-preserve-root
+    <ul class="task-list">
+      <li>do not treat '/' in a special way</li>
+      <li>default setting</li>
+    </ul>
+  </li>
+   <li>--reference=FILENAME
+    <ul class="task-list">
+      <li>use FILENAME's group settings rather than specifiying a group value</li>
+    </ul>
+  </li>
+   <li>-R, --recursive
+    <ul class="task-list">
+      <li>operates recursively on files and directories</li>
+      <li>these options modify how hierachy is affected when -R is specified
+        <li>-H
+          <ul class="task-list">
+            <li>if a command line arguement us a symbolic link, traverse it</li>
+          </ul>
+        </li>
+        <li>-L
+          <ul class="task-list">
+            <li>traverse every symbolic link to a directory</li>
+          </ul>
+        </li>
+        <li>-P
+          <ul class="task-list">
+            <li>do not traverse any symbolic links</li>
+            <li>this is the default</li>
+          </ul>
+        </li>
+        <li>--help
+          <ul class="task-list">
+            <li>display a help message</li>
+            <li>exits after message is displayed</li>
+          </ul>
+        </li>
+        <li>--version
+          <ul class="task-list">
+            <li>displays the output information</li>
+          </ul>
+        </li>
+      </li>
+    </ul>
+  </li>
+   
+ </ul>
 
 <p>Uses/Examples:</p>
 <ul class="task-list">
-  <li>bg %1
+  <li>chgrp users file.txt
     <ul class="task-list">
-      <li>resumes job 1 in the background</li>
+      <li>changes the owning group of file.txt to the group named "users"</li>
     </ul></li>
-  <li>bg %+
+  <li>chgrp -hR admin /database/
   <ul class="task-list">
-      <li>bg %</li>
-      <li>bg %%</li>
-      <li>resumes current job background</li>
+      <li>changes the owning group of /database/ and all of its subdirectories & files to belong to admin</li>
     </ul></li>
 
 </ul>
-<!--
-<ul class="task-list">
-<li>bg job
-<ul class="task-list">
-<li>displays a file</li>
-</ul>
-</li>
-<li>cat &gt; filename
--->
