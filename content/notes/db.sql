@@ -58,3 +58,6 @@ create table CommandTracker (
 
 CREATE INDEX cmdPathIndex
 ON CommandTracker (path);
+
+CREATE INDEX hitsIndex
+ON CommandTracker (hits);
