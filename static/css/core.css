@@ -142,7 +142,8 @@ html, body{
 }
 
 .localNavItemWrapper {
-    height: 22px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     width: 100%;
 
     -o-transition:.2s;
