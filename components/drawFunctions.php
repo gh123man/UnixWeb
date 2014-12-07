@@ -52,7 +52,7 @@ function drawLogin() {
 			</table>
 				<div id="credsOut"></div>
 			
-				<input type="submit" name="submit" id="submit" value="Submit">
+				<input type="submit" name="submit" id="submit" value="Log In">
 			</p>
 		</form></div>
 		<div id="loginWrapper" style="float: right;">
@@ -81,7 +81,7 @@ function drawLogin() {
 				</tr>
 			</table>
 			<p>
-				<input type="submit" name="submit" id="submit" value="Submit">
+				<input type="submit" name="submit" id="submit" value="Register">
 				<div id="regOut"></div>
 			</p>
 			</form>
