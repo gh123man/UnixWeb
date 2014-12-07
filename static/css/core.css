@@ -323,3 +323,35 @@ td {
 #loginBox {
     font-size: 80%;
 }
+
+.historyItem {
+    margin: 2px;
+}
+
+.historyTitle {
+    width: 100%;
+    background: #DDD;
+    font-weight: bold;
+    padding: 5px;
+
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
+}
+
+
+.historyContent {
+    display: none;
+    padding: 10px;
+}
+
+.historyTitle:hover {
+    background: #D0D0D0;
+    padding-left: 20px;
+}
+
+.historyTitle:hover + .historyContent {
+   display: block;
+}
