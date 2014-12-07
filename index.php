@@ -37,7 +37,7 @@ include_once 'src/CommandTracker.php';
             "Docs"      => "/docs",
             "Tutorials" => "/tutorials",
             "Quizzes"   => "/quizzes",
-            "History"   => "/histroy",
+            "History"   => "/history",
         ));
 
 
@@ -54,7 +54,7 @@ include_once 'src/CommandTracker.php';
                     displayHome();
                     break;
 
-                case "histroy":
+                case "history":
                         include_once 'components/History.php';
                         break;
 
