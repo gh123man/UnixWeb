@@ -15,41 +15,149 @@ Definition: for copying files or directories.
     </li>
   <li> -b, --backup[=CONTROL]
     <ul class="task-list">
-    <li>make a backup of existing file</li>
-    <li>b</li>
+      <li>make a backup of existing file</li>
+      <li>-b doesn't accept a control arguement (uses default) but --backup does
+        <ul class="task-list">
+          <li>=CONTROL specifies the version control methof to use</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li> -m
+  <li> --copy-contents
     <ul class="task-list">
-    <li>displays the calendat with Monday as the starting day</li>
+    <li>When operating recursively, the command instructs to copy contents of special files</li>
     </ul>
   </li>
-  <li> -j
+  <li> -f, --force
     <ul class="task-list">
-    <li>displays the calendat with dates of the Julian calendar</li>
+    <li>if an existing destination file cannot be opened, remove file & try again</li>
+    <li>if -n is used, the -f command will not have an effect</li>
     </ul>
   </li>
-  <li> -y
+  <li> -i, --interactive
     <ul class="task-list">
-    <li>display a calendar for the entire current year</li>
+    <li>prompt before overwrite</li>
+    <li>will override -n option</li>
     </ul>
   </li>
-  
-  <p>Uses</p>
-  <li> cal  
+   <li> -H
     <ul class="task-list">
-    <li>display the calendar for the current month</li>
+    <li>follow command line symlinks</li>
     </ul>
   </li>
-  <li> cal month year
+   <li> -l, --link
     <ul class="task-list">
-    <li>displays the calender for the month and year specificed/li>
+      <li>creates hard links instead of copying</li>
     </ul>
   </li>
+   <li> -L, --dereference
+    <ul class="task-list">
+    <li>always follow symlinks in SOURCE</li>
+    <li>If the SOURCE is a symlink: copy file linked, not the symlink</li>
+    </ul>
+  </li>
+   <li> -n, --no-clober
+    <ul class="task-list">
+      <li>don't overwrite an existing file</li>
+      <li>overwrites the -l option</li>
+    </ul>
+  </li>
+   <li> -P, --no-dereference
+      <ul class="task-list">
+      <li>never follow symlinks in the source</li>
+    </ul>
+  </li>
+   <li> -p, --perserve[=ATTR_LIST]
+    <ul class="task-list">
+      <li>perserves the specified attributes</li>
+      <li>-p is a default the same as --perserve=mode,owenrship,timestamps</li>
+      <li>attributes: mode, ownership, timestamps, context, links, xattr, all</li>
+    </ul>
+  </li>
+  <li> --parents
+    <ul class="task-list">
+      <li>use full source file name</li>
+    </ul>
+  </li>
+  <li> -R, -r, --recursive
+    <ul class="task-list">
+      <li>copy files recursively</li>
+    </ul>
+  </li>
+  <li> -reflink[=WHEN]
+    <ul class="task-list">
+      <li>control clone copies</li>
+    </ul>
+  </li>
+  <li> --remove-destination
+    <ul class="task-list">
+      <li>removes every destination file before opening</li>
+      <li>opposite of --force</li>
+    </ul>
+  </li>
+  <li> -sparse=WHEN
+    <ul class="task-list">
+      <li>control creation of sparse files</li>
+    </ul>
+  </li>
+  <li> -s, --symbolic-link
+    <ul class="task-list">
+      <li>makes a symbolic link instead of copying the file/directory</li>
+    </ul>
+  </li>
+  <li> -S --suffix=SUFFIX
+    <ul class="task-list">
+      <li>overrides the default backup suffix</li>
+    </ul>
+  </li>
+  <li> -t, --target-directory=DIRECTORY
+    <ul class="task-list">
+      <li>copy all source arguements into the DIRECTORY specified</li>
+    </ul>
+  </li>
+  <li> -T, --no-target-directory
+    <ul class="task-list">
+      <li>treats as a normal file</li>
+    </ul>
+  </li>
+  <li> -u, --update
+    <ul class="task-list">
+      <li>copy only when the SOURCE file is newer than the destination file</li>
+    </ul>
+  </li>
+  <li> -v, --verbose
+    <ul class="task-list">
+      <li>details of transcations happening</li>
+    </ul>
+  </li>
+  <li> -x, --one-file-system
+    <ul class="task-list">
+      <li>stay on this file system</li>
+    </ul>
+  </li>
+</ul> 
+
   
   <p>Examples:</p>
   <ul>
-    <li>cal 12 2000</li>
-    <li>cal -j</li>
-    <li>cal -y</li>
+    <li>cp file1.txt myDir
+      <ul class="task-list">
+        <li>copies the file1 into the myDir subdirectory</li>
+      </ul>
+    </li>
+    <li>cp /home/Sites/file.txt /home/myDir/file.bak
+      <ul class="task-list">
+        <li>copies the file from /home/Sites into /home/myDir/ as file.bak</li>
+      </ul>
+    </li>
+    <li>cp *.html /home/Sites/
+      <ul class="task-list">
+        <li>copies all html files into the Sites directory</li>
+      </ul>
+    </li>
+    <li>cp -u *.html Sites
+      <ul class="task-list">
+        <li>copies all html files <em>that don't exist in Sites</em> into the Sites directory</li>
+      </ul>
+    </li>
   </ul>
