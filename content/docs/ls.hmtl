@@ -1,0 +1,10 @@
+<p>Category: System Info <br/>
+Definition: for displaying a calendar on the commanxd line. The calendar is formatted for you after called/
+
+<p>Options:</p>
+
+  <ul class="task-list">
+  <li>-l
+    <ul class="task-list">
+    <li>displays a single month (default)</li></ul>
+  </li>
