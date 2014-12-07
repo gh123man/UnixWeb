@@ -8,6 +8,7 @@ include_once 'components/Quiz.php';
 include_once 'components/Tutorial.php';
 include_once 'components/home.php';
 include_once 'components/accountUtils.php';
+include_once 'src/CommandTracker.php';
 
 ?>
 
@@ -53,6 +54,10 @@ include_once 'components/accountUtils.php';
                     displayHome();
                     break;
 
+                case "histroy":
+                        include_once 'components/History.php';
+                        break;
+
                 case "docs":
                     try {
                         $docPage = new Doc($urlParams);
@@ -78,9 +83,6 @@ include_once 'components/accountUtils.php';
                     } catch (Exception $e) {
                         error_log($e);
                     }
-                case "histroy":
-                        include_once 'components/History.php';
-                        break;
 
                 default:
                     echo "<h1> 404 </h1>";

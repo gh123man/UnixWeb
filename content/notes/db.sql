@@ -44,3 +44,17 @@ ON QuizTracker (user);
 
 CREATE INDEX pathIndex
 ON QuizTracker (path);
+
+
+
+create table CommandTracker (
+    ID char(32) NOT NULL,
+    name varchar(80) NOT NULL,
+    hits int unsigned NOT NULL,
+    path varchar(180) NOT NULL,
+    type varchar(80) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE INDEX cmdPathIndex
+ON CommandTracker (path);

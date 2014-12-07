@@ -1,6 +1,7 @@
 <?php
 
 include_once './components/LocalNavBuilder.php';
+include_once './src/CommandTracker.php';
 
 abstract class PageBuilder {
 
@@ -31,6 +32,11 @@ abstract class PageBuilder {
             $dataLocation = sprintf($this->getPageTypePath(), $page);
 
             self::confirmPageExists($dataLocation);
+
+
+            //Track page view here
+            $trackPath = '/' . $this->urlContext[0] . '/' . $this->urlContext[1];
+            CommandTracker::track($page, $trackPath, $this->urlContext[0]);
 
 
             $this->showSideBar($page);

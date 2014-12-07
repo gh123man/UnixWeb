@@ -18,17 +18,6 @@ function displayHome() {
         var insertHTML = "<h3>Command of the Day:</h3><h4>" + command[number] + "</h4><p>" + description[number] + "</p>";
         document.getElementById("command-of-day").innerHTML = insertHTML;
 
-        var insertHTML2 = "<h3>Top Ten Commands:</h3><ul>";
-        //var i = 0;
-        for(var i = 0; i < 10; i++){
-            insertHTML2 += "<li><a href='#'>"
-            insertHTML2 +=topTen[i];
-            insertHTML2 += "</a></li>"
-        }
-
-        insertHTML2 += "</ul>";
-        document.getElementById("top-ten-commands").innerHTML = insertHTML2;
-
     }
     $(function() {
         generateCommand();
@@ -53,7 +42,18 @@ echo '</div>';
     <!--generate command of the day / top 10 with javascript queries-->
     <div id="command-of-day"></div>
 
-    <div id="top-ten-commands"></div>
+    <div id="top-ten-commands">
+        <h3>Top 10 Commands</h3>
+        <ol>
+            <?php
+            $topCommands = CommandTracker::getTopCommands(10);
+
+            foreach ($topCommands as $cmd) {
+                echo '<li><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></li>';
+            }
+            ?>
+        </ol>
+    </div>
 
 </div>
 
