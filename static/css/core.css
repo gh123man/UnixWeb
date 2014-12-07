@@ -138,13 +138,24 @@
     width: 100%;
 }
 
+.localNavContainer a:hover {
+    text-decoration: none;
+}
+
 .localNavItemWrapper {
     height: 22px;
     width: 100%;
+
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
 }
 
 .localNavItemWrapper:hover {
     background: #DDD;
+    padding-left: 6px;
 }
 
 a{
