@@ -111,34 +111,18 @@ Common combinations are: 644 for files and 755 for directories.
    <li>-R, --recursive
     <ul class="task-list">
       <li>operates recursively on files and directories</li>
-      <li>these options modify how hierachy is affected when -R is specified
-        <li>-H
-          <ul class="task-list">
-            <li>if a command line arguement us a symbolic link, traverse it</li>
-          </ul>
-        </li>
-        <li>-L
-          <ul class="task-list">
-            <li>traverse every symbolic link to a directory</li>
-          </ul>
-        </li>
-        <li>-P
-          <ul class="task-list">
-            <li>do not traverse any symbolic links</li>
-            <li>this is the default</li>
-          </ul>
-        </li>
-        <li>--help
-          <ul class="task-list">
-            <li>display a help message</li>
-            <li>exits after message is displayed</li>
-          </ul>
-        </li>
-        <li>--version
-          <ul class="task-list">
-            <li>displays the output information</li>
-          </ul>
-        </li>
+      </ul></li>
+  <li>--help
+    <ul class="task-list">
+      <li>display a help message</li>
+      <li>exits after message is displayed</li>
+    </ul>
+  </li>
+  <li>--version
+    <ul class="task-list">
+      <li>displays the output information</li>
+    </ul>
+  </li>
       </li>
     </ul>
   </li>
@@ -147,13 +131,19 @@ Common combinations are: 644 for files and 755 for directories.
 
 <p>Uses/Examples:</p>
 <ul class="task-list">
-  <li>chgrp users file.txt
+  <li>chmod 644 file.txt
     <ul class="task-list">
-      <li>changes the owning group of file.txt to the group named "users"</li>
+      <li>changes the permissions to read & write for the user, read only for the group & other users for file.txt</li>
     </ul></li>
-  <li>chgrp -hR admin /database/
+  <li>chmod u=rx file.txt
   <ul class="task-list">
-      <li>changes the owning group of /database/ and all of its subdirectories & files to belong to admin</li>
+      <li>changes the permissions for the user/owner only to read and write the file.txt</li>
     </ul></li>
-
+ <li>chmod a=rw file.txt
+ <ul class="task-list">
+      <li>changes the permissions for all user classes to be able to read and write  the file.txt</li>
+    </ul></li>
 </ul>
+
+<p>Also note that when you type "ls - l" in your command line to see all directories/files, permissions will be displayed first.
+</p>
