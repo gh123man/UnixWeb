@@ -385,3 +385,19 @@ td {
     float: right;
     color: #777;
 }
+
+input{
+	width: 200px;
+}
+
+input#renewpassword{
+	width: 146px;
+}
+
+input#submit{
+	width: 286px;
+}
+
+#loginWrapper{
+	width: 45%;
+}	
