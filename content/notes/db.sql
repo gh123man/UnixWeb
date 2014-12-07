@@ -41,3 +41,6 @@ create table QuizTracker (
 
 CREATE INDEX userIndex
 ON QuizTracker (user);
+
+CREATE INDEX pathIndex
+ON QuizTracker (path);

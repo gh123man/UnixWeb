@@ -24,7 +24,6 @@ if (isset($_GET['login']) && $_GET['login']) {
         $out = array("result" => false, "msg" => 'email must be set');
     } else if ($_POST['password1'] != $_POST['password']) {
         $out = array("result" => false, "msg" => 'passwords must match');
-
     } else {
         if (Account::accountExistsEmail($_POST['email'])) {
             $out = array("result" => false, "msg" => 'Account with that email address already exists');
@@ -32,6 +31,7 @@ if (isset($_GET['login']) && $_GET['login']) {
             $email = strtolower($_POST['email']);
             $account = Account::createNew($email, $_POST['password'], $_POST['fname'], $_POST['lname']);
             if (isset($account) && $account != null && !is_string($account)) {
+                loginAccount($email, $_POST['password']);
                 $out = array("result" => true);
             } else {
                 $out = array("result" => false, "msg" => $account);

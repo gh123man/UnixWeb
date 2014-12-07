@@ -226,6 +226,9 @@ namespace Fireball {
             }
         }
 
+        /**
+         * Maps an array returned by a query to the current object resetting the colChangedCache.
+         */
         protected function map($result) {
             $this->setID($result[$this->tableDef->getKey()]);
             foreach ($result as $key => $value) {
@@ -235,6 +238,9 @@ namespace Fireball {
 
         }
 
+        /**
+         * Maps the results of a query on a table to an array of objects that abstract the selected tables data.
+         */
         public static function mapQuery($getNewInstance, $query) {
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $out = array();
