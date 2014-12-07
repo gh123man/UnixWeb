@@ -8,10 +8,12 @@ $(window).scroll(function() {
 });
 
 function correctBox() {
-    var wHeight = $(window).height();
-    var dHeight = wHeight - 20;
-    $("#loginBox").dialog("option", "height", dHeight);
-    $("#loginBox").dialog("option", "position", 'center');
+    if ($("#loginBox").hasClass('ui-dialog-content')) {
+        var wHeight = $(window).height();
+        var dHeight = wHeight - 20;
+        $("#loginBox").dialog("option", "height", dHeight);
+        $("#loginBox").dialog("option", "position", 'center');
+    }
 }
 
 function accountWindow() {

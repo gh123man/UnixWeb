@@ -39,7 +39,7 @@ function drawLogin() {
     <div id="loginBox"><form type="post" id="loginForm">
         <h3>If you are already registered:</h3>
         <p>
-            <label for="email">Email or Username:</label>
+            <label for="email">Email:</label>
             <input onkeypress="handleKey(event,this)" type="email" name="username" id="username">
             <label for="password">Password:</label>
             <input onkeypress="handleKey(event,this)" type="password" name="password" id="password">
