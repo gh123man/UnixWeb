@@ -399,14 +399,6 @@ td {
 	height: auto;
 }
 
-input{
-	width: 200px;
-}
-
-input#renewpassword{
-	width: 146px;
-}
-
 input#submit{
 	width: 286px;
 }
