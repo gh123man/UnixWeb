@@ -386,16 +386,16 @@ td {
     color: #777;
 }
 
-input{
-	width: 200px;
-}
-
-input#renewpassword{
-	width: 146px;
+#loginTable{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	left: -11px;
+	width: 50%
 }
 
 input#submit{
-	width: 286px;
+	width: 100%;
 }
 
 #loginWrapper{
