@@ -2,29 +2,6 @@
 function displayHome() {
 ?>
 
-<script>
-    //this can be removed and placed in a different file and needs to be rewritten
-    //since i don't have access to the database, I am writing it with an array of basic commands
-    var command = ["pwd", "cd", "mkdir", "rm", "ls"];
-    var description =  ["prints the working directory that you are in. <br/> just type 'pwd'",
-                          "changes the directory to a new directory<br/> just type 'cd (name of directory)' <br/> Example: cd 330/Links",
-                          "makes a new directory <br/> just type 'mkdir (directory name)' <br/> Example: mkdir Links",
-                          "removes/deletes a directory or file <br/> just type 'rm (directory / file name)' <br/> Example: rm Links",
-                          "lists the contents of the current directory. add -a for all or -l for a long detailed listing <br/> just type 'ls' or 'ls -a' or 'ls -l'"];
-    var topTen = ["pwd", "cd", "mkdir", "rm", "ls", "gzip", "history", "df", "tar", "echo"];
-
-    function generateCommand(){
-        var number = Math.floor(Math.random() * 4);
-        var insertHTML = "<h3>Command of the Day:</h3><h4>" + command[number] + "</h4><p>" + description[number] + "</p>";
-        document.getElementById("command-of-day").innerHTML = insertHTML;
-
-    }
-    $(function() {
-        generateCommand();
-    });
-
-</script>
-
 <?php
 echo '<div class="sideBar">';
 drawLogin();
@@ -40,7 +17,15 @@ echo '</div>';
     </div>
 
     <!--generate command of the day / top 10 with javascript queries-->
-    <div id="command-of-day"></div>
+    <div id="command-of-day">
+        <h3>Command of the day</h3>
+        <?php
+
+        $cmd = CommandTracker::getCommandOfTheDay();
+        echo '<h4><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></h4>';
+
+        ?>
+    </div>
 
     <div id="top-ten-commands">
         <h3>Top 10 Commands</h3>
@@ -51,6 +36,7 @@ echo '</div>';
             foreach ($topCommands as $cmd) {
                 echo '<li><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></li>';
             }
+
             ?>
         </ol>
     </div>
