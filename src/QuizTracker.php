@@ -70,7 +70,7 @@ class QuizTracker extends Fireball\ORM {
             self::getInstanceClosure(),
             Fireball\ORM::rawQuery(
                 'select * from ' . self::TABLE_NAME .
-                ' where ' . self::USER . ' = :u',
+                ' where ' . self::USER . ' = :u order by ' . self::NAME . ' asc',
                 array(':u' => $user), true
             )
         );

@@ -359,7 +359,7 @@ td {
     -webkit-transition: height .6s ease;
 	-webkit-transition: opacity .6s ease;
 	-webkit-transition: padding .6s ease;
-    opacity: 0; 
+    opacity: 0;
     height: 0;
     overflow: hidden;
 	padding: 0px;
@@ -386,6 +386,7 @@ td {
     font-size: 12pt;
     font-weight: normal;
     margin-left: 20px;
+    margin-top: 20px;
     float: right;
     color: #777;
 }
