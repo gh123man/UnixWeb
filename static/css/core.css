@@ -115,11 +115,12 @@ html, body{
 .logo {
     float: left;
     width: 125px;
+    margin-right: 8px;
     margin-top: -8px;
 }
 
 .logo img {
-    margin-top: 19px;
+    margin-top: 18px;
     margin-bottom: -8px;
     width: 140px;
 }
