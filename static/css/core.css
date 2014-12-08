@@ -114,15 +114,14 @@ html, body{
 
 .logo {
     float: left;
-    padding: 10px;
     width: 125px;
     margin-top: -8px;
 }
 
 .logo img {
-    margin-top: 12px;
+    margin-top: 19px;
     margin-bottom: -8px;
-    width: 120px;
+    width: 140px;
 }
 
 #errorPage {

@@ -22,6 +22,7 @@ $urlParams = parseUrl();
 
     <link rel="stylesheet" href="/static/css/core.css"/>
     <link rel="stylesheet" href="/static/js/jqueryUi/jquery-ui.css"/>
+    <link rel="icon"  type="image/png" href="/favicon.png" />
     <script src="/static/js/jquery/jquery.js"></script>
     <script src="/static/js/jqueryUi/jquery-ui.js"></script>
     <script src="/static/js/search.js"></script>
