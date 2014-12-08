@@ -19,17 +19,17 @@
  <p>You can tell if you are in edit mode if you see the <emphasis>--INSERT--</emphasis> at the bottom left of your terminal, otherwise you are in command mode.</p>
  <p align="center"><img width="1054" height="500" alt="Showing the -- INSERT --" src="../../static/images/tutorial3/tutorial3picture3.png"> </p>
  <p>Go ahead and press the i key and when you see the -- INSERT -- show up on the bottom left, enter any text you want!</p>
- 
+
  <h3>VI Navigating</h3>
  <p>The difficult thing for users coming from a GUI based system is navigating around vi.</p>
  <p>You can move your green cursor with the arrow keys. Using the mouse to try and click a location will not work</p>
  <p>Also what you see on the screen is merely a portion of the file, you can use the Page Up and Page Down keys on your keyboard to move up or down in the file you're in respectively. You can also go up or down with the cursor but it may take a long time!</p>
- 
+
  <h3>VI Commands</h3>
  <p>There are hundreds of vi commands; and it would take a fifteen week course to cover all the ways that you can use the vi editor to edit files, run commands, and do an astounding amount of things.</p>
  <p>We will be covering three main interactions: writing a file, quitting vi, and searching a file.</p>
  <p><strong>NOTE: All commands in vi are case-sensitive, just like in Unix!</strong></p>
- 
+
  <h3>Writing a file</h3>
  <p>Once you are ready to save your file, make sure you are in command mode. (Press the ESC key if you are in edit mode) And enter:</p>
  <p class="code">:w test</p>
@@ -38,7 +38,7 @@
  <p><strong>NOTE: There may be a prompt to add ! to your :w command to overwrite the file. (Your command would now be ":w! test") The ! is an override marker to force the execution of the command.</strong></p>
  <p align="center"><img width="1054" height="500" alt="Results of :w command" src="../../static/images/tutorial3/tutorial3picture5.png"> </p>
  <p>Upon saving it, you will see the file has been written result in the bottom left</p>
- 
+
  <h3>Quitting vi</h3>
  <p>For quitting vi you need to be in command mode again, and enter in the command:</p>
  <p class="code">:q</p>
@@ -47,7 +47,7 @@
   <p align="center"><img width="1054" height="500" alt="Returned to the Unix command line" src="../../static/images/tutorial3/tutorial3picture7.png"> </p>
  <p>Upon entering the quit command, you will be brought back to the Unix command line!</p>
 
- 
+
  <h3>Searching in vi</h3>
  <p>This section is optional to everyday usage of vi, but really showcases the power of having an advanced knowledge of vi</p>
  <p>In vi there are two directions to search in: forward of your cursor position and backwards of it.</p>
@@ -60,5 +60,5 @@
  <p align="center"><img width="1054" height="500" alt="Pattern not found error" src="../../static/images/tutorial3/tutorial3picture10.png"> </p>
  <p>To search backwards, just do the same thing but with the ? instead of a /</p>
  <p><strong>NOTE: If your search hits the end or beginning of the document depending on which kind of search you did, it will continue searching from the opposite end until it hits your current cursor position.</strong></p>
- 
-<div class="quizLink"><a href="/quizzes/Text+Editing"> Take The Quiz! </a></div>
+
+<div class="quizLink"><a href="/quizzes/3+-+Text+Editing"> Take The Quiz! </a></div>
