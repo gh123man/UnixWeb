@@ -17,7 +17,7 @@ $urlParams = parseUrl();
 <html lang="en">
     <head>
     <meta charset="utf-8" />
-    <title>Unix Web<?php echo ($urlParams[0] != "" ? ' - ' . ucfirst($urlParams[0]) : '' )?></title>
+    <title>UNIX Web<?php echo ($urlParams[0] != "" ? ' - ' . ucfirst($urlParams[0]) : '' )?></title>
     </head>
 
     <link rel="stylesheet" href="/static/css/core.css"/>
@@ -89,7 +89,7 @@ $urlParams = parseUrl();
             }
             ?>
             <div class="footer">
-                &copy;2014 UnixWeb Team
+                &copy;2014 UNIXWeb Team
             </div>
         </div>
     </body>
