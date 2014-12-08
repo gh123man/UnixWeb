@@ -216,6 +216,10 @@ a:visited{
     text-decoration: none;
 }
 
+.genTitle {
+    color: rgb(169,3,41);
+}
+
 
 .searchResults {
     margin-top: 3px;

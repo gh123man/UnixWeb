@@ -1,4 +1,4 @@
-<h2>
+<h2 class="genTitle">
 Quizzes
 </h2>
 <p>Use the navigation bar on the left side to select a quiz and test your knowledge of Unix!</p>
