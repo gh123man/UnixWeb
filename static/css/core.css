@@ -407,3 +407,7 @@ input#submit{
 #loginWrapper{
 	width: 45%;
 }
+
+.quizLink > a{
+	color: rgb(169,3,41);
+}
