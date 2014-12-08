@@ -241,11 +241,12 @@ namespace Fireball {
         /**
          * Maps the results of a query on a table to an array of objects that abstract the selected tables data.
          */
-        public static function mapQuery($getNewInstance, $query) {
+        public static function mapQuery($query) {
             $query->setFetchMode(PDO::FETCH_ASSOC);
             $out = array();
             foreach ($query->fetchAll() as $result) {
-                $class = $getNewInstance();
+                $className = get_called_class();
+                $class = new $className;
                 $class->map($result);
                 $out[] = $class;
             }

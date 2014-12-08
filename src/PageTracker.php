@@ -41,13 +41,6 @@ class PageTracker extends Fireball\ORM {
 
     }
 
-    public function getInstanceClosure() {
-        return function() {
-            return new PageTracker();
-        };
-    }
-
-
     private static function getInstance($path, $type) {
 
         $result = self::getItem($path);
@@ -61,9 +54,7 @@ class PageTracker extends Fireball\ORM {
     }
 
     public static function getItem($path) {
-        $result = Fireball\ORM::mapQuery(
-            self::getInstanceClosure(),
-            Fireball\ORM::rawQuery(
+        $result = self::mapQuery(self::rawQuery(
                 'select * from ' . self::TABLE_NAME . ' where ' . self::PATH . ' = :p',
                 array(':p' => $path), true
             )
@@ -72,9 +63,7 @@ class PageTracker extends Fireball\ORM {
     }
 
     public static function getTopCommands($limit) {
-        $result = Fireball\ORM::mapQuery(
-            self::getInstanceClosure(),
-            Fireball\ORM::rawQuery(
+        $result = self::mapQuery(self::rawQuery(
                 'select * from ' . self::TABLE_NAME . ' where ' . self::TYPE . ' = :t order by hits desc limit ' . $limit,
                 array(':t' => 'docs'), true
             )
@@ -85,9 +74,7 @@ class PageTracker extends Fireball\ORM {
     public static function getCommandOfTheDay() {
         $today = strtotime("today");
 
-        $result = Fireball\ORM::mapQuery(
-            self::getInstanceClosure(),
-            Fireball\ORM::rawQuery(
+        $result = self::mapQuery(self::rawQuery(
                 'select * from ' . self::TABLE_NAME . ' WHERE ' . self::TYPE . ' = :t ORDER BY RAND(' . $today . ') LIMIT 1',
                 array(':t' => 'docs'), true
             )

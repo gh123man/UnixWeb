@@ -76,9 +76,7 @@ class Search {
 
     private static function searchTitles($q) {
 
-        $results = Fireball\ORM::mapQuery(function() {
-            return new Searchable();
-        }, Fireball\ORM::rawQuery(
+        $results = Searchable::mapQuery(Searchable::rawQuery(
             'SELECT ' . Searchable::PRIMARY_KEY .
             ' FROM ' . Searchable::TABLE_NAME .
             ' where ' . Searchable::TITLE .
@@ -91,9 +89,7 @@ class Search {
     private static function searchContent($q) {
 
 
-        $results = Fireball\ORM::mapQuery(function() {
-            return new Searchable();
-        }, Fireball\ORM::rawQuery(
+        $results = Searchable::mapQuery(Searchable::rawQuery(
             'SELECT *' .
             ' FROM ' . Searchable::TABLE_NAME .
             ' where match(' . Searchable::CONTENT . ')' .

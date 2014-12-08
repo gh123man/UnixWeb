@@ -46,13 +46,6 @@ class QuizTracker extends Fireball\ORM {
 
     }
 
-    public function getInstanceClosure() {
-        return function() {
-            return new QuizTracker();
-        };
-    }
-
-
     private static function getInstance($user, $path) {
 
         $result = self::getQuiz($user, $path);
@@ -66,9 +59,7 @@ class QuizTracker extends Fireball\ORM {
     }
 
     public static function getAllForUser($user) {
-        $result = Fireball\ORM::mapQuery(
-            self::getInstanceClosure(),
-            Fireball\ORM::rawQuery(
+        $result = self::mapQuery(self::rawQuery(
                 'select * from ' . self::TABLE_NAME .
                 ' where ' . self::USER . ' = :u order by ' . self::NAME . ' asc',
                 array(':u' => $user), true
@@ -78,9 +69,7 @@ class QuizTracker extends Fireball\ORM {
     }
 
     public static function getQuiz($user, $path) {
-        $result = Fireball\ORM::mapQuery(
-            self::getInstanceClosure(),
-            Fireball\ORM::rawQuery(
+        $result = self::mapQuery(self::rawQuery(
                 'select * from ' . self::TABLE_NAME .
                 ' where ' . self::PATH . ' = :p and ' . self::USER . ' = :u',
                 array(':p' => $path, ':u' => $user), true
