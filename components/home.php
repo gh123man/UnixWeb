@@ -9,7 +9,7 @@ echo '</div>';
 ?>
 <div class="pageContent pannel pageContentHomePage">
     <div id="main">
-        <h1>Welcome!</h1>
+        <img src="/static/images/homepage.png">
         <p>UnixWeb is a place for anyone to learn and reference everything Unix. If you want to look up examples of commands
             as well as explanations, you can view them under docs. UnixWeb provides a variety of tutorials and quizzes to expand
             and test your knowledge. Head on over to the History to get a glimspe how unix was developed throughout time.

@@ -3,7 +3,7 @@ function drawLogo() {
 ?>
     <a href="/">
         <div class="logo">
-            <img src="/static/images/logo.png" />
+            <img src="/static/images/logo.svg" />
         </div>
     </a>
 <?php
@@ -51,7 +51,7 @@ function drawLogin() {
 				</tr>
 			</table>
 				<div id="credsOut"></div>
-			
+
 				<input type="submit" name="submit" id="submit" value="Log In">
 			</p>
 		</form></div>
