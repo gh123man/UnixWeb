@@ -80,6 +80,6 @@
 
     </ol>
 
-<input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled'?>/>
+<input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled';?>/>
 <?php if($submitted){ echo '<button onclick="location.href=\'' . curPageURL() . '\'">Reset Quiz</button>';}?>
 </form>
