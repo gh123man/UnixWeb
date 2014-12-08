@@ -79,6 +79,6 @@
 
     </ol>
 
-<input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled'?>/>
-<?php if($submitted){ echo '<button onclick="window.location.href=' . curPageURL() . ';}">Reset Quiz</button>'?>
+<input type="submit" id="submitbutton" name="btnSubmit" value="Submit Quiz!" <?php if($submitted) echo 'disabled';?>/>
+<?php if($submitted){ echo '<button onclick="location.href=\'' . $_SERVER['REQUEST_URI'] . '\'">Reset Quiz</button>';}?>
 </form>
