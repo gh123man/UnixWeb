@@ -201,10 +201,6 @@ a:visited{
 #top-ten-commands ul li, #top-ten-commands a{
     list-style: none;
     text-decoration: none;
-    color: black;
-}
-
-#top-ten-commands a:visited {
     color: rgb(169,3,41);
 }
 
@@ -411,3 +407,4 @@ input#submit{
 .quizLink > a{
 	color: rgb(169,3,41);
 }
+
