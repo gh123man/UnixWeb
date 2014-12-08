@@ -350,18 +350,19 @@ td {
     padding: 5px;
     padding-top: 15px;
     padding-bottom: 15px;
-
-    -o-transition:.2s;
-    -ms-transition:.2s;
-    -moz-transition:.2s;
-    -webkit-transition:.2s;
-    transition:.2s;
+	-webkit-transition: padding-left .6s ease;
 }
 
 
 .historyContent {
-    display: none;
-    padding: 10px;
+	display: block;
+    -webkit-transition: height .6s ease;
+	-webkit-transition: opacity .6s ease;
+	-webkit-transition: padding .6s ease;
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+	padding: 0px;
 }
 
 .historyTitle:hover {
@@ -370,7 +371,9 @@ td {
 }
 
 .historyTitle:hover + .historyContent {
-   display: block;
+	opacity: 1;
+    height: auto;
+	padding: 10px;
 }
 
 .footer {
