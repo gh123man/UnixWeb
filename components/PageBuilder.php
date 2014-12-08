@@ -43,16 +43,13 @@ abstract class PageBuilder {
 
             ?>
             <div class="pageContent pannel pageContentDocs">
-                <h2><?php echo $this->getPageHeader($page) ?>
                 <div class="pageVIews">
                 <?php
-
                 $currentItem = PageTracker::getItem($trackPath);
                 echo $currentItem->hits();
-
                 ?>
                 Views</div>
-                </h2>
+                <h2><?php echo $this->getPageHeader($page) ?></h2>
                 <?php
                 include_once $dataLocation;
                 ?>
