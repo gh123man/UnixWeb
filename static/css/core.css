@@ -194,13 +194,19 @@ a:visited{
 }
 #command-of-day h3, #top-ten-commands h3{
     color: #aaa;
+	font-size: 1em;
 }
-#command-of-day h4{
+
+#command-of-day a{
     font-size: 1.2em;
 	color: rgb(169,3,41);
 }
 
-#top-ten-commands ul li, #top-ten-commands a, #command-of-day a{
+#command-of-day a:hover{
+	font-style: italic;
+}
+
+#top-ten-commands ul li, #top-ten-commands a{
     list-style: none;
     text-decoration: none;
     color: rgb(169,3,41);
