@@ -11,7 +11,7 @@ echo '</div>';
     <div id="main">
         <img src="/static/images/homepage.png">
     </div>
-    
+
     <p class="homeContent">UnixWeb is a place for anyone to learn and reference everything Unix. If you want to look up examples of commands
         as well as explanations, you can view them under docs. UnixWeb provides a variety of tutorials and quizzes to expand
         and test your knowledge. Head on over to the History to get a glimspe how unix was developed throughout time.
@@ -24,7 +24,7 @@ echo '</div>';
         <?php
 
         $cmd = PageTracker::getCommandOfTheDay();
-        echo '<h4><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></h4>';
+        echo '<h4><a href="' . $cmd->path() . '"><div class="localNavItemWrapper">' . $cmd->name() . '</div></a></h4>';
 
         ?>
     </div>
@@ -36,7 +36,7 @@ echo '</div>';
             $topCommands = PageTracker::getTopCommands(10);
 
             foreach ($topCommands as $cmd) {
-                echo '<li><a href="' . $cmd->path() . '">' . $cmd->name() . '</a></li>';
+                echo '<li><a href="' . $cmd->path() . '"><div class="localNavItemWrapper">' . $cmd->name() . '</div></a></li>';
             }
 
             ?>

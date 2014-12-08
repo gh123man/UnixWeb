@@ -193,7 +193,7 @@ a:visited{
 	border-radius: 0px 8px 0px 8px;
 }
 #command-of-day h3, #top-ten-commands h3{
-    color: #aaa;
+    color: #666;
 	font-size: 1em;
 }
 
@@ -203,7 +203,6 @@ a:visited{
 }
 
 #command-of-day a:hover{
-	font-style: italic;
 }
 
 #top-ten-commands ul li, #top-ten-commands a{
@@ -213,7 +212,6 @@ a:visited{
 }
 
 #top-ten-commands a:hover{
-    font-style: italic;
 }
 
 
