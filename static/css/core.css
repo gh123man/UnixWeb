@@ -409,3 +409,9 @@ input#submit{
 .quizLink > a{
 	color: rgb(169,3,41);
 }
+
+.homeContent {
+    width: 410px;
+    padding-left: 20px;
+    float: left;
+}
