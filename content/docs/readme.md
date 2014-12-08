@@ -9,16 +9,16 @@ Folders and their contents (based on navigation structure):
   + Homepage
     + index.html
     
-  + Unix Tutorials
+  + UNIX Tutorials
   
-  + Unix Quizzes
+  + UNIX Quizzes
   
-  + Unix and Beyond
-    + History of Unix
+  + UNIX and Beyond
+    + History of UNIX
     
-    + Unix Applications
+    + UNIX Applications
     
-    + OS based Unix
+    + OS based UNIX
   
   + Command Reference
   

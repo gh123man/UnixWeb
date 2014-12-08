@@ -78,7 +78,7 @@ Definition: changes the current working directory. cd stands for "current direct
 
 See **Directory Structure** for more information
 
-Additional explanation: Unix shells use a tree system. The root directory is represented by "/" whereas
+Additional explanation: UNIX shells use a tree system. The root directory is represented by "/" whereas
 the current directory is represented by "."
 To move up to the parent directory in the tree, you can use ".."
 A "/" separates the names of file 
