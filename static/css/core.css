@@ -356,13 +356,10 @@ td {
 
 .historyContent {
 	display: block;
-    -webkit-transition: height .6s ease;
-	-webkit-transition: opacity .6s ease;
-	-webkit-transition: padding .6s ease;
-    opacity: 0; 
-    height: 0;
+    -webkit-transition: all .4s ease;
     overflow: hidden;
 	padding: 0px;
+	max-height: 0px;
 }
 
 .historyTitle:hover {
@@ -371,8 +368,7 @@ td {
 }
 
 .historyTitle:hover + .historyContent {
-	opacity: 1;
-    height: auto;
+    max-height: 400px;
 	padding: 10px;
 }
 
