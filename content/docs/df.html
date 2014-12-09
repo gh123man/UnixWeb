@@ -3,78 +3,85 @@ Definition: shows the amount of disk space available and the amount of disk spac
 
 <p>Options:</p>
 
-  <ul class="task-list">
-  <li> -a, --all
-    <ul class="task-list">
-    <li>includes dummy file systems</li></ul>
-  </li>
- <li> -B, --block-size=SIZE
-   <ul class="task-list">
-    <li> scales the file by size before printing</li></ul>
-    </li>
-  <li> --total
-    <ul class="task-list">
-    <li>displays the total size; a grand total</li>
-    </ul>
-  </li>
-  <li> -h, --human-readable, -H, --si
-    <ul class="task-list">
-    <li>print size in a 'human readable' format</li>
-    <li>i.e. 1K 234M</li>
-    <li>-H & --si use powers of 1000 instead 1024</li>
-    </ul>
-  </li>
-  <li>-i, --inodes
-    <ul class="task-list">
-    <li>list inode information</li></ul>
-  </li>
-  <li> -k
-    <ul class="task-list">
-    <li>same as --block-size=1K</li></ul>
-  </li>
-  <li> -l, --local
-    <ul class="task-list">
-    <li>only displays local file systems</li></ul>
-  </li>
-  <li> --no-sync
-    <ul class="task-list">
-    <li>prevents a sync from happening before getting information</li>
-      <li>this is the default</li>
-    </ul>
-  </li>
-  <li> -P, --portability
-    <ul class="task-list">
-    <li>makes it so the format is in POSIX</li></ul>
-  </li>
-  <li> --sync
-    <ul class="task-list">
-    <li>implements a sync before getting information</li></ul>
-  </li>
-  <li> -t, --type=TYPE
-    <ul class="task-list">
-    <li>limit the listing to a certain TYPE of file</li></ul>
-  </li>
-  <li> -T, --print-type
-    <ul class="task-list">
-    <li>prints the file system type with other information</li></ul>
-  </li>
-  <li> -x, --exclude-type=TYPE
-    <ul class="task-list">
-    <li>excludes the TYPE of file system specified</li></ul>
-  </li>
-</ul>
+<table>
+	<tr>
+		<th>Cmd</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td> -a, --all</td>
+		<td>includes dummy file systems</td>
+	</tr>
+	<tr>
+		<td> -B, --block-size=SIZE</td>
+		<td>scales the file by size before printing</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td> -h, --human-readable <br/> -H, --si</td>
+		<td>print size in a 'human readable' format i.e. 1K 234M <br/>-H & --si use powers of 1000 instead 1024</td>
+	</tr>
+	<tr>
+		<td>-i, --inodes</td>
+		<td>list inode information</td>
+	</tr>
+	<tr>
+		<td>-k</td>
+		<td>same as --block-size=1K</td>
+	</tr>
+	<tr>
+		<td>-l, --local</td>
+		<td>only displays local file systems</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td>--no-sync</td>
+		<td>prevents a sync from happening before getting information <br/> this is the default</td>
+	</tr>
+	<tr>
+		<td>-P, --portability</td>
+		<td>makes it so the format is in POSIX</td>
+	</tr>
+	<tr>
+		<td>--sync</td>
+		<td>implements a sync before getting information</td>
+	</tr>
+	<tr>
+		<td>-t, --type=TYPE</td>
+		<td>limit the listing to a certain TYPE of file</td>
+	</tr>
+	<tr>
+		<td>-T, --print-type</td>
+		<td>prints the file system type with other information</td>
+	</tr>
+	<tr>
+		<td>-x, --exclude-type=TYPE</td>
+		<td>excludes the TYPE of file system specified</td>
+	</tr>
+ </table>
 
-<p>Uses/Examples:</p>
+
+<p>Examples:</p>
 <ul class="task-list">
-  <li>df
-    <ul class="task-list">
-      <li>will display all file systems and their disk usage</li>
-    </ul></li>
-    <li>df Sites
-    <ul class="task-list">
-      <li></li>displays the amount of free space in the Sites directory</li>
-    </ul></li>
-  <li>df Sites -h
-  <ul class="task-list">
-      <li></li>displays the same as above, but in a readable format</li>
-    </ul></li>
+    &nbsp;<pre>df</pre>
+    &nbsp;&nbsp; will display all file systems and their disk usage
+	
+    &nbsp;<pre>df Sites</pre>
+    &nbsp;&nbsp; displays the amount of free space in the Sites directory
+	
+	&nbsp;<pre>df Sites -h</pre>
+	&nbsp;&nbsp; displays the same as above, but in a readable format
