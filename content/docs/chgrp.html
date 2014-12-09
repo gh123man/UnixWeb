@@ -1,82 +1,59 @@
 <p>Category: File Management <br/>
 Definition: changes a group ownership of a file or of many files. </p>
 
-<p>Options:</p>
 
-  <ul class="task-list">
-  <li>-C, --changes
-    <ul class="task-list">
-      <li>reports when a change is made</li></ul>
-  </li>
- <li>-f, --silent, --quiet
-   <ul class="task-list">
-     <li>makes it so error messages are not shown</li></ul>
-    </li>
-  <li>-v, --verbose
-    <ul class="task-list">
-      <li>prints out details/diagnostic for every file processed/changed</li>
-    </ul>
-  </li>
-   <li>-h, --no-dereference
-    <ul class="task-list">
-      <li>affects symbolic links instead of any referenced file</li>
-      <li>can only use this if you can change symlink ownership</li>
-    </ul>
-  </li>
-   <li>--no-preserve-root
-    <ul class="task-list">
-      <li>do not treat '/' in a special way</li>
-      <li>default setting</li>
-    </ul>
-  </li>
-   <li>--reference=FILENAME
-    <ul class="task-list">
-      <li>use FILENAME's group settings rather than specifying a group value</li>
-    </ul>
-  </li>
-   <li>-R, --recursive
-    <ul class="task-list">
-      <li>operates recursively on files and directories</li>
-      <li>these options modify how hierarchy is affected when -R is specified
-        <li>-H
-          <ul class="task-list">
-            <li>if a command line argument us a symbolic link, traverse it</li>
-          </ul>
-        </li>
-        <li>-L
-          <ul class="task-list">
-            <li>traverse every symbolic link to a directory</li>
-          </ul>
-        </li>
-        <li>-P
-          <ul class="task-list">
-            <li>do not traverse any symbolic links</li>
-            <li>this is the default</li>
-          </ul>
-        </li>
-        
-      </li>
-      <li> --help
-    <ul class="task-list">
-    <li>display help message and exits</li></ul>
-  </li>
-  <li> --version
-    <ul class="task-list">
-    <li>displays version and exits</li></ul>
-    </ul>
-  </li>
-   
- </ul>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-C, --changes</td>
+		<td>reports when a change is made</td>
+	</tr>
+	<tr>
+		<td>-f, --silent, --quiet</td>
+		<td>makes it so error messages are not shown</td>
+	</tr>
+	<tr>
+		<td>-v, --verbose</td>
+		<td>prints out details/diagnostic for every file processed/changed</td>
+	</tr>
+	<tr>
+		<td>-h, --no-dereference</td>
+		<td>affects symbolic links instead of any referenced file <br/> can only use this if you can change symlink ownership</td>
+	</tr>
+	<tr>
+		<td>--no-preserve-root</td>
+		<td>do not treat '/' in a special way <br/> this is the default setting</td>
+	</tr>
+	<tr>
+		<td>--reference=FILENAME</td>
+		<td>use FILENAME's group settings rather than specifying a group value</td>
+	<tr>
+		<td>-R, --recursive</td>
+		<td>operates recursively on files and directories<br/>
+        these options modify how hierarchy is affected when -R is specified:
+		<br/>&nbsp;&nbsp; -H: traverses a symlink if it's on the cmd line
+		<br/>&nbsp;&nbsp; -L: traverses every symbolic link to a directory
+		<br/>&nbsp;&nbsp; -P: do not traverse any symbolic links (default)
+		</td>
+	</tr>
+	<tr>
+		<td>--help</td>
+		<td>cdisplay help message and exits</td>
+	</tr>
+	<tr>
+		<td>--version</td>
+		<td>displays version and exits</td>
+	</tr>
+ </table>
+
 
 <p>Examples:</p>
-<ul class="task-list">
-  <li>chgrp users file.txt
-    <ul class="task-list">
-      <li>changes the owning group of file.txt to the group named "users"</li>
-    </ul></li>
-  <li>chgrp -hR admin /database/
-  <ul class="task-list">
-      <li>changes the owning group of /database/ and all of its subdirectories & files to belong to admin</li>
-    </ul></li>
-
-</ul>
+	<pre>chgrp users file.txt</pre>
+	<pre>chgrp -hR admin /database/</pre>
+	<pre>chgrp --reference=STAFF finances.txt</pre>
+   
+	
+	
