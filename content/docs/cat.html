@@ -1,105 +1,61 @@
-	
 <p>Category: File <br/>
 Definition: concatenates (or appends) and displays files.
 The command will display file contents to a screen. You can also use the command
-to create a file as well as read/write to it. </p>
+to create a file as well as read/write to it. Because cat is so versatile, different uses
+rather than options for each command is shown in the table</p>
 
-<ul class="task-list">
-<li>cat filename
+<table>
+	<tr>
+		<th>Different uses</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>cat filename</td>
+		<td>displays a file</td>
+	</tr>
+	<tr>
+		<td>cat &gt; filename</td>
+		<td>creates the file</td>
+	</tr>
+	<tr>
+		<td>cat file | command</td>
+		<td> view a large file with cat command<br/> use "| more" or " | less" to view the file in parts</td>
+	</tr>
+	<tr>
+		<td>cat file1 file2 &gt; file3</td>
+		<td>combines two or more files into one</td>
+	</tr>
+	<tr>
+		<td>cat &gt;&gt;file</td>
+		<td>add to existing file <br/> can be binary or a rar file as well (.bin / .rar) <br/> must follow this command with text to enter<br/> enter "ctrl-D" to stop entering text</td>
+	</tr>
+	<tr>
+		<td>cat *</td>
+		<td>used to view all files</td>
+	<tr>
+		<td>cat *.html</td>
+		<td>can be used to view all of a specific file</td>
+	</tr>
+	<tr>
+		<td>cat /proc/[SYSTEM INFO]</td>
+		<td>can use to see LINUX information <br/> [SYSTEM INFO]: meminfo, cpuinfo, and version</td>
+	</tr>
+	<tr>
+		<td>tac filename</td>
+		<td>conceates files in reverse <br/> can also use: "cat filename | tac" and "tac &lt;&lt;&lt; "$myFileName"</td>
+	</tr>
+ </table>
 
-<ul class="task-list">
-<li>displays a file</li>
-</ul>
-</li>
-<li>cat &gt; filename
 
-<ul class="task-list">
-<li>creates the file</li>
-</ul>
-</li>
-<li>cat file | command
-
-<ul class="task-list">
-<li>view a large file with cat command</li>
-<li>use "| more" or " | less" to view the file in parts</li>
-</ul>
-</li>
-<li>cat file1 file2 &gt; file3
-
-<ul class="task-list">
-<li>combines two or more files into one</li>
-</ul>
-</li>
-<li>cat &gt;&gt;file
-
-<ul class="task-list">
-<li>add to existing file</li>
-<li>can be binary or a rar file as well (.bin / .rar)</li>
-<li>must follow this command with text to enter</li>
-<li>enter "ctrl-D" to stop entering text</li>
-</ul>
-</li>
-<li>cat -n file
-
-<ul class="task-list">
-<li>numbers each line of the output</li>
-<li>also can type cat --number file</li>
-</ul>
-</li>
-<li>cat *
-
-<ul class="task-list">
-<li>view all files</li>
-<li>can be used to view all of a specific file
-
-<ul class="task-list">
-<li>cat *.html</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>cat /proc/(system info)
-
-<ul class="task-list">
-<li>can use to see LINUX information
-
-<ul class="task-list">
-<li>meminfo</li>
-<li>cpuinfo</li>
-<li>version</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>tac filename
-
-<ul class="task-list">
-<li>conceates files in reverse</li>
-<li>can also use:
-
-<ul class="task-list">
-<li>cat filename | tac</li>
-<li>tac &lt;&lt;&lt; "$myFileName"</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <p>Examples:</p>
-<ul class="task-list">
-<li>cat helloWorld.txt</li>
-<li>cat &gt; hellowWorld.txt</li>
-<li>cat /links/helloWorld.txt</li>
-<li>cat helloWorld | more</li>
-<li>cat helloWorld.txt byeWorld.txt &gt; helloBye.txt</li>
-<li> cat &gt;&gt;helloWorld.txt
-
-<ul class="task-list">
-<li>This world is nice. </li>
-</ul>
-</li>
-<li>cat -n helloWorld.txt</li>
-<li>cat *</li>
-<li>cat *.html</li>
-<li>cat /proc/cpuinfo</li>
-</ul>
+	<pre>cat helloWorld.txt</pre>
+	<pre>cat &gt; hellowWorld.txt</pre>
+	<pre>cat /links/helloWorld.txt</pre>
+	<pre>cat helloWorld | more</pre>
+	<pre>cat helloWorld.txt byeWorld.txt &gt; helloBye.txt</pre>
+	<pre>cat &gt;&gt;helloWorld.txt</pre>
+	<p>&nbsp;&nbsp;&nbsp;This world is nice.</p>
+	<pre>cat -n helloWorld.txt</pre>
+	<pre>cat /proc/cpuinfo</pre>
+	
+	
