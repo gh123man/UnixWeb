@@ -1,41 +1,34 @@
 <p>Category: File Management <br/>
 Definition: to move or rename files.</p>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-b, --backup[=CONTROL]</td>
+		<td>make backup of each file<br/>-b doesn't accept an argument but --backup does</td>
+	</tr>
+	<tr>
+		<td>-f, --force</td>
+		<td>prevents a prompt from appearing before overwriting a file</td>
+	</tr>
+	<tr>
+		<td>-i, --interactive</td>
+		<td>prompt before overwriting each destination file<br/>disregards file permissions</td>
+	</tr>
+	<tr>
+		<td>-n, --no-clobber</td>
+		<td>do not overwrite an existing file</td>
+	</tr>
+ </table>
 
-<p>Options:</p>
 
-  <ul class="task-list">
-  <li> -b, --backup[=CONTROL]
-    <ul class="task-list">
-    <li>make backup of each file</li>
-    <li>-b doesn't accept an argument but --backup does</li></ul>
-  </li>
-   <li> -f, --force
-    <ul class="task-list">
-    <li>prevents a prompt from appearing before overwriting a file</li></ul>
-  </li>
-  <li> -i, --interactive
-    <ul class="task-list">
-    <li>prompt before overwriting each destination file</li>
-    <li>disregards file permissions</li></ul>
-  </li>
-  <li> -n, --no-clobber
-    <ul class="task-list">
-    <li>do not overwrite an existing file</li>,/ul>
-  </li>
-</ul>
-
-<p>Examples: </p>
- <ul class="task-list">
-  <li> mv file1.txt Sites
-    <ul class="task-list">
-    <li>moves the file file1 to the Sites directory (destination)</li></ul>
-  </li>
-  <li> mv file1.txt file3.txt
-    <ul class="task-list">
-    <li>renames the file1.xt as file3.txt</li></ul>
-  </li>
-  <li> mv file1.html ../
-    <ul class="task-list">
-    <li>moves file1 up to the parent directory</li></ul>
-  </li>
-</ul>
+<p>Examples:</p>
+	<pre>mv file1.txt Sites</pre>
+	<pre>mv file1.txt file3.txt</pre>
+	<pre>mv file1.html ../</pre>
+	
+	
+	
+	
