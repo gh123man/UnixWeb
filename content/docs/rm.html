@@ -3,91 +3,65 @@ Definition: to remove files or directories. In order to remove a directory, the 
   the rm command will only remove files.
 </p>
 
-<p>Options:</p>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td> -f, --force</td>
+		<td>ignores files that are non-existent<br/>does not prompt before removing</td>
+	</tr>
+	<tr>
+		<td>-i</td>
+		<td>gives a prompt before each removal</td>
+	</tr>
+	<tr>
+		<td>-I</td>
+		<td>prompts only once before removing if there are 3+ files being removed<br/>prompts only once if removing reclusively</td>
+	</tr>
+	<tr>
+		<td>--interactive[=WHEN]</td>
+		<td>prompt removes as specified by WHEN<br/>WHEN can be: always, once, never<br/>default for WHEN is always</td>
+	</tr>
+	<tr>
+		<td>--one-file-system</td>
+		<td>sfor when you are removing a hierarchy recursively<br/>says skip directories that is on a different file system than on the cmd line</td>
+	</tr>
+	<tr>
+		<td>--no-preserve-root</td>
+		<td>/ is not treated in a special way<br/> / is the root directory</td>
+	</tr>
+	<tr>
+		<td>--preserve-root</td>
+		<td>will not remove the root directory aka "/"<br/> this is the default setting</td>
+	</tr>
+	<tr>
+		<td>-r, -R, --recursive</td>
+		<td>removes directories and their contents recursively</td>
+	</tr>
+	<tr>
+		<td>-v, --verbose</td>
+		<td>explains what is happening for each action</td>
+	</tr>
+	<tr>
+		<td>--help</td>
+		<td>display help message and exits</td>
+	</tr>
+	<tr>
+		<td>--version</td>
+		<td>displays version and exits</td>
+	</tr>
+ </table>
 
-  <ul class="task-list">
-  <li> -f, --force
-    <ul class="task-list">
-    <li>ignores files that are nonexistant</li>
-    <li>does not prompt before removing</li></ul>
-  </li>
-  <li> -i
-    <ul class="task-list">
-    <li>gives a prompt before each removal</li></ul>
-  </li>
-  <li> -I
-    <ul class="task-list">
-    <li>prompts only once before removing if there are 3+ files being removed</li>
-      <li>prompts only once if removing reclusively</li>
-    </ul>
-  </li>
-  <li> --interactive[=WHEN]
-    <ul class="task-list">
-    <li>prompt removes as specified by WHEN</li>
-    <li>WHEN can be: always, once, never</li>
-    <li>default for WHEN is always</li>
-    </ul>
-  </li>
-  <li> --one-file-system
-    <ul class="task-list">
-    <li>for when you are removing a hierarchy recursively</li>
-      <li>says skip directories that is on a different file system than on the cmd line</li>
-    </ul>
-  </li>
-  <li> --no-preserve-root
-    <ul class="task-list">
-    <li> / is not treated in a special way</li>
-      <li> / is the root directory</li>
-    </ul>
-  </li>
-  <li> --preserve-root
-    <ul class="task-list">
-    <li>will not remove the root directory aka "/"</li>
-      <li>default setting</li>
-    </ul>
-  </li>
-  <li> -r, -R, --recursive
-    <ul class="task-list">
-    <li>removes directories and their contents recursively</li></ul>
-  </li>
-  <li> -v, --verbose
-    <ul class="task-list">
-    <li>explains what is happening for each action</li></ul>
-  </li>
-  <li> --help
-    <ul class="task-list">
-    <li>display help message and exits</li></ul>
-  </li>
-  <li> --version
-    <ul class="task-list">
-    <li>displays version and exits</li></ul>
-  </li>
-</ul>
 
 <p>Examples:</p>
-
-<ul>
- <li> rm file1.txt
-    <ul class="task-list">
-    <li>removes the file1.txt after you respond yes to the prompt</li></ul>
-  </li>
-  <li> rm -f *
-    <ul class="task-list">
-    <li>removes all the files in the current directory without a prompt</li></ul>
-  </li>
-  <li> rm -r Sites
-    <ul class="task-list">
-    <li>removes the Sites directory and all files in it</li>
-      <li>A prompt will appear for any write-protected files</li>
-    </ul>
-  </li>
-  <li> rm -fr Sites
-    <ul class="task-list">
-    <li>same as above, but no prompt will appear</li></ul>
-  </li>
-  <li> rm -I *.txt
-    <ul class="task-list">
-    <li>removes all text files</li>
-    <li>it shows a prompt IF there's more than three files</li></ul>
-  </li>
-</ul>
+	<pre>rm file1.txt</pre>
+	<pre>rm -f *</pre>
+	<pre>rm -r Sites</pre>
+	<pre>rm -fr Sites</pre>
+	<pre>rm -I *.txt</pre>
+	
+	
+	
+	
