@@ -3,7 +3,7 @@ function drawLogo() {
 ?>
     <a href="/">
         <div class="logo">
-            <img src="/static/images/logo.svg" />
+            <img src="/static/images/logo.png" />
         </div>
     </a>
 <?php
