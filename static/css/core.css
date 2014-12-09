@@ -432,14 +432,16 @@ input#submit{
 
 /***************table formatting add*********/
 table{
-		width:100%;
-	}
+	width:100%;
+}
 	
 th{
 	background-color:  rgb(169,3,41);
 	color: white;
+	border: 1px solid rgb(169,3,41);
+	border-collapse: collapse;
 }
-table, th, td{
+table, td{
 	border: 1px solid black;
 	border-collapse: collapse;
 }
