@@ -2,162 +2,116 @@
 Definition: for copying files or directories.
 </p>
 
-<p>Options:</p>
 
-  <ul class="task-list">
-  <li>-a, --archive
-    <ul class="task-list">
-    <li>archives the file/directory</li></ul>
-  </li>
- <li> --attributes-only
-   <ul class="task-list">
-    <li>says: don't copy the data, just create a file with the same attributes as the file to be copied</li></ul>
-    </li>
-  <li> -b, --backup[=CONTROL]
-    <ul class="task-list">
-      <li>make a backup of existing file</li>
-      <li>-b doesn't accept a control argument (uses default) but --backup does
-        <ul class="task-list">
-          <li>=CONTROL specifies the version control method to use</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li> --copy-contents
-    <ul class="task-list">
-    <li>When operating recursively, the command instructs to copy contents of special files</li>
-    </ul>
-  </li>
-  <li> -f, --force
-    <ul class="task-list">
-    <li>if an existing destination file cannot be opened, remove file & try again</li>
-    <li>if -n is used, the -f command will not have an effect</li>
-    </ul>
-  </li>
-  <li> -i, --interactive
-    <ul class="task-list">
-    <li>prompt before overwrite</li>
-    <li>will override -n option</li>
-    </ul>
-  </li>
-   <li> -H
-    <ul class="task-list">
-    <li>follow command line symlinks</li>
-    </ul>
-  </li>
-   <li> -l, --link
-    <ul class="task-list">
-      <li>creates hard links instead of copying</li>
-    </ul>
-  </li>
-   <li> -L, --dereference
-    <ul class="task-list">
-    <li>always follow symlinks in SOURCE</li>
-    <li>If the SOURCE is a symlink: copy file linked, not the symlink</li>
-    </ul>
-  </li>
-   <li> -n, --no-clobber
-    <ul class="task-list">
-      <li>don't overwrite an existing file</li>
-      <li>overwrites the -l option</li>
-    </ul>
-  </li>
-   <li> -P, --no-dereference
-      <ul class="task-list">
-      <li>never follow symlinks in the source</li>
-    </ul>
-  </li>
-   <li> -p, --preserve[=ATTR_LIST]
-    <ul class="task-list">
-      <li>preserves the specified attributes</li>
-      <li>-p is a default the same as --perserve=mode,owenrship,timestamps</li>
-      <li>attributes: mode, ownership, timestamps, context, links, xattr, all</li>
-    </ul>
-  </li>
-  <li> --parents
-    <ul class="task-list">
-      <li>use full source file name</li>
-    </ul>
-  </li>
-  <li> -R, -r, --recursive
-    <ul class="task-list">
-      <li>copy files recursively</li>
-    </ul>
-  </li>
-  <li> -reflink[=WHEN]
-    <ul class="task-list">
-      <li>control clone copies</li>
-    </ul>
-  </li>
-  <li> --remove-destination
-    <ul class="task-list">
-      <li>removes every destination file before opening</li>
-      <li>opposite of --force</li>
-    </ul>
-  </li>
-  <li> -sparse=WHEN
-    <ul class="task-list">
-      <li>control creation of sparse files</li>
-    </ul>
-  </li>
-  <li> -s, --symbolic-link
-    <ul class="task-list">
-      <li>makes a symbolic link instead of copying the file/directory</li>
-    </ul>
-  </li>
-  <li> -S --suffix=SUFFIX
-    <ul class="task-list">
-      <li>overrides the default backup suffix</li>
-    </ul>
-  </li>
-  <li> -t, --target-directory=DIRECTORY
-    <ul class="task-list">
-      <li>copy all source arguments into the DIRECTORY specified</li>
-    </ul>
-  </li>
-  <li> -T, --no-target-directory
-    <ul class="task-list">
-      <li>treats as a normal file</li>
-    </ul>
-  </li>
-  <li> -u, --update
-    <ul class="task-list">
-      <li>copy only when the SOURCE file is newer than the destination file</li>
-    </ul>
-  </li>
-  <li> -v, --verbose
-    <ul class="task-list">
-      <li>prints the details and explanations of the actions occuring</li>
-    </ul>
-  </li>
-  <li> -x, --one-file-system
-    <ul class="task-list">
-      <li>stay on this file system</li>
-    </ul>
-  </li>
-</ul> 
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-a, --archive</td>
+		<td>archives the file/directory</td>
+	</tr>
+	<tr>
+		<td> --attributes-only</td>
+		<td>says: don't copy the data, just create a file with the same attributes as the file to be copied</td>
+	</tr>
+	<tr>
+		<td>-b, --backup[=CONTROL]</td>
+		<td>make a backup of existing file <br/> -b doesn't accept a control argument (uses default) but --backup does <br/> =CONTROL specifies the version control method to use</td>
+	</tr>
+	<tr>
+		<td>--copy-contents</td>
+		<td>When operating recursively, the command instructs to copy contents of special files</td>
+	</tr>
+	<tr>
+		<td>-f, --force</td>
+		<td>if an existing destination file cannot be opened, remove file & try again<br/> if -n is used, the -f command will not have an effect</td>
+	</tr>
+	<tr>
+		<td>-i, --interactive</td>
+		<td>prompt before overwrite<br/>will override -n option</td>
+	<tr>
+		<td>-H</td>
+		<td>follow command line symlinks</td>
+	</tr>
+	<tr>
+		<td>-l, --link</td>
+		<td>creates hard links instead of copying</td>
+	</tr>
+	<tr>
+		<td>-L, --dereference</td>
+		<td>always follow symlinks in SOURCE<br/> if the SOURCE is a symlink: copy file linked, not the symlink</td>
+	</tr>
+	<tr>
+		<td>-n, --no-clobber</td>
+		<td>don't overwrite an existing file<br/>overwrites the -l option</td>
+	</tr>
+	<tr>
+		<td>-P, --no-dereference</td>
+		<td>never follow symlinks in the source</td>
+	</tr>
+	<tr>
+		<td> -p, --preserve[=ATTR_LIST]</td>
+		<td>preserves the specified attributes<br/>-p is a default the same as --perserve=mode,owenrship,timestamps<br/>attributes: mode, ownership, timestamps, context, links, xattr, all</td>
+	</tr>
+	<tr>
+		<td>--parents</td>
+		<td>use full source file name</td>
+	</tr>
+	<tr>
+		<td>-R, -r, --recursive</td>
+		<td>copy files recursively</td>
+	</tr>
+	<tr>
+		<td>--reflink[=WHEN]</td>
+		<td>control clone copies</td>
+	</tr>
+	<tr>
+		<td>--remove-destination</td>
+		<td>removes every destination file before opening<br/>opposite of --force</td>
+	</tr>
+	<tr>
+		<td>--sparse=WHEN</td>
+		<td>control creation of sparse files</td>
+	</tr>
+	<tr>
+		<td>-s, --symbolic-link</td>
+		<td>makes a symbolic link instead of copying the file/directory</td>
+	</tr>
+	<tr>
+		<td>-S --suffix=SUFFIX</td>
+		<td>overrides the default backup suffix</td>
+	</tr>
+	<tr>
+		<td>-t, --target-directory=DIRECTORY</td>
+		<td>copy all source arguments into the DIRECTORY specified</td>
+	</tr>
+	<tr>
+		<td>-T, --no-target-directory</td>
+		<td>treats as a normal file</td>
+	</tr>
+	<tr>
+		<td>-u, --update</td>
+		<td>copy only when the SOURCE file is newer than the destination file</td>
+	</tr>
+	<tr>
+		<td>-v, --verbose</td>
+		<td>prints the details and explanations of the actions occuring</td>
+	</tr>
+	<tr>
+		<td>-x, --one-file-system</td>
+		<td>stay on this file system</td>
+	</tr>
+ </table>
 
-  
-  <p>Examples:</p>
-  <ul>
-    <li>cp file1.txt myDir
-      <ul class="task-list">
-        <li>copies the file1 into the myDir subdirectory</li>
-      </ul>
-    </li>
-    <li>cp /home/Sites/file.txt /home/myDir/file.bak
-      <ul class="task-list">
-        <li>copies the file from /home/Sites into /home/myDir/ as file.bak</li>
-      </ul>
-    </li>
-    <li>cp *.html /home/Sites/
-      <ul class="task-list">
-        <li>copies all html files into the Sites directory</li>
-      </ul>
-    </li>
-    <li>cp -u *.html Sites
-      <ul class="task-list">
-        <li>copies all html files <em>that don't exist in Sites</em> into the Sites directory</li>
-      </ul>
-    </li>
-  </ul>
+
+<p>Examples:</p>
+	<pre>cp file1.txt myDir</pre>
+	<pre>cp /home/Sites/file.txt /home/myDir/file.bak</pre>
+	<pre>cp *.html /home/Sites/</pre>
+	<pre>cp -u *.html Sites</pre>
+	
+	
+	
+	
