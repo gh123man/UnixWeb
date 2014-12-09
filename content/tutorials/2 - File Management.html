@@ -3,33 +3,33 @@
 <p> <strong>cp</strong> is a command which makes a copy of a file. </p>
  <p>When you enter the command</p>
 <p class="code">% cp test test2</p>
-<p>UNIX will copy the file named test and create a new file named test2.</p>
+<p>Unix will copy the file named test and create a new file named test2.</p>
  <p align="center"><img width="1054" height="500" alt="Results of cp command" src="../../static/images/tutorial2/tutorial2picture1.png"> </p>
- <p>As you can see from the picture above, I check to see what files I have in my test folder and there is only the test file from earlier. (Refer to Lesson 1) Then I copy the file named test to a new one named test2 using the <emphasis>cp test test2</emphasis> command and upon checking for files again using <emphasis>ls</emphasis> the newly created test2 file shows up.</p>
+ <p>As you can see from the picture above, I check to see what files I have in my test folder and there is only the test file from earlier. (Refer to Lesson 1) Then I copy the file named test to a new one named test2 using the <strong>cp test test2</strong> command. Upon checking for files again using <strong>ls</strong> the newly created test2 file shows up.</p>
 
  <h3>mv (Move)</h3>
  <p>There are instances where you may want to move a file to a different location in your folder structure or rename a file. <strong>mv</strong> is a command designed to help with this.</p>
  <p>When you enter the command</p>
 <p class="code">% mv file1 filepath</p>
-<p>UNIX takes file1 and changes it's path to reflect the filepath specified. Even if this includes changing the name.</p>
+<p>Unix takes file1 and changes it's path to reflect the filepath specified. Even if this includes changing the name.</p>
  <p align="center"><img width="1054" height="500" alt="Results of cp command" src="../../static/images/tutorial2/tutorial2picture2.png"> </p>
- <p>As you can see from the picture above, I check my working directory for files and I move the file named test to the subfolder using the mv command! I confirm this by switching to the subfolder using cd and listing it's contents.</p>
-
+ <p>As you can see from the picture above, I check my working directory for files and I move the file named test to the subfolder using the <strong>mv</strong> command! I confirm this by switching to the subfolder using <strong>cd</strong> and using <strong>ls</strong> to list it's contents.</p>
+ 
   <h3>rm (Remove)</h3>
- <p>rm is used to remove files. Great care has to be taken before running the rm command. There is no way to recover the files which are removed unless they were backed up.</p>
+ <p><strong>rm</strong> is used to remove files. Great care has to be taken before running the <strong>rm</strong> command. <strong>There is no way to recover the files which are removed unless they were backed up.</strong></p>
  <p>When you enter the command</p>
 <p class="code">% rm test</p>
-<p>UNIX will look in your current working directory for a file named test and remove it if found.</p>
+<p>Unix will look in your current working directory for a file named test and remove it if found.</p>
  <p align="center"><img width="1054" height="500" alt="Results of pwd command" src="../../static/images/tutorial2/tutorial2picture3.png"> </p>
- <p>As you can see from the picture above, I am in my subfolder directory still with the test file in it. I use the <emphasis>rm test</emphasis> command and then list the file contents and to show it is removed!</p>
-
+ <p>As you can see from the picture above, I am in my subfolder directory still with the test file in it. I use the <strong>'rm test'</strong> command and then <strong>ls</strong> to list the file contents to show it is removed!</p>
+ 
  <h3>cat</h3>
- <p>The cat command is used to print out the contents of a file to the screen.</p>
+ <p>The <strong>cat</strong> command is used to print out the contents of a file to the screen.</p>
  <p>When you enter the command</p>
 <p class="code">% cat test</p>
-<p>UNIX will grab the file named test, and print whatever is inside the file to your terminal.</p>
+<p>Unix will grab the file named test, and print whatever is inside the file to your terminal.</p>
  <p align="center"><img width="1054" height="500" alt="Results of pwd command" src="../../static/images/tutorial2/tutorial2picture4.png"> </p>
- <p>As you can see from the picture above, I check to see what files I have in my test folder and there is a test file that I made that has some text in it. I then use <emphasis>cat test</emphasis> to print out the contents which happen to be "This is some text!".</p>
+ <p>As you can see from the picture above, I check to see what files I have in my test folder and there is a test file that I made that has some text in it. I then use <strong>cat test</strong> to print out the contents which happen to be "This is some text!".</p>
 
-<div class="quizLink"><a href="/quizzes/2+-+File+Management"> Take The Quiz! </a></div>
+<div class="quizLink"><a href="/quizzes/File+Management"> Take The Quiz! </a></div>
 <div class="quizLink"><a href="/tutorials/3+-+Text+Editing"> Next Lesson! </a></div>

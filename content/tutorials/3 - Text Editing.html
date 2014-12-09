@@ -1,13 +1,13 @@
-<h2>Lesson 3: Text editing </h2>
+<h2>Lesson 3: Text Editing </h2>
 <h3>Terinal Text Editors</h3>
 <p>Although we will be focusing on the <strong>vi</strong> text editing tool, we wanted to list some other alternatives.</p>
 <ul>
-	<li>vi - a not as new user friendly editor but is supported across nearly all UNIX-based systems</li>
-	<li>pico - an editor that closely resembles the DOS-based editor but some versions of Linux systems do not include this anymore, so it must be downloaded separately</li>
-	<li>nano - similar to pico but has some more advanced features</li>
-	<li>emacs - one of the most widely used across system administrators and is similar to vi in versatility for automated tasks</li>
+	<li>vi - An editor found across nearly all Unix systems, but is not new user-friendly</li>
+	<li>pico - An editor that closely resembles the old editors that computers used when there was no graphical user interface. However, some versions of Linux systems do not include this anymore so it must be downloaded separately</li>
+	<li>nano - Similar to pico but has some more advanced features</li>
+	<li>emacs - One of the most commonly used editors by System Administrators and is similar to vi in versatility for automated tasks</li>
 </ul>
-<p>We will be covering vi mainly because it will be available on nearly any UNIX system you use and is a good baseline to know.</p>
+<p>We will be covering vi mainly because it will be available on nearly any Unix system you use and is a good baseline to know.</p>
 <h3>VI Modes</h3>
 <p>To get started with vi, simply enter the vi command at the terminal:</p>
  <p align="center"><img width="1054" height="500" alt="Terminal with vi command ready" src="../../static/images/tutorial3/tutorial3picture1.png"> </p>
@@ -16,20 +16,20 @@
  <p>The key thing to remember is that vi has two modes: command, and insert. When you are in command mode, everything you type on the keyboard gets interpreted by vi as a command. When you are in edit mode, most everything you type on the keyboard gets interpreted as characters.</p>
  <p>When you are in insert mode, you can switch to command mode by pressing the Esc key on your keyboard (this is often at the left and upper portion of your keyboard).</p>
  <p>If you are in command mode, you can simply type i on your keyboard to enter edit mode</p>
- <p>You can tell if you are in edit mode if you see the <emphasis>--INSERT--</emphasis> at the bottom left of your terminal, otherwise you are in command mode.</p>
+ <p>You can tell if you are in edit mode if you see the <strong>--INSERT--</strong> at the bottom left of your terminal, otherwise you are in command mode.</p>
  <p align="center"><img width="1054" height="500" alt="Showing the -- INSERT --" src="../../static/images/tutorial3/tutorial3picture3.png"> </p>
  <p>Go ahead and press the i key and when you see the -- INSERT -- show up on the bottom left, enter any text you want!</p>
-
+ 
  <h3>VI Navigating</h3>
  <p>The difficult thing for users coming from a GUI based system is navigating around vi.</p>
  <p>You can move your green cursor with the arrow keys. Using the mouse to try and click a location will not work</p>
  <p>Also what you see on the screen is merely a portion of the file, you can use the Page Up and Page Down keys on your keyboard to move up or down in the file you're in respectively. You can also go up or down with the cursor but it may take a long time!</p>
-
+ 
  <h3>VI Commands</h3>
  <p>There are hundreds of vi commands; and it would take a fifteen week course to cover all the ways that you can use the vi editor to edit files, run commands, and do an astounding amount of things.</p>
  <p>We will be covering three main interactions: writing a file, quitting vi, and searching a file.</p>
- <p><strong>NOTE: All commands in vi are case-sensitive, just like in UNIX!</strong></p>
-
+ <p><strong>NOTE: All commands in vi are case-sensitive, just like in Unix!</strong></p>
+ 
  <h3>Writing a file</h3>
  <p>Once you are ready to save your file, make sure you are in command mode. (Press the ESC key if you are in edit mode) And enter:</p>
  <p class="code">:w test</p>
@@ -38,16 +38,16 @@
  <p><strong>NOTE: There may be a prompt to add ! to your :w command to overwrite the file. (Your command would now be ":w! test") The ! is an override marker to force the execution of the command.</strong></p>
  <p align="center"><img width="1054" height="500" alt="Results of :w command" src="../../static/images/tutorial3/tutorial3picture5.png"> </p>
  <p>Upon saving it, you will see the file has been written result in the bottom left</p>
-
+ 
  <h3>Quitting vi</h3>
  <p>For quitting vi you need to be in command mode again, and enter in the command:</p>
  <p class="code">:q</p>
   <p align="center"><img width="1054" height="500" alt="Quit command ready" src="../../static/images/tutorial3/tutorial3picture6.png"> </p>
  <p><strong>NOTE: You may get the prompt to add the override ! if you have unsaved changes to your file in the editor.</strong></p>
-  <p align="center"><img width="1054" height="500" alt="Returned to the UNIX command line" src="../../static/images/tutorial3/tutorial3picture7.png"> </p>
- <p>Upon entering the quit command, you will be brought back to the UNIX command line!</p>
+  <p align="center"><img width="1054" height="500" alt="Returned to the Unix command line" src="../../static/images/tutorial3/tutorial3picture7.png"> </p>
+ <p>Upon entering the quit command, you will be brought back to the Unix command line!</p>
 
-
+ 
  <h3>Searching in vi</h3>
  <p>This section is optional to everyday usage of vi, but really showcases the power of having an advanced knowledge of vi</p>
  <p>In vi there are two directions to search in: forward of your cursor position and backwards of it.</p>
@@ -60,5 +60,5 @@
  <p align="center"><img width="1054" height="500" alt="Pattern not found error" src="../../static/images/tutorial3/tutorial3picture10.png"> </p>
  <p>To search backwards, just do the same thing but with the ? instead of a /</p>
  <p><strong>NOTE: If your search hits the end or beginning of the document depending on which kind of search you did, it will continue searching from the opposite end until it hits your current cursor position.</strong></p>
-
-<div class="quizLink"><a href="/quizzes/3+-+Text+Editing"> Take The Quiz! </a></div>
+ 
+<div class="quizLink"><a href="/quizzes/Text+Editing"> Take The Quiz! </a></div>
