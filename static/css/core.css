@@ -425,3 +425,7 @@ input#submit{
     padding-left: 20px;
     float: left;
 }
+
+.homeImage {
+    width: 660px;
+}
