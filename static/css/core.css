@@ -364,7 +364,9 @@ td {
 
 .historyContent {
 	display: block;
-    -webkit-transition: all .4s ease;
+	transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-webkit-transition: all .4s ease;
     overflow: hidden;
 	padding: 0px;
 	max-height: 0px;
