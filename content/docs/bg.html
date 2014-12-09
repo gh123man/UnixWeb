@@ -2,37 +2,30 @@
 Definition: a job control command that makes sure suspended jobs are not brought to the foreground when resumed.
 The job indicated with the bg command is the job you want to run in the background. OS systems must have bg to be POSIX complaint</p>
 
-<p>Options:</p>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>%, %+, %%</td>
+		<td>refers to the current job</td>
+	</tr>
+	<tr>
+		<td> %- or </td>
+		<td> refers to the previous job</td>
+	</tr>
+	<tr>
+		<td>%(num)</td>
+		<td>>refers to the job number <br/> i.e. %1 or %2</td>
+	</tr>
+ </table>
 
-  <ul class="task-list">
-  <li>%, %+, %%
-    <ul class="task-list">
-    <li>refers to the current job</li></ul>
-  </li>
- <li> %- or -
-   <ul class="task-list">
-    <li> refers to the previous job</li></ul>
-    </li>
-  <li> %(num)
-    <ul class="task-list">
-    <li>refers to the job number</li>
-    <li>i.e. %1 or %2</li>
-    </ul>
-  </li>
-</ul>
 
 <p>Examples:</p>
-<ul class="task-list">
-  <li>bg %1
-    <ul class="task-list">
-      <li>resumes job 1 in the background</li>
-    </ul></li>
-  <li>bg %+
-  <ul class="task-list">
-      <li>bg %</li>
-      <li>bg %%</li>
-      <li>resumes current job background</li>
-    </ul></li>
-
-</ul>
-
+	<pre>bg %1</pre>
+	<p>&nbsp;&nbsp;&nbsp; resumes job 1 in the background</p>
+	<pre>bg %+</pre>
+	<p>&nbsp;&nbsp;&nbsp; same as bg % or bg%%</p>
+	<p>&nbsp;&nbsp;&nbsp; resumes current job in background</p>
+	
