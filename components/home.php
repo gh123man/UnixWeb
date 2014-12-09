@@ -11,9 +11,17 @@ echo '</div>';
     <div id="main">
         <img class="homeImage" src="/static/images/homepage.png">
     </div>
-    <p class="homeContent">UNIXWeb is a place for anyone to learn and reference everything UNIX. If you want to look up examples of commands
-        as well as explanations, you can view them on the docs page. UNIXWeb provides a variety of tutorials and quizzes to expand
-        and test your knowledge. Head on over to the history page to get a glimpse of how UNIX was developed throughout time.
+    <p class="homeContent">UNIXWeb is a place for anyone to learn and reference everything UNIX. 
+    <br/><br/>
+    If you want to look up examples of commands as well as explanations, you can view them on the docs page. 
+    <br/><br/>
+    UNIXWeb provides a variety of tutorials and quizzes to expand and test your knowledge.
+    <br/><br/>
+    Head on over to the history page to get a glimpse of how UNIX was developed throughout time.
+   <br/><br/>
+    If you create an account with us, you will have the ability to track your progress and your results regarding quizzes.
+    We will not use your information for anything other than logging in for the system.
+    <br/><br/>
 
     <!--generate command of the day / top 10 with javascript queries-->
     <div id="command-of-day">
