@@ -1,53 +1,45 @@
 <p>Category: System Info <br/>
 Definition: for displaying a calendar on the command line. The calendar is formatted for you after command is called</p>
 
-<p>Options:</p>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-l</td>
+		<td>displays a single month <br/> this is the default</td>
+	</tr>
+	<tr>
+		<td>-3 </td>
+		<td> displays three months: previous month, the current month, and the upcoming month</td>
+	</tr>
+	<tr>
+		<td>-s</td>
+		<td> display the calendar with Sunday as the starting day</td>
+	</tr>
+	<tr>
+		<td>-m</td>
+		<td>displays the calendar with Monday as the starting day</td>
+	</tr>
+	<tr>
+		<td>-j</td>
+		<td>displays the calendar with dates of the Julian calendar</td>
+	</tr>
+	<tr>
+		<td>-y</td>
+		<td>display a calendar for the entire current year</td>
+	</tr>
+ </table>
 
-  <ul class="task-list">
-  <li>-l
-    <ul class="task-list">
-    <li>displays a single month (default)</li></ul>
-  </li>
- <li> -3
-   <ul class="task-list">
-    <li>displays three months: previous month, the current month, and the upcoming month</li></ul>
-    </li>
-  <li> -s
-    <ul class="task-list">
-    <li>display the calendar with Sunday as the starting day</li>
-    </ul>
-  </li>
-  <li> -m
-    <ul class="task-list">
-    <li>displays the calendar with Monday as the starting day</li>
-    </ul>
-  </li>
-  <li> -j
-    <ul class="task-list">
-    <li>displays the calendar with dates of the Julian calendar</li>
-    </ul>
-  </li>
-  <li> -y
-    <ul class="task-list">
-    <li>display a calendar for the entire current year</li>
-    </ul>
-  </li>
-  
-  <p>Uses</p>
-  <li> cal  
-    <ul class="task-list">
-    <li>display the calendar for the current month</li>
-    </ul>
-  </li>
-  <li> cal month year
-    <ul class="task-list">
-    <li>displays the calendar for the month and year specified/li>
-    </ul>
-  </li>
-  
-  <p>Examples:</p>
-  <ul>
-    <li>cal 12 2000</li>
-    <li>cal -j</li>
-    <li>cal -y</li>
-  </ul>
+
+<p>Examples:</p>
+	<pre>cal</pre>
+	<p>&nbsp;&nbsp;&nbsp; display the calendar for the current month</p>
+	<pre>cal 12 2000</pre>
+	<p>&nbsp;&nbsp;&nbsp; displays the calendar for the december of 2000 specified</p>
+	<pre>cal -j</pre>
+	<p>&nbsp;&nbsp;&nbsp; displays the calendar with Julian dates</p>
+	<pre>cal -y</pre>
+	<p>&nbsp;&nbsp;&nbsp; displays the calendar for the current year</p>
+	
