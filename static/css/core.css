@@ -434,7 +434,7 @@ input#submit{
 table{
 	width:100%;
 }
-	
+
 th{
 	background-color:  rgb(169,3,41);
 	color: white;
@@ -449,4 +449,8 @@ table, td{
 th, td {
 	padding: 5px;
 	text-align: left;
+}
+
+.top10 {
+    display: inline-block;
 }

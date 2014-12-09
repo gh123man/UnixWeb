@@ -11,9 +11,9 @@ echo '</div>';
     <div id="main">
         <img class="homeImage" src="/static/images/homepage.png">
     </div>
-    <p class="homeContent">UNIXWeb is a place for anyone to learn and reference everything UNIX. 
+    <p class="homeContent">UNIXWeb is a place for anyone to learn and reference everything UNIX.
     <br/><br/>
-    If you want to look up examples of commands as well as explanations, you can view them on the docs page. 
+    If you want to look up examples of commands as well as explanations, you can view them on the docs page.
     <br/><br/>
     UNIXWeb provides a variety of tutorials and quizzes to expand and test your knowledge.
     <br/><br/>
@@ -41,7 +41,7 @@ echo '</div>';
             $topCommands = PageTracker::getTopCommands(10);
 
             foreach ($topCommands as $cmd) {
-                echo '<li><a href="' . $cmd->path() . '"><div class="localNavItemWrapper">' . $cmd->name() . '</div></a></li>';
+                echo '<li><a href="' . $cmd->path() . '"><div class=" top10 localNavItemWrapper">' . $cmd->name() . '</div></a></li>';
             }
 
             ?>
