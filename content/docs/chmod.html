@@ -4,6 +4,10 @@ Definition: used to control access/permissions to files and directories. There a
 file permissions that looks to read (r), write (w), and execute (x) the file. The abilities are set to define
 the permissions for three different groups: the user (aka the owner), the group (list of users belonging to the ownership's group), and
 the public (Other).
+
+<br/><br/>
+Quick and dirty reference: you can determine these permissions by implementing u=rw, go=rx, 755, or 644. If you don't 
+understand these numbers or letter combinations, refer to explanations below.
 </p>
 
 <p>How to use permissions:<br/>
@@ -14,18 +18,18 @@ To define the different groups, you must a user class symbol:
     <li> u : user/owner </li>
     <li> g : group</li>
     <li> o : other/public </li>
-    <li> a : all aka (ugo)</li>
+    <li> a : all which is the same as ugo</li>
   </ul>
 To determine how to set, take away, or add symbols, you must use a permission operator:
   <ul class="task-list">
-    <li> = : allows the specificed permissions to be enabled for defined user class</li>
-    <li> + : adds/allows the specificed permissions to be enabled for defined user class</li>
-    <li> - : takes away/prohibits the specificed permissions to be enabled for defined user class </li>
+    <li> = : allows the specified permissions to be enabled for defined user class</li>
+    <li> + : adds/allows the specified permissions to be enabled for defined user class</li>
+    <li> - : takes away/prohibits the specified permissions to be enabled for defined user class </li>
   </ul>
 And lastly, you must determine the permissions themselves. 
   <ul class="task-list">
-    <li> r: the ablity to read the contents of the file</li>
-    <li> w: the ability to change the contents of the file (write)</li>
+    <li> r : the ability to read the contents of the file</li>
+    <li> w : the ability to change the contents of the file (write)</li>
     <li> x : the ability to run the contents of the file as a program </li>
   </ul>
 
@@ -55,7 +59,7 @@ Examples of class/operator/permissions combinations:
 
 
 <br/><br/>
-The second way is by three numbers. Each number represents a permission.
+The second way is by three numbers. Each number represents a permission type.
  <ul class="task-list">
     <li> 4: read</li>
     <li> 2: write</li>
@@ -105,7 +109,7 @@ Common combinations are: 644 for files and 755 for directories.
   </li>
    <li>--reference=FILENAME
     <ul class="task-list">
-      <li>use FILENAME's group settings rather than specifiying a group value</li>
+      <li>use FILENAME's group settings rather than specifying a group value</li>
     </ul>
   </li>
    <li>-R, --recursive
