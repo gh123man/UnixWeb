@@ -3,22 +3,24 @@
 Definition: displays the date and time as well as setting the date and time. Please note you must be the root user to set the time</p>
 
 <p>Options:</p>
+<table>
+	<tr>
+		<th>Cmd</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-a / --archive</td>
+		<td>preserves date </td>
+	</tr>
+	<tr>
+		<td> --attributes only</td>
+		<td>refers to the previous job</td>
+	</tr>
+	<tr>
+		<td>%(num)</td>
+		<td>refers to the job number <br/> i.e. %1 or %2</td>
+	</tr>
 
-  <ul class="task-list">
-  <li>-a / --archive
-    <ul class="task-list">
-    <li>preserves date </li></ul>
-  </li>
- <li> --attributes only
-   <ul class="task-list">
-    <li> refers to the previous job</li></ul>
-    </li>
-  <li> %(num)
-    <ul class="task-list">
-    <li>refers to the job number</li>
-    <li>i.e. %1 or %2</li>
-    </ul>
-  </li>
   
   <p>Uses:</p>
 
@@ -33,11 +35,15 @@ Definition: displays the date and time as well as setting the date and time. Ple
     </li>
 
 
-<p>Uses:</p>
+<p>Examples:</p>
 
-  <ul class="task-list">
-  <li>date</li>
- <li>date 0530.30</li>
- <li>date 10250045</li>
- <li>date --set="20091015 04:30"</li>
- </ul>
+  
+  <pre>date</pre>
+  <br/><br/>
+ <pre>date 0530.30</pre>
+  <br/><br/>
+ <pre>date 10250045</pre>
+  <br/><br/>
+ <pre>date --set="20091015 04:30"</pre>
+  <br/><br/>
+ 
