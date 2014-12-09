@@ -359,6 +359,7 @@ td {
     padding-top: 15px;
     padding-bottom: 15px;
 	-webkit-transition: padding-left .6s ease;
+    transition: padding-left .6s ease;
 }
 
 
@@ -367,6 +368,8 @@ td {
 	transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	-webkit-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
     overflow: hidden;
 	padding: 0px;
 	max-height: 0px;
