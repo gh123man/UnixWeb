@@ -429,3 +429,22 @@ input#submit{
 .homeImage {
     width: 660px;
 }
+
+/***************table formatting add*********/
+table{
+		width:100%;
+	}
+	
+th{
+	background-color:  rgb(169,3,41);
+	color: white;
+}
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 5px;
+	text-align: left;
+}
