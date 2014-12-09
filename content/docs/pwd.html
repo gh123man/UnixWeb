@@ -1,66 +1,40 @@
-
-<p>Category: File<br/>
+<p>Category: File Proceses<br/>
 Definition: prints the current working directory. you can use it to find the full path to the current directory,
 store the full path, and verify the physical path.</p>
 
-<p>Options:</p>
-<ul class="task-list">
-<li>-L
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-L</td>
+		<td>>displays the logical current working directory<br/>causes the pwd to use a $PWD environment despite symlinks</td>
+	</tr>
+	<tr>
+		<td>-P</td>
+		<td>displays the physical current working directory</td>
+	</tr>
+	<tr>
+		<td>/bin/pwd -- version</td>
+		<td>displays the pwd command version</td>
+	</tr>
+	<tr>
+		<td>/bin/pwd --help</td>
+		<td>displays information about the pwd</td>
+	</tr>
+	<tr>
+		<td>x=$(pwd)</td>
+		<td>stores the path <br/>can do with the variable:<br/>&nbsp;&nbsp;&nbsp;echo "The current working directory: $x"<br/>&nbsp;&nbsp;&nbsp;printf "The current directory is: %s" $x</td>
+	</tr>
+ </table>
 
-<ul class="task-list">
-<li>displays the logical current working directory</li>
-<li>causes the pwd to use a $PWD environment despite symlinks</li>
-<li>see <strong>_</strong>
-</li>
-</ul>
-</li>
-<li>-P
 
-<ul class="task-list">
-<li>default</li>
-<li>displays the physical current working directory</li>
-</ul>
-</li>
-<li>/bin/pwd -- version
-
-<ul class="task-list">
-<li>displays the pwd command version</li>
-</ul>
-</li>
-<li>/bin/pwd --help
-
-<ul class="task-list">
-<li>displays information about the pwd</li>
-</ul>
-</li>
-</ul>
-
-<p>Uses:</p>
-<ul class="task-list">
-<li>pwd
-
-<ul class="task-list">
-<li>prints the path</li>
-</ul>
-</li>
-<li>x=$(pwd)
-
-<ul class="task-list">
-<li>stores the path</li>
-<li>can do with the variable
-
-<ul class="task-list">
-<li>echo "The current working directory: $x"</li>
-<li>printf "The current directory is: %s" $x</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>type -a pwd
-
-<ul class="task-list">
-<li>shows all locations containing an executable named pwd</li>
-</ul>
-</li>
-
-</ul>
+<p>Examples:</p>
+	<pre>pwd</pre>
+	<pre>x=$(pwd)</pre>
+	<pre>pwd -P</pre>
+	
+	
+	
+	
