@@ -1,53 +1,39 @@
-
-<p>Category: File<br/>
+<p>Category: File Processes<br/>
 Definiton: creates a directory.</p>
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td>-m / --mode</td>
+		<td>set the file mode (see <strong>chmod</strong>)</td>
+	</tr>
+	<tr>
+		<td>-p / --parents</td>
+		<td>create parent directory<br/>if directory exists, no response will appear</td>
+	</tr>
+	<tr>
+		<td>-v / --verbose</td>
+		<td>prints a message for each created directory</td>
+	</tr>
+	<tr>
+		<td>-Z / --context</td>
+		<td>sets the SELinux security context</td>
+	</tr>
+	<tr>
+		<td>--help</td>
+		<td>displays help message and exits</td>
+	</tr>
+	<tr>
+		<td>--version</td>
+		<td>displays the version information and exits</td>
+	</tr>
+ </table>
 
-<p>Options:</p>
-<ul class="task-list">
-<li>-m / --mode
 
+ <p>Mkdir with mode:</p>
 <ul class="task-list">
-<li>set the file mode (see <strong>chmod</strong>)</li>
-</ul>
-</li>
-<li>-p / --parents
-
-<ul class="task-list">
-<li>create parent directory</li>
-<li>if directory exists, no response will appear</li>
-</ul>
-</li>
-<li> -v / --verbose
-
-<ul class="task-list">
-<li>prints a message for each created directory</li>
-</ul>
-</li>
-<li> -Z / --context
-
-<ul class="task-list">
-<li>sets the SELinux security context</li>
-</ul>
-</li>
-<li> --help
-
-<ul class="task-list">
-<li>displays help message</li>
-<li>will exit after</li>
-</ul>
-</li>
-<li> --version
-
-<ul class="task-list">
-<li>displays the version information</li>
-<li>will exit after</li>
-</ul>
-</li>
-</ul>
-
-<p>Uses:</p>
-<ul class="task-list">
-<li>mkdir directoryName</li>
 <li> mkdir -m a=rwx directoryName
 
 <ul class="task-list">
@@ -71,9 +57,14 @@ Definiton: creates a directory.</p>
 </li>
 </ul>
 
+ 
+ 
 <p>Examples:</p>
-<ul class="task-list">
-<li>mkdir /330/Links</li>
-<li>mkdir -m a=rx Links</li>
-<li>mkdir p /home/330/Links/a/b/c</li>
-</ul>
+	<pre>mkdir /330/Links</pre>
+	<pre>mkdir -m a=rx Links</pre>
+	<pre>mkdir p /home/330/Links/a/b/c</pre>
+
+	
+	
+	
+	
