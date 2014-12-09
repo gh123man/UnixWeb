@@ -17,7 +17,7 @@ Quizzes
         ?>
         <div><strong>My Quiz Results</strong></div>
         <?php
-        echo '<table>';
+        echo '<table class="quizTable">';
         foreach ($results as $result) {
             echo '<tr>';
             echo '<td><a href="' . $result->path() . '">' . $result->name() . '</a></td>';

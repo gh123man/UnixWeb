@@ -415,6 +415,16 @@ td {
 	border: none;
 }
 
+
+
+.quizTable,
+.quizTable tr,
+.quizTable tbody td,
+.quizTable thead th,
+.quizTable tfoot th {
+    border: none;
+}
+
 .pageContent img {
 	max-width: 100%;
 	height: auto;
