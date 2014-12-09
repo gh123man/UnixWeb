@@ -1,11 +1,93 @@
 <p>Category: File Management <br/>
-Definition: to remove files.</p>
+Definition: to remove files or directories. In order to remove a directory, the -r option must be specified. Otherwise
+  the rm command will only remove files.
+</p>
 
 <p>Options:</p>
 
   <ul class="task-list">
-  <li> -b, --backup[=CONTROL]
+  <li> -f, --force
     <ul class="task-list">
-    <li>make backup of each file</li>
-    <li>-b doesn't accept an argument but --backup does</li></ul>
+    <li>ignores files that are nonexist</li>
+    <li>does not prompt before removing</li></ul>
   </li>
+  <li> -i
+    <ul class="task-list">
+    <li>gives a prompt before each removal</li></ul>
+  </li>
+  <li> -I
+    <ul class="task-list">
+    <li>prompts only once before removing if there are 3+ files being removed</li>
+      <li>prompts only once if removing recusively</li>
+    </ul>
+  </li>
+  <li> --interactive[=WHEN]
+    <ul class="task-list">
+    <li>prompt removes as specificed by WHEN</li>
+    <li>WHEN can be: always, once, never</li>
+    <li>default for WHEN is always</li>
+    </ul>
+  </li>
+  <li> --one-file-system
+    <ul class="task-list">
+    <li>for when you are removing a hierachy recursively</li>
+      <li>says skip directories that is on a different file system than on the cmd line</li>
+    </ul>
+  </li>
+  <li> --no-perserve-root
+    <ul class="task-list">
+    <li> / is not treated in a special way</li>
+      <li> / is the root directory</li>
+    </ul>
+  </li>
+  <li> --perserve-root
+    <ul class="task-list">
+    <li>will not remove the root directory aka "/"</li>
+      <li>default setting</li>
+    </ul>
+  </li>
+  <li> -r, -R, --recursive
+    <ul class="task-list">
+    <li>removes directories and their contents recursively</li></ul>
+  </li>
+  <li> -v, --verbose
+    <ul class="task-list">
+    <li>explains what is happening for each action</li></ul>
+  </li>
+  <li> --help
+    <ul class="task-list">
+    <li>display help message and exits</li></ul>
+  </li>
+  <li> --version
+    <ul class="task-list">
+    <li>displays version and exits</li></ul>
+  </li>
+</ul>
+
+<p>Examples:</p>
+
+<ul>
+ <li> rm file1.txt
+    <ul class="task-list">
+    <li>removes the file1.txt after you respond yes to the prompt</li></ul>
+  </li>
+  <li> rm -f *
+    <ul class="task-list">
+    <li>removes all the files in the current directory without a prompt</li></ul>
+  </li>
+  <li> rm -r Sites
+    <ul class="task-list">
+    <li>removes the Sites directory and all files in it</li>
+      <li>A prompt will appear for any write-protexted files</li>
+    </ul>
+  </li>
+  <li> rm -fr Sites
+    <ul class="task-list">
+    <li>same as above, but no prompt will appear</li></ul>
+  </li>
+  <li> rm -I *.txt
+    <ul class="task-list">
+    <li>removes all text files</li>
+    <li>it shows a prompt IF there's more than three files</li></ul>
+  </li>
+</ul>
