@@ -407,6 +407,14 @@ td {
 	width: 50%
 }
 
+#loginTable,
+#loginTable tr,
+#loginTable tbody td,
+#loginTable thead th,
+#loginTable tfoot th {
+	border: none;
+}
+
 .pageContent img {
 	max-width: 100%;
 	height: auto;
