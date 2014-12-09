@@ -109,3 +109,173 @@ Definition: shows the amount of disk space available  and the amount of disk spa
     </ul></li>
   <li>df Sites -h
   </ul>
+  
+  <!--
+  <p>Category: System Info<br/>
+Definition: shows the amount of disk space available  and the amount of disk space being used for <strong>files</strong>. </p>
+
+
+<table>
+	<tr>
+		<th>Options</th>
+		<th>Explanation</th>
+	<tr>
+	<tr>
+		<td> -a, --all</td>
+		<td>includes dummy file systems</td>
+	</tr>
+	<tr>
+		<td> -B, --block-size=SIZE</td>
+		<td>scales the file by size before printing</td>
+	</tr>
+	<tr>
+		<td> -b, --bytes</td>
+		<td> the same as --apparent-size --block-size=1 </td>
+	</tr>
+	<tr>
+		<td>-c, --total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td> -D, --dereference-args<br/> -H, --si</td>
+		<td>print size in a 'human readable' format i.e. 1K 234M <br/>-H & --si use powers of 1000 instead 1024</td>
+	</tr>
+	<tr>
+		<td>-i, --inodes</td>
+		<td>list inode information</td>
+	</tr>
+	<tr>
+		<td>-k</td>
+		<td>same as --block-size=1K</td>
+	</tr>
+	<tr>
+		<td>-l, --local</td>
+		<td>only displays local file systems</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td>--total</td>
+		<td>displays the total size; a grand total</td>
+	</tr>
+	<tr>
+		<td>--no-sync</td>
+		<td>prevents a sync from happening before getting information <br/> this is the default</td>
+	</tr>
+	<tr>
+		<td>-P, --portability</td>
+		<td>makes it so the format is in POSIX</td>
+	</tr>
+	<tr>
+		<td>--sync</td>
+		<td>implements a sync before getting information</td>
+	</tr>
+	<tr>
+		<td>-t, --type=TYPE</td>
+		<td>limit the listing to a certain TYPE of file</td>
+	</tr>
+	<tr>
+		<td>-T, --print-type</td>
+		<td>prints the file system type with other information</td>
+	</tr>
+	<tr>
+		<td>-x, --exclude-type=TYPE</td>
+		<td>excludes the TYPE of file system specified</td>
+	</tr>
+ </table>
+
+
+
+<p>Options:</p>
+
+  
+  <li>
+   <ul class="task-list">
+    <li> dereferences only symlinks that are listed by you</li></ul>
+    </li>
+  <li> --files0-from=F
+    <ul class="task-list">
+    <li>summarize disk usage of NULL-terminated file names as specified in File F</li>
+    </ul>
+  </li>
+  <li> -h, --human-readable, --si
+    <ul class="task-list">
+    <li>print size in a 'human readable' format</li>
+    <li>i.e. 1K 234M</li>
+    <li>-H & --si use powers of 1000 instead 1024</li>
+    </ul>
+  </li>
+  <li> -k
+    <ul class="task-list">
+    <li>same as --block-size=1K</li></ul>
+  </li>
+  <li> -l, --count-links
+    <ul class="task-list">
+    <li>count sizes many times if hard linked</li></ul>
+  </li>
+  <li> -m
+    <ul class="task-list">
+    <li>like --block-size=1M</li>
+    </ul>
+  </li>
+  <li> -L, --dereference
+    <ul class="task-list">
+    <li>dereference all symlinks</li>
+    </ul>
+  </li>
+  <li> -P, --no-dereference
+    <ul class="task-list">
+    <li>don't follow any symlinks</li>
+      <li>this is the default</li>
+    </ul>
+  </li>
+  <li> -0, --null
+    <ul class="task-list">
+    <li>end each output line with 0 byte</li>
+      <li>default is a newline</li>
+    </ul>
+  </li>
+  <li> -s, --separate-dirs
+    <ul class="task-list">
+    <li>do not include subdirectories in list</li></ul>
+  </li>
+  <li> -s, --summarize
+    <ul class="task-list">
+    <li>display only a total for each item</li></ul>
+  </li>
+  <li> -x, --one-file-system
+    <ul class="task-list">
+    <li>skip directories not in local file system</li></ul>
+  </li>
+  <li> -X, --exclude-from=FILE
+    <ul class="task-list">
+    <li>exclude files that match any pattern in FILE</li>
+    </ul>
+  </li>
+  <li> --exclude=PATTERN
+    <ul class="task-list">
+    <li>exclude any files that match the PATTERN specified</li>
+    </ul>
+  </li>
+  <li> --time, --time=WORD
+    <ul class="task-list">
+    <li>shows time of last modification of any file in the directory</li>
+    <li>WORD means it'l show a word instead such as: atime, access, use, ctime, or status</li>
+    </ul>
+  </li>
+</ul>
+
+
+<p>Examples:</p>
+    &nbsp;<pre> du -s *.txt<pre>
+    <ul class="task-list">
+      <p>&nbsp;&nbsp;shows a summary of the size of every file that's a .txt file</p>
+    
+	<pre>du -shc *.html</pre>
+    <p>&nbsp;&nbsp; shows a summary of the size in readable format of every .html file</p>
+    </ul></li>
+  <pre>df Sites -h</pre>
+
+  -->
