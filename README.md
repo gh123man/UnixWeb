@@ -12,7 +12,7 @@ The root folder
 
 This is the site root. It contains important files for routing and our whole file structure.
 
-####Some notes
+#### Some notes
  - do not delete your .git folder, its contents are gits meta data
  - never put html in the 'src' folder. that is for framework code.
  - only static data goes in 'static' (images, javascript, css)
@@ -22,7 +22,7 @@ This is the site root. It contains important files for routing and our whole fil
 Setup Guide
 -----------
 
-###Windows
+### Windows
 
 #### A) set up apache
 1. Install Wamp
